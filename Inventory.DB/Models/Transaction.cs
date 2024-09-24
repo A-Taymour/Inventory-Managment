@@ -1,7 +1,13 @@
-﻿public class Transaction
-{
-    public int TransactionID { get; set; }
+﻿using System.ComponentModel.DataAnnotations;
+
+public class Transaction
+{   
+ 
+    public int ID { get; set; }
+    [Required]
+
     public string TransactionType { get; set; }
+    [Required]
     public int Quantity { get; set; }
     public DateTime TransactionDate { get; set; }
 

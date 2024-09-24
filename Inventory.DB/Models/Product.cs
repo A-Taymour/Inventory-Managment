@@ -1,13 +1,27 @@
 ﻿using Inventory.Models;
+using System.ComponentModel.DataAnnotations;
 
 public class Product
 {
-    public int ProductID { get; set; }
-    public string ProductName { get; set; }
+    public int ID { get; set; }
+    [Required]
+    [MinLength(3), MaxLength(50)]
+    [RegularExpression("[0-9A-Za-z_]")]
+    public string Name { get; set; }
+    [Required]
+    [MinLength(20), MaxLength(200)]
+    public string Description { get; set; }
+    [Required]
+
     public decimal Price { get; set; }
+  
     public DateTime CreatedAt { get; set; }
+     
     public DateTime UpdatedAt { get; set; }
+    [Required]
     public int StockQuantity { get; set; }
+    
+    [Required]
     public int LowStockThreshold { get; set; }
 
     public int UserID { get; set; }
