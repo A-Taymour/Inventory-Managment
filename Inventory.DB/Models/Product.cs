@@ -6,7 +6,6 @@ public class Product
     public int ID { get; set; }
     [Required]
     [MinLength(3), MaxLength(50)]
-    [RegularExpression("[0-9A-Za-z_]")]
     public string Name { get; set; }
     [Required]
     [MinLength(20), MaxLength(200)]
