@@ -1,5 +1,8 @@
 using Inventory.Data;
+using Inventory.Service.Sevices;
+using Inventory.Services;
 using Microsoft.EntityFrameworkCore;
+using Task.Repositories;
 
 namespace Inventory
 {
@@ -11,9 +14,14 @@ namespace Inventory
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<IProductService,ProductService>();
 
             builder.Services.AddDbContext<ApplicationDBcontext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<IProductService, ProductService>();
+
+            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             var app = builder.Build();
 
