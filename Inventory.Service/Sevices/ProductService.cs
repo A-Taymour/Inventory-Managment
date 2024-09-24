@@ -5,7 +5,16 @@ using System.Threading.Tasks;
 
 namespace Inventory.Services
 {
-    public class ProductService
+    public interface IProductService
+    {
+        IEnumerable<Product> GetAllProducts();
+        Product GetProductById(int id);
+        void CreateProduct(Product product);
+        void UpdateProduct(Product product);
+        void DeleteProduct(int id);
+    }
+
+    public class ProductService : IProductService
     {
         private readonly IGenericRepository<Product> _productRepository;
 
