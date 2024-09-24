@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\Inventory.csproj": {}
+    "E:\\depi project tester\\george project\\Inventory\\Inventory.csproj": {}
   },
   "projects": {
-    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\Inventory.csproj": {
+    "E:\\depi project tester\\george project\\Inventory.DB\\Inventory.DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\Inventory.csproj",
-        "projectName": "Inventory",
-        "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\Inventory.csproj",
-        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-        "outputPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\obj\\",
+        "projectUniqueName": "E:\\depi project tester\\george project\\Inventory.DB\\Inventory.DB.csproj",
+        "projectName": "Inventory.DB",
+        "projectPath": "E:\\depi project tester\\george project\\Inventory.DB\\Inventory.DB.csproj",
+        "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
+        "outputPath": "E:\\depi project tester\\george project\\Inventory.DB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,11 +34,91 @@
           "warnAsError": [
             "NU1605"
           ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\depi project tester\\george project\\Inventory\\Inventory.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\depi project tester\\george project\\Inventory\\Inventory.csproj",
+        "projectName": "Inventory",
+        "projectPath": "E:\\depi project tester\\george project\\Inventory\\Inventory.csproj",
+        "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
+        "outputPath": "E:\\depi project tester\\george project\\Inventory\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\depi project tester\\george project\\Inventory.DB\\Inventory.DB.csproj": {
+                "projectPath": "E:\\depi project tester\\george project\\Inventory.DB\\Inventory.DB.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
         }
       },
       "frameworks": {
@@ -94,7 +173,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
