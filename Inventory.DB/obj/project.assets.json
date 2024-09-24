@@ -4286,11 +4286,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\depi project tester\\george project\\Inventory.DB\\Inventory.DB.csproj",
+      "projectUniqueName": "E:\\depi\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
       "projectName": "Inventory.DB",
-      "projectPath": "E:\\depi project tester\\george project\\Inventory.DB\\Inventory.DB.csproj",
+      "projectPath": "E:\\depi\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
       "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
-      "outputPath": "E:\\depi project tester\\george project\\Inventory.DB\\obj\\",
+      "outputPath": "E:\\depi\\Inventory-Managment\\Inventory.DB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",

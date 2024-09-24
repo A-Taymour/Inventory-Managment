@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zgLHQbdN0ATiDNpG8KRXU8Mjf2rGCMpCQQEUho/dz1WdOWNJWykNRlDxzAYD1j7N6UmlQsvmzRcqWg07uzDyNw==",
+  "dgSpecHash": "FG9ONcN/EYi7/EgpRSJJ7kiowruUO1jnI2sUekrz30oQC5oT/5LiEBsbUJRTCsMcrjiVxteOnKuBlG8nDoSKgg==",
   "success": true,
-  "projectFilePath": "E:\\depi project tester\\george project\\Inventory.Repository\\Inventory.Repository.csproj",
+  "projectFilePath": "E:\\depi\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\omar\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\omar\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
