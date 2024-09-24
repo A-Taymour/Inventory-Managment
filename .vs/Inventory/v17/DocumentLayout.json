@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D3A31E44-A151-4ACE-93D1-1FE874E97F27}|Inventory.DB\\Inventory.DB.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory.db\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3A31E44-A151-4ACE-93D1-1FE874E97F27}|Inventory.DB\\Inventory.DB.csproj|solutionrelative:inventory.db\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F118178A-9D5F-45B1-B23A-44568DEC1C13}|Inventory.Repository\\Inventory.Repository.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory.repository\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F118178A-9D5F-45B1-B23A-44568DEC1C13}|Inventory.Repository\\Inventory.Repository.csproj|solutionrelative:inventory.repository\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F118178A-9D5F-45B1-B23A-44568DEC1C13}|Inventory.Repository\\Inventory.Repository.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory.repository\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F118178A-9D5F-45B1-B23A-44568DEC1C13}|Inventory.Repository\\Inventory.Repository.csproj|solutionrelative:inventory.repository\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F118178A-9D5F-45B1-B23A-44568DEC1C13}|Inventory.Repository\\Inventory.Repository.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory.repository\\inventory.repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F118178A-9D5F-45B1-B23A-44568DEC1C13}|Inventory.Repository\\Inventory.Repository.csproj|solutionrelative:inventory.repository\\inventory.repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Migrations\\20240924105529_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Inventory\\Migrations\\20240924105529_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Repositories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Inventory.Repository\\Repositories\\IGenericRepository.cs",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Repositories\\IGenericRepository.cs",
+              "RelativeToolTip": "Inventory.Repository\\Repositories\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:10:12.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Inventory.Repository\\Repositories\\GenericRepository.cs",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "Inventory.Repository\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:09:12.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDBcontext.cs",
+              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Data\\ApplicationDBcontext.cs",
+              "RelativeDocumentMoniker": "Inventory.DB\\Data\\ApplicationDBcontext.cs",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Data\\ApplicationDBcontext.cs",
+              "RelativeToolTip": "Inventory.DB\\Data\\ApplicationDBcontext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T11:08:06.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Inventory.Repository.csproj",
+              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj",
+              "RelativeDocumentMoniker": "Inventory.Repository\\Inventory.Repository.csproj",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj",
+              "RelativeToolTip": "Inventory.Repository\\Inventory.Repository.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-24T11:06:44.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20240924105529_InitialCreate.cs",
+              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Migrations\\20240924105529_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Inventory\\Migrations\\20240924105529_InitialCreate.cs",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Migrations\\20240924105529_InitialCreate.cs",
+              "RelativeToolTip": "Inventory\\Migrations\\20240924105529_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T10:55:29.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\appsettings.json",
+              "RelativeDocumentMoniker": "Inventory\\appsettings.json",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\appsettings.json",
+              "RelativeToolTip": "Inventory\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-24T10:43:43.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Program.cs",
+              "RelativeDocumentMoniker": "Inventory\\Program.cs",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Program.cs",
+              "RelativeToolTip": "Inventory\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T10:42:59.306Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

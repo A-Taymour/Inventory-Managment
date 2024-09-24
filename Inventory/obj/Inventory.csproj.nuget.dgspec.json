@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\studies\\Inventory\\Inventory\\Inventory.csproj": {}
+    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\Inventory.csproj": {}
   },
   "projects": {
-    "D:\\studies\\Inventory\\Inventory\\Inventory.csproj": {
+    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\Inventory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\studies\\Inventory\\Inventory\\Inventory.csproj",
+        "projectUniqueName": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\Inventory.csproj",
         "projectName": "Inventory",
-        "projectPath": "D:\\studies\\Inventory\\Inventory\\Inventory.csproj",
-        "packagesPath": "C:\\Users\\Boody\\.nuget\\packages\\",
-        "outputPath": "D:\\studies\\Inventory\\Inventory\\obj\\",
+        "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\Inventory.csproj",
+        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
+        "outputPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Boody\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +35,46 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -50,7 +86,15 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

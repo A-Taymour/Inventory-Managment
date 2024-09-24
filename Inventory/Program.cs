@@ -1,3 +1,6 @@
+using Inventory.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Inventory
 {
     public class Program
@@ -8,6 +11,9 @@ namespace Inventory
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<ApplicationDBcontext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
