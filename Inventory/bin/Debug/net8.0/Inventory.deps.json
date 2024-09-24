@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Inventory/1.0.0": {
         "dependencies": {
-          "Inventory.DB": "1.0.0",
+          "Inventory.Service": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.8",
           "Microsoft.AspNetCore.Identity.UI": "8.0.8",
           "Microsoft.EntityFrameworkCore": "8.0.8",
@@ -929,12 +929,6 @@
       "System.Text.Json/8.0.4": {
         "dependencies": {
           "System.Text.Encodings.Web": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/System.Text.Json.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.724.31311"
-          }
         }
       },
       "System.Threading.Channels/6.0.0": {},
@@ -965,7 +959,33 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
         },
         "runtime": {
-          "Inventory.DB.dll": {}
+          "Inventory.DB.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Inventory.Repository/1.0.0": {
+        "dependencies": {
+          "Inventory.DB": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.8"
+        },
+        "runtime": {
+          "Inventory.Repository.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Inventory.Service/1.0.0": {
+        "dependencies": {
+          "Inventory.Repository": "1.0.0"
+        },
+        "runtime": {
+          "Inventory.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -1565,6 +1585,16 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Inventory.DB/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Inventory.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Inventory.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

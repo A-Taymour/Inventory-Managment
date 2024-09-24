@@ -49,7 +49,7 @@ namespace Inventory.Controllers
             }
 
             product = _productService.GetProductById(id);
-            if (id != product.ProductID)
+            if (id != product.ID)
             {
                 return NotFound();
             }

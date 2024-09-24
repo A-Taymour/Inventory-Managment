@@ -13,3 +13,18 @@ E:\depi project tester\george project\Inventory.DB\obj\Debug\net8.0\Inventory.DB
 E:\depi project tester\george project\Inventory.DB\obj\Debug\net8.0\ref\Inventory.DB.dll
 E:\depi project tester\george project\Inventory.DB\bin\Debug\net8.0\Inventory.DB.runtimeconfig.json
 E:\depi project tester\george project\Inventory.DB\obj\Debug\net8.0\Inventory.DB.genruntimeconfig.cache
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.deps.json
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.runtimeconfig.json
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.dll
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.pdb
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.csproj.AssemblyReference.cache
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.GeneratedMSBuildEditorConfig.editorconfig
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.AssemblyInfoInputs.cache
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.AssemblyInfo.cs
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.csproj.CoreCompileInputs.cache
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.sourcelink.json
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.dll
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\refint\Inventory.DB.dll
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.pdb
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.genruntimeconfig.cache
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\ref\Inventory.DB.dll

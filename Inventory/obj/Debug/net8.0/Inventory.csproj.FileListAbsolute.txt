@@ -293,3 +293,9 @@ E:\depi project tester\george project\Inventory\obj\Debug\net8.0\scopedcss\proje
 E:\depi project tester\george project\Inventory\obj\Debug\net8.0\Inventory.csproj.CopyComplete
 E:\depi project tester\george project\Inventory\obj\Debug\net8.0\Inventory.genruntimeconfig.cache
 E:\depi project tester\george project\Inventory\obj\Debug\net8.0\ref\Inventory.dll
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory\bin\Debug\net8.0\Inventory.DB.dll
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory\bin\Debug\net8.0\Inventory.Repository.dll
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory\bin\Debug\net8.0\Inventory.Service.dll
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory\bin\Debug\net8.0\Inventory.Service.pdb
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory\bin\Debug\net8.0\Inventory.DB.pdb
+D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory\bin\Debug\net8.0\Inventory.Repository.pdb
