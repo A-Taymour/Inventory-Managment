@@ -36,9 +36,8 @@ namespace Task.Repositories
             _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public void Delete(TEntity entity)
         {
-            var entity = _dbSet.Find(id);
             if (entity != null)
             {
                 _dbSet.Remove(entity);

@@ -36,9 +36,9 @@ namespace Inventory.Services
             _productRepository.Update(product);
         }
 
-        public void DeleteProduct(int id)
+        public void DeleteProduct(Product product)
         {
-            _productRepository.Delete(id);
+            _productRepository.Delete(product);
         }
     }
 }

@@ -6,6 +6,6 @@
         TEntity GetById(int id);
         void Add(TEntity entity);
         void Update(TEntity entity);
-        void Delete(int id);
+        void Delete(TEntity entity);
     }
 }

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Inventory.Data
 {
-    public class ApplicationDBcontext : DbContext
+    public partial class ApplicationDBcontext : IdentityDbContext
     {
         public ApplicationDBcontext(DbContextOptions<ApplicationDBcontext> options)
        : base(options)

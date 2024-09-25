@@ -38,27 +38,36 @@ namespace Inventory.Controllers
             }
             return View("Insert", product);
         }
-
-        public IActionResult Update(int id, Product product)
+        [HttpGet]
+        public IActionResult Update(int id)
         {
+            var product = _productService.GetProductById(id);
             if (product == null)
             {
                 return NotFound();
             }
 
-            product = _productService.GetProductById(id);
-            if (id != product.ID)
+            return View(product);
+        }
+
+        [HttpPost]
+        public IActionResult Update(Product product)
+        {
+            if (product == null)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             if (ModelState.IsValid)
             {
+                product.UpdatedAt = DateTime.Now;
                 _productService.UpdateProduct(product);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("GetAllProducts");
             }
+
             return View(product);
         }
+
 
         public IActionResult Delete(int id)
         {
@@ -67,10 +76,13 @@ namespace Inventory.Controllers
             {
                 return NotFound();
             }
+            if (ModelState.IsValid)
+            {
+                _productService.DeleteProduct(product);
+                return RedirectToAction("GetAllProducts");
+            }
             return View(product);
         }
-
-     
 
     }
 }
