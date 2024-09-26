@@ -35,7 +35,7 @@ namespace Inventory.Controllers
                 return RedirectToAction(nameof(GetAll));
             }
        
-            return View("Register", User);
+            return View("Insert", User);
         }
 
         public IActionResult Update(int id)

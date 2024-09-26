@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inventory.DB.Models
-{
+ 
     public class Supplier
     {
         public int Id { get; set; }
@@ -15,4 +14,4 @@ namespace Inventory.DB.Models
         public string Phone { get; set; }
         public ICollection<Product> Products { get; set; }
     }
-}
+ 
