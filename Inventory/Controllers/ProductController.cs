@@ -38,50 +38,33 @@ namespace Inventory.Controllers
             }
             return View("Insert", product);
         }
-        [HttpGet]
+
         public IActionResult Update(int id)
         {
-            var product = _productService.GetProductById(id);
-            if (product == null)
+            var employee = _productService.GetProductById(id);
+            if (employee == null)
             {
-                return NotFound();
+                return NotFound("this employee doesn't exist");
             }
-
-            return View(product);
+            return View(employee);
         }
 
         [HttpPost]
         public IActionResult Update(Product product)
         {
-            if (product == null)
-            {
-                return BadRequest();
-            }
-
             if (ModelState.IsValid)
             {
-                product.UpdatedAt = DateTime.Now;
                 _productService.UpdateProduct(product);
-                return RedirectToAction("GetAllProducts");
+                return RedirectToAction(nameof(GetAllProducts));
             }
-
             return View(product);
         }
 
 
         public IActionResult Delete(int id)
         {
-            var product = _productService.GetProductById(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-            if (ModelState.IsValid)
-            {
-                _productService.DeleteProduct(product);
-                return RedirectToAction("GetAllProducts");
-            }
-            return View(product);
+            _productService.DeleteProduct(id);
+            return RedirectToAction(nameof(GetAllProducts));
         }
 
     }

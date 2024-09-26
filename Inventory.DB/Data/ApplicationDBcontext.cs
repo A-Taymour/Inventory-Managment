@@ -1,4 +1,5 @@
-﻿using Inventory.Models;
+﻿using Inventory.DB.Models;
+using Inventory.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,7 @@ namespace Inventory.Data
         {
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Transaction> Transactions { get; set; }

@@ -2138,7 +2138,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
         },
         "runtime": {
-          "Inventory.DB.dll": {}
+          "Inventory.DB.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Inventory.Repository/1.0.0": {
@@ -2147,7 +2150,10 @@
           "Microsoft.EntityFrameworkCore": "8.0.8"
         },
         "runtime": {
-          "Inventory.Repository.dll": {}
+          "Inventory.Repository.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Inventory.Service/1.0.0": {
@@ -2155,7 +2161,10 @@
           "Inventory.Repository": "1.0.0"
         },
         "runtime": {
-          "Inventory.Service.dll": {}
+          "Inventory.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
