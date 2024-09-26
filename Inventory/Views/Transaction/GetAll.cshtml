@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Transaction>
+
+<h2>Transaction List</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>TransactionType</th>
+            <th>Quantity</th>
+            <th>TransactionDate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ID</td>
+                <td>@product.TransactionType</td>
+                <td>@product.Quantity</td>
+                <td>@product.TransactionDate</td>
+
+                <td>
+                    <a asp-action="Update" asp-route-id="@product.ID">Edit</a> 
+                    <a asp-action="Delete" asp-route-id="@product.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Insert">Create New Transaction</a>

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 namespace Inventory.Service.Sevices.ProductService
 {
 
-    public class ProductService : IProductService
+    public class TransactionService : IProductService
     {
         private readonly IGenericRepository<Product> _productRepository;
 
-        public ProductService(IGenericRepository<Product> productRepository)
+        public TransactionService(IGenericRepository<Product> productRepository)
         {
             _productRepository = productRepository;
         }
