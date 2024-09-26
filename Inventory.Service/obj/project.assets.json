@@ -2960,11 +2960,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\CLS\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Boody\\.nuget\\packages\\": {}
+>>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\CLS\\Desktop\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj",
       "projectName": "Inventory.Service",
       "projectPath": "C:\\Users\\CLS\\Desktop\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj",
@@ -2973,6 +2978,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CLS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj",
+      "projectName": "Inventory.Service",
+      "projectPath": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj",
+      "packagesPath": "C:\\Users\\Boody\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory.Service\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Boody\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2980,14 +2995,20 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< Updated upstream
             "C:\\Users\\CLS\\Desktop\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj": {
               "projectPath": "C:\\Users\\CLS\\Desktop\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj"
+=======
+            "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj": {
+              "projectPath": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj"
+>>>>>>> Stashed changes
             }
           }
         }
@@ -3022,7 +3043,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< Updated upstream
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
       }
     }
   }
