@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Inventory.Service.Sevices
 {
-    public interface IProductService
+    public interface IUserService
     {
-        IEnumerable<Product> GetAll();
-        Product GetById(int id);
-        void Insert(Product product);
-        void Update(Product product);
+        IEnumerable<User> GetAll();
+        User GetById(int id);
+        void Insert(User User);
+        void Update(User User);
         void Delete(int id);
     }
 }

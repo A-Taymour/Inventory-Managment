@@ -16,27 +16,27 @@ namespace Inventory.Services
             _productRepository = productRepository;
         }
 
-        public IEnumerable<Product> GetAllProducts()
+        public IEnumerable<Product> GetAll()
         {
             return _productRepository.GetAll();
         }
 
-        public Product GetProductById(int id)
+        public Product GetById(int id)
         {
             return _productRepository.GetById(id);
         }
 
-        public void InsertProduct(Product product)
+        public void Insert(Product product)
         {
             _productRepository.Add(product);
         }
 
-        public void UpdateProduct(Product product)
+        public void Update(Product product)
         {
             _productRepository.Update(product);
         }
 
-        public void DeleteProduct(int id)
+        public void Delete(int id)
         {
             _productRepository.Delete(id);
         }

@@ -16,7 +16,7 @@ namespace Inventory
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<IProductService,ProductService>();
-
+            builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddDbContext<ApplicationDBcontext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

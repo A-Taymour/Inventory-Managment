@@ -6,12 +6,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Inventory.DB.Migrations
 {
     /// <inheritdoc />
-    public partial class last : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable( 
+            migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
                 {
