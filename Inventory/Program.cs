@@ -1,6 +1,7 @@
 using Inventory.Data;
-using Inventory.Service.Sevices;
-using Inventory.Services;
+using Inventory.Service.Sevices.CategoryService;
+using Inventory.Service.Sevices.ProductService;
+using Inventory.Service.Sevices.UserService;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Task.Repositories;
@@ -16,7 +17,8 @@ namespace Inventory
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<IProductService,ProductService>();
-
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddDbContext<ApplicationDBcontext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

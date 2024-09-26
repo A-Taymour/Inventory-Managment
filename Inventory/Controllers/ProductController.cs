@@ -1,6 +1,5 @@
 ﻿using Inventory.Models;
-using Inventory.Service.Sevices;
-using Inventory.Services;
+using Inventory.Service.Sevices.ProductService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -18,14 +17,14 @@ namespace Inventory.Controllers
             
         }
 
-        public IActionResult GetAllProducts()
+        public IActionResult GetAll()
         {
-            var products = _productService.GetAllProducts();
-            return View(products); 
+            var products = _productService.GetAll();
+            return View("GetAll",products); 
         }
-        public IActionResult GetProduct(int id) { 
-            var product = _productService.GetProductById(id);
-            return View(product);
+        public IActionResult GetById(int id) { 
+            var product = _productService.GetById(id);
+            return View("GetById",product);
         }
 
 
@@ -33,20 +32,20 @@ namespace Inventory.Controllers
         {
             if (ModelState.IsValid)
             {
-                _productService.InsertProduct(product);
-                return RedirectToAction(nameof(GetAllProducts));
+                _productService.Insert(product);
+                return RedirectToAction(nameof(GetAll));
             }
             return View("Insert", product);
         }
 
         public IActionResult Update(int id)
         {
-            var employee = _productService.GetProductById(id);
-            if (employee == null)
+            var product = _productService.GetById(id);
+            if ( product == null)
             {
-                return NotFound("this employee doesn't exist");
+                return NotFound("this Product doesn't exist");
             }
-            return View(employee);
+            return View(product);
         }
 
         [HttpPost]
@@ -54,8 +53,8 @@ namespace Inventory.Controllers
         {
             if (ModelState.IsValid)
             {
-                _productService.UpdateProduct(product);
-                return RedirectToAction(nameof(GetAllProducts));
+                _productService.Update(product);
+                return RedirectToAction(nameof(GetAll));
             }
             return View(product);
         }
@@ -63,8 +62,8 @@ namespace Inventory.Controllers
 
         public IActionResult Delete(int id)
         {
-            _productService.DeleteProduct(id);
-            return RedirectToAction(nameof(GetAllProducts));
+            _productService.Delete(id);
+            return RedirectToAction(nameof(GetAll));
         }
 
     }

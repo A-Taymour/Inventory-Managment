@@ -16,7 +16,7 @@ public class Product
     public decimal Price { get; set; }
   
     public DateTime CreatedAt { get; set; } = DateTime.Now;
-     
+    
     public DateTime UpdatedAt { get; set; } 
     [Required]
     public int StockQuantity { get; set; }

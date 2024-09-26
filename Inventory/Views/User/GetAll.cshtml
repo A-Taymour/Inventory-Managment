@@ -1,0 +1,34 @@
+﻿ @model IEnumerable<User>
+
+<h2>Our Users</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Enail</th>
+            <th>Phone</th>
+                   
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var User in Model)
+        {
+            <tr>
+                <td>@User.ID</td>
+                <td>@User.Name</td>
+                <td>@User.Email</td>
+                <td>@User.Phone</td>
+                
+
+                <td>
+                    <a asp-action="Update" asp-route-id="@User.ID">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@User.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Insert">Add new user</a>

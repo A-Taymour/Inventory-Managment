@@ -1,12 +1,13 @@
 ﻿using Inventory.Models;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-
+using System.Runtime.InteropServices;
+ 
 public class User
 {
   
     public int ID { get; set; }
-    [RegularExpression("[0-9A-Za-z_]")]
+   // [RegularExpression("[0-9A-Za-z_]")]
     [DisplayName("User Name")]
     public string Name { get; set; }
     [PasswordPropertyText]
@@ -18,8 +19,9 @@ public class User
     [StringLength(11, MinimumLength = 11, ErrorMessage = "phone number must be 11")]
     [Required]
     public string Phone { get; set; }
+    [DataType(DataType.Text)]
     public bool IsAdmin{ get; set; }
-
+     
     public ICollection<Product> Products { get; set; }
     public ICollection<Transaction> Transactions { get; set; }
 }
