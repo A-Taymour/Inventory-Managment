@@ -9,6 +9,7 @@ public class Transaction
     public string TransactionType { get; set; }
     [Required]
     public int Quantity { get; set; }
+
     public DateTime TransactionDate { get; set; }
 
     public int UserID { get; set; }

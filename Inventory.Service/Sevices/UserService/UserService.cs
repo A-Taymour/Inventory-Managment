@@ -2,9 +2,8 @@
 using Inventory.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Inventory.Service.Sevices;
 
-namespace Inventory.Services
+namespace Inventory.Service.Sevices.UserService
 {
 
     public class UserService : IUserService

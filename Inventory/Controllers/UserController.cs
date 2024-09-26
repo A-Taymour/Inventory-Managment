@@ -1,4 +1,4 @@
-﻿using Inventory.Service.Sevices;
+﻿using Inventory.Service.Sevices.UserService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Inventory.Controllers
@@ -34,7 +34,8 @@ namespace Inventory.Controllers
                 _UserService.Insert(User);
                 return RedirectToAction(nameof(GetAll));
             }
-            return View("Insert", User);
+       
+            return View("Register", User);
         }
 
         public IActionResult Update(int id)

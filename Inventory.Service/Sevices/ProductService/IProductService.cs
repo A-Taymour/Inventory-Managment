@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inventory.Service.Sevices
+namespace Inventory.Service.Sevices.ProductService
 {
     public interface IProductService
     {

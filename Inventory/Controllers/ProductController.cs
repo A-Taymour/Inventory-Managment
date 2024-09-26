@@ -1,6 +1,5 @@
 ﻿using Inventory.Models;
-using Inventory.Service.Sevices;
-using Inventory.Services;
+using Inventory.Service.Sevices.ProductService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -18,14 +17,14 @@ namespace Inventory.Controllers
             
         }
 
-        public IActionResult GetAllProducts()
+        public IActionResult GetAll()
         {
             var products = _productService.GetAll();
-            return View(products); 
+            return View("GetAll",products); 
         }
-        public IActionResult GetProduct(int id) { 
+        public IActionResult GetById(int id) { 
             var product = _productService.GetById(id);
-            return View(product);
+            return View("GetById",product);
         }
 
 
@@ -34,7 +33,7 @@ namespace Inventory.Controllers
             if (ModelState.IsValid)
             {
                 _productService.Insert(product);
-                return RedirectToAction(nameof(GetAllProducts));
+                return RedirectToAction(nameof(GetAll));
             }
             return View("Insert", product);
         }
@@ -55,7 +54,7 @@ namespace Inventory.Controllers
             if (ModelState.IsValid)
             {
                 _productService.Update(product);
-                return RedirectToAction(nameof(GetAllProducts));
+                return RedirectToAction(nameof(GetAll));
             }
             return View(product);
         }
@@ -64,7 +63,7 @@ namespace Inventory.Controllers
         public IActionResult Delete(int id)
         {
             _productService.Delete(id);
-            return RedirectToAction(nameof(GetAllProducts));
+            return RedirectToAction(nameof(GetAll));
         }
 
     }
