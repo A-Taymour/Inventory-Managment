@@ -30,11 +30,15 @@ namespace Inventory.Controllers
 
         public IActionResult Insert(Product product)
         {
+            Category cat=new Category();
             if (ModelState.IsValid)
+
             {
+                
                 _productService.Insert(product);
                 return RedirectToAction(nameof(GetAll));
             }
+            ViewBag.Category = cat;
             return View("Insert", product);
         }
 

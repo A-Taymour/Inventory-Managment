@@ -1,5 +1,4 @@
-﻿ 
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +7,7 @@ using Task.Repositories;
 
 namespace Inventory.Service.Sevices.SupplierService
 {
-    public class SupplierService:ISupplierService
+    public class SupplierService : ISupplierService
     {
 
 

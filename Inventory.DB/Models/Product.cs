@@ -1,4 +1,4 @@
-﻿using Inventory.DB.Models;
+﻿
 using Inventory.Models;
 using System.ComponentModel.DataAnnotations;
 
