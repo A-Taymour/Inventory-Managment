@@ -1,5 +1,4 @@
-﻿using Inventory.DB.Models;
-using Inventory.Models;
+﻿using Inventory.Models;
 using System.ComponentModel.DataAnnotations;
 
 public class Product
