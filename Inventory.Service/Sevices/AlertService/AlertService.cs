@@ -7,7 +7,7 @@ using Task.Repositories;
 
 namespace Inventory.Service.Sevices.AlertService
 {
-    public class AlertService
+    public class AlertService : IAlertService
     {
         private readonly IGenericRepository<Alert> _alertRepository;
 

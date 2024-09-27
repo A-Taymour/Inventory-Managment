@@ -1,4 +1,5 @@
 using Inventory.Data;
+using Inventory.Service.Sevices.AlertService;
 using Inventory.Service.Sevices.CategoryService;
 using Inventory.Service.Sevices.ProductService;
 using Inventory.Service.Sevices.SupplierService;
@@ -23,6 +24,8 @@ namespace Inventory
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<ISupplierService, SupplierService>();
             builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<IAlertService, AlertService>();
+
 
             builder.Services.AddDbContext<ApplicationDBcontext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
