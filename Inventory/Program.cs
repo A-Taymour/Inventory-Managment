@@ -1,5 +1,6 @@
 using Inventory.Data;
 using Inventory.Service.Sevices.CategoryService;
+using Inventory.Service.Sevices.ProductService;
 using Inventory.Service.Sevices.SupplierService;
 using Inventory.Service.Sevices.TransactionService;
 using Inventory.Service.Sevices.UserService;
@@ -21,6 +22,8 @@ namespace Inventory
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<ISupplierService, SupplierService>();
+            builder.Services.AddScoped<IProductService, ProductService>();
+
             builder.Services.AddDbContext<ApplicationDBcontext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
