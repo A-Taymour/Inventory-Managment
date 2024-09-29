@@ -1,4 +1,6 @@
-﻿using Inventory.Models;
+﻿using Inventory.DB.ViewModels;
+using Inventory.Models;
+using Inventory.Service.Sevices.CategoryService;
 using Inventory.Service.Sevices.ProductService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,35 +11,58 @@ namespace Inventory.Controllers
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
+        private readonly ICategoryService _CategoryService;
         
 
-        public ProductController(IProductService productService)
+        public ProductController(IProductService productService , ICategoryService CategoryService)
         {
             _productService = productService;
-            
-        }
+            _CategoryService = CategoryService;
+    }
 
-        public IActionResult GetAll()
+        [HttpGet]
+        public IActionResult Create()
         {
-            var products = _productService.GetAll();
-            return View("GetAll",products); 
+            CreateProductViewModel viewModel = new CreateProductViewModel();
+            {
+                viewModel.Categories = _CategoryService.GetAll();
+            }
+            return View(viewModel);
         }
-        public IActionResult GetById(int id) { 
-            var product = _productService.GetById(id);
-            return View("GetById",product);
-        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
 
-
-        public IActionResult Insert(Product product)
+        public async Task<IActionResult> Create(CreateProductViewModel vm)
         {
+            if (!ModelState.IsValid)
+            {
+                vm.Categories = _CategoryService.GetAll();
+                return View(vm);
+            }
+
+            await _productService.Insert(vm);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+
+
+
+        /*   public IActionResult Insert(Product product)
+        {
+            CreateProductViewModel viewModel = new CreateProductViewModel();
+            {
+                viewModel.Categories = (List<Category>)_CategoryService.GetAll();
+            }
             if (ModelState.IsValid)
             {
                 _productService.Insert(product);
                 return RedirectToAction(nameof(GetAll));
             }
-            return View("Insert", product);
+            return View("Insert", viewModel);
         }
-
+     */
         public IActionResult Update(int id)
         {
             var product = _productService.GetById(id);
@@ -58,7 +83,16 @@ namespace Inventory.Controllers
             }
             return View(product);
         }
-
+        public IActionResult GetAll()
+        {
+            var products = _productService.GetAll();
+            return View("GetAll", products);
+        }
+        public IActionResult GetById(int id)
+        {
+            var product = _productService.GetById(id);
+            return View("GetById", product);
+        }
 
         public IActionResult Delete(int id)
         {

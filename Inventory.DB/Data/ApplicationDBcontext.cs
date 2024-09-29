@@ -1,10 +1,11 @@
-﻿using Inventory.DB.Models;
+﻿
 using Inventory.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Inventory.Data
 {
+
     public partial class ApplicationDBcontext : IdentityDbContext
     {
         public ApplicationDBcontext(DbContextOptions<ApplicationDBcontext> options)

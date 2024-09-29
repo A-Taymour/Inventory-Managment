@@ -1,5 +1,6 @@
 using Inventory.Data;
 using Inventory.Service.Sevices.CategoryService;
+using Inventory.Service.Sevices.SupplierService;
 using Inventory.Service.Sevices.TransactionService;
 using Inventory.Service.Sevices.UserService;
 using Microsoft.AspNetCore.Identity;
@@ -19,6 +20,7 @@ namespace Inventory
             builder.Services.AddScoped<ITransactionService,TransactionService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<ISupplierService, SupplierService>();
             builder.Services.AddDbContext<ApplicationDBcontext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

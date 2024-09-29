@@ -1,0 +1,34 @@
+﻿  @model IEnumerable<Supplier>
+
+<h2>All Suppliers</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Supplier in Model)
+        {
+            <tr>
+                <td>@Supplier.Id</td>
+                <td>@Supplier.Name</td>
+                <td>@Supplier.Email</td>
+                <td>@Supplier.Phone</td>
+
+                <td>
+                    <a asp-action="Update" asp-route-id="@Supplier.Id">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@Supplier.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Insert">Add new Supplier</a>
