@@ -3078,8 +3078,11 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.8",
+          "Microsoft.AspNetCore.Identity.UI": "8.0.8",
           "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
+          "Microsoft.EntityFrameworkCore.Sqlite": "8.0.8",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.5"
         },
         "compile": {
           "bin/placeholder/Inventory.DB.dll": {}

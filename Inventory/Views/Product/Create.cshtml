@@ -1,0 +1,46 @@
+﻿ @using Inventory.DB.ViewModels;
+ @model Inventory.DB.ViewModels.CreateProductViewModel;
+@{
+	ViewData["Title"] = "Create";
+}
+ 
+<h2>Add Product</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>    
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>  
+    <div class="form-group">
+        <label asp-for="StockQuantity" class="control-label"></label>
+        <input asp-for="StockQuantity" class="form-control" />
+        <span asp-validation-for="StockQuantity" class="text-danger"></span>
+    </div>   
+    <div class="form-group">
+        <label asp-for="LowStockThreshold" class="control-label"></label>
+        <input asp-for="LowStockThreshold" class="form-control" />
+        <span asp-validation-for="LowStockThreshold" class="text-danger"></span>
+    </div>   
+    <div class="form-group">
+        <label asp-for="CategoryID" class="control-label"></label>
+        <select class="form-select" asp-for="CategoryID" asp-items="Model.categories"></select>
+        <span asp-validation-for="LowStockThreshold" class="text-danger"></span>
+    </div>   
+
+  
+  
+   
+    <div class="form-group">
+        <input type="submit" value="Insert" class="btn btn-primary" />
+    </div>
+</form>
+<div>
+    <a asp-action="GetAll">Back to List</a>
+</div>
+

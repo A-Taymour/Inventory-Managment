@@ -25,8 +25,6 @@ namespace Inventory
             builder.Services.AddScoped<ISupplierService, SupplierService>();
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<IAlertService, AlertService>();
-
-
             builder.Services.AddDbContext<ApplicationDBcontext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
