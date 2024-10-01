@@ -1,5 +1,7 @@
-﻿using Inventory.Service.Sevices.CategoryService;
+﻿using Inventory.DB.ViewModels;
+using Inventory.Service.Sevices.CategoryService;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Inventory.Controllers
 {
@@ -13,6 +15,38 @@ namespace Inventory.Controllers
             _CategoryService = CategoryService;
 
         }
+        [HttpGet]
+        public IActionResult Insert()
+        {
+           
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Insert(CategoryProductViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+              
+                var category = new Category
+                {
+                    CategoryName = viewModel.CategoryName
+                };
+
+                
+                _CategoryService.Insert(category);
+               
+                return RedirectToAction(nameof(GetAll));
+            }
+
+         
+            return View(viewModel);
+        }
+
+
+
+
+
+
 
         public IActionResult GetAll()
         {
@@ -26,7 +60,7 @@ namespace Inventory.Controllers
         }
 
 
-        public IActionResult Insert(Category category)
+     /*   public IActionResult Insert(Category category)
         {
             if (ModelState.IsValid)
             {
@@ -35,7 +69,7 @@ namespace Inventory.Controllers
             }
             return View(category);
         }
-
+     */
         public IActionResult Update(int id)
         {
             var category = _CategoryService.GetById(id);

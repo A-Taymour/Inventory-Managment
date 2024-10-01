@@ -3,6 +3,7 @@ using Inventory.Models;
 using Inventory.Service.Sevices.CategoryService;
 using Inventory.Service.Sevices.ProductService;
 using Inventory.Service.Sevices.SupplierService;
+using Inventory.Service.Sevices.UserService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -13,36 +14,43 @@ namespace Inventory.Controllers
         private readonly IProductService _productService;
         private readonly ICategoryService _CategoryService;
         private readonly ISupplierService _SupplierService;
+        private readonly IUserService _UserService;
 
 
-        public ProductController(IProductService productService, ICategoryService CategoryService, ISupplierService SupplierService)
+        public ProductController(IProductService productService, ICategoryService CategoryService, ISupplierService SupplierService, IUserService UserService)
         {
             _productService = productService;
             _SupplierService = SupplierService;
             _CategoryService = CategoryService;
+            _UserService= UserService;
         }
 
 
         [HttpGet]
         public IActionResult Create()
         {
-            var categories = _CategoryService.GetAll(); // Assuming this returns List<Category>
-            var Suppliers = _SupplierService.GetAll(); // Assuming this returns List<Category>
-
-            // Transform categories into SelectListItems
+            var categories = _CategoryService.GetAll(); 
+            var Suppliers = _SupplierService.GetAll();  
+            var Users = _UserService.GetAll();  
+         
             var selectListItems = categories.Select(c => new SelectListItem
             {
-                Text = c.CategoryName, // Display name
+                Text = c.CategoryName, 
             }).ToList();  
             var selectListItem = Suppliers.Select(c => new SelectListItem
             {
-                Text = c.Name, // Display name
+                Text = c.Name, 
+            }).ToList();
+            var selectUserItem = Users.Select(c => new SelectListItem
+            {
+                Text = c.Name,  
             }).ToList();
 
             var viewModel = new CreateProductViewModel
             {
                 categories = selectListItems,
-                Suppliers= selectListItem// Populate categories for the dropdown
+                Suppliers= selectListItem, 
+                Users= selectUserItem 
             };
 
             return View(viewModel);
@@ -62,6 +70,10 @@ namespace Inventory.Controllers
                 vm.Suppliers = Supplier.Select(c => new SelectListItem
                 {
                 }).ToList();
+                     var User = _UserService.GetAll();
+                 vm.Users = User.Select(c => new SelectListItem
+               {
+                 }).ToList();
 
                 return View(vm);
             }
@@ -73,8 +85,11 @@ namespace Inventory.Controllers
                 StockQuantity = vm.StockQuantity,
                 LowStockThreshold = vm.LowStockThreshold,
                 CategoryID = vm.CategoryID,
-                SupplierID=vm.SupplierID
-
+                SupplierID=vm.SupplierID,
+                UserID = vm.UserID,
+                CreatedAt=vm.CreatedAt,
+                UpdatedAt = vm.UpdatedAt
+              
             };
 
             _productService.Add(product);
