@@ -10,7 +10,7 @@ namespace Inventory.Service.Sevices.ProductService
     {
         IEnumerable<Product> GetAll();
         Product GetById(int id);
-        void Insert(Product product);
+        void Add(Product product);
         void Update(Product product);
         void Delete(int id);
     }

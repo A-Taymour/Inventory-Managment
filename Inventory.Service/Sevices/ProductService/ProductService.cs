@@ -25,7 +25,7 @@ namespace Inventory.Service.Sevices.ProductService
             return _productRepository.GetById(id);
         }
 
-        public void Insert(Product product)
+        public void Add(Product product)
         {
             _productRepository.Add(product);
         }

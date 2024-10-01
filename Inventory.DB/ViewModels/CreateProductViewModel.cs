@@ -27,19 +27,17 @@ namespace Inventory.DB.ViewModels
         
         public int LowStockThreshold { get; set; }
 
-        [Required]
-        public int UserID { get; set; }
-        public User User { get; set; }
-
-        [Required]
+ 
+        
         [Display(Name = "Category")]
         public int CategoryID { get; set; }
         
         public IEnumerable<SelectListItem> categories { get; set; }
 
-        [Required]
+      
         public int SupplierID { get; set; }
-        public Supplier supplier { get; set; }
+        public IEnumerable<SelectListItem> Suppliers { get; set; }
+        //public Supplier supplier { get; set; }
 
         public ICollection<Alert> Alerts { get; set; } = new List<Alert>();
         public ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();

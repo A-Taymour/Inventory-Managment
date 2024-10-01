@@ -2,6 +2,7 @@
 using Inventory.Models;
 using Inventory.Service.Sevices.CategoryService;
 using Inventory.Service.Sevices.ProductService;
+using Inventory.Service.Sevices.SupplierService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -11,28 +12,37 @@ namespace Inventory.Controllers
     {
         private readonly IProductService _productService;
         private readonly ICategoryService _CategoryService;
-        
+        private readonly ISupplierService _SupplierService;
 
-        public ProductController(IProductService productService , ICategoryService CategoryService)
+
+        public ProductController(IProductService productService, ICategoryService CategoryService, ISupplierService SupplierService)
         {
             _productService = productService;
+            _SupplierService = SupplierService;
             _CategoryService = CategoryService;
-    }
+        }
+
 
         [HttpGet]
         public IActionResult Create()
         {
             var categories = _CategoryService.GetAll(); // Assuming this returns List<Category>
+            var Suppliers = _SupplierService.GetAll(); // Assuming this returns List<Category>
 
             // Transform categories into SelectListItems
             var selectListItems = categories.Select(c => new SelectListItem
             {
                 Text = c.CategoryName, // Display name
+            }).ToList();  
+            var selectListItem = Suppliers.Select(c => new SelectListItem
+            {
+                Text = c.Name, // Display name
             }).ToList();
 
             var viewModel = new CreateProductViewModel
             {
-                categories = selectListItems // Populate categories for the dropdown
+                categories = selectListItems,
+                Suppliers= selectListItem// Populate categories for the dropdown
             };
 
             return View(viewModel);
@@ -48,6 +58,10 @@ namespace Inventory.Controllers
                 vm.categories = categories.Select(c => new SelectListItem
                 {
                 }).ToList();
+                  var Supplier = _SupplierService.GetAll();
+                vm.Suppliers = Supplier.Select(c => new SelectListItem
+                {
+                }).ToList();
 
                 return View(vm);
             }
@@ -59,10 +73,11 @@ namespace Inventory.Controllers
                 StockQuantity = vm.StockQuantity,
                 LowStockThreshold = vm.LowStockThreshold,
                 CategoryID = vm.CategoryID,
-                // Set other properties as needed
+                SupplierID=vm.SupplierID
+
             };
 
-            _productService.Insert(product);
+            _productService.Add(product);
 
             return RedirectToAction(nameof(GetAll));
         }
@@ -70,25 +85,10 @@ namespace Inventory.Controllers
 
 
 
-
-        /*   public IActionResult Insert(Product product)
-        {
-            CreateProductViewModel viewModel = new CreateProductViewModel();
-            {
-                viewModel.Categories = (List<Category>)_CategoryService.GetAll();
-            }
-            if (ModelState.IsValid)
-            {
-                _productService.Insert(product);
-                return RedirectToAction(nameof(GetAll));
-            }
-            return View("Insert", viewModel);
-        }
-     */
         public IActionResult Update(int id)
         {
             var product = _productService.GetById(id);
-            if ( product == null)
+            if (product == null)
             {
                 return NotFound("this Product doesn't exist");
             }
