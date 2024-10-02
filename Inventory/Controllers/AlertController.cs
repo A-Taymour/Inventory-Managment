@@ -1,19 +1,23 @@
-﻿using Inventory.Service.Sevices.AlertService;
+﻿using Inventory.DB.ViewModels;
+using Inventory.Service.Sevices.AlertService;
+using Inventory.Service.Sevices.ProductService;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Inventory.Controllers
 {
     public class AlertController : Controller
     {
         private readonly IAlertService _alertService;
+        private readonly IProductService _productService;
 
 
-        public AlertController(IAlertService alertService)
+        public AlertController(IAlertService alertService, IProductService productService)
         {
             _alertService = alertService;
-
+            _productService = productService;
         }
-        
+
         public IActionResult GetAll()
         {
             var alerts = _alertService.GetAll();
@@ -25,17 +29,50 @@ namespace Inventory.Controllers
             return View("GetById", alert);
         }
 
-
-        public IActionResult Insert(Alert alert)
+        [HttpGet]
+        public IActionResult Create()
         {
-            if (ModelState.IsValid)
-            {
-                _alertService.Insert(alert);
-                return RedirectToAction(nameof(GetAll));
-            }
-            return View("Insert", alert);
-        }
+            var products = _productService.GetAll();
 
+            var selectListItems = products.Select(c => new SelectListItem
+            {
+                Text = c.Name,
+            }).ToList();
+
+            var viewModel = new AlertViewModel
+            {
+                products = selectListItems,
+            };
+
+            return View(viewModel);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> Create(AlertViewModel vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                var products = _productService.GetAll();
+                vm.products = products.Select(c => new SelectListItem
+                {
+                }).ToList();
+
+                return View(vm);
+            }
+
+            var alert = new Alert
+            {
+                AlertDate = vm.AlertDate,
+                Description = vm.Description,
+                IsResolved = vm.IsResolved,
+
+            };
+
+            _alertService.Insert(alert);
+
+            return RedirectToAction(nameof(GetAll));
+        }
 
 
         public IActionResult Delete(int id)
