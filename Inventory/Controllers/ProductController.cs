@@ -27,7 +27,7 @@ namespace Inventory.Controllers
 
 
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult Insert()
         {
             var categories = _CategoryService.GetAll();
             var Suppliers = _SupplierService.GetAll();
@@ -60,36 +60,13 @@ namespace Inventory.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ProductViewModel vm)
+        public async Task<IActionResult> Insert(ProductViewModel vm)
         {
-            vm.Users = null;
-            vm.Suppliers = null;
-            vm.categories = null;
+            //vm.Users = null;
+            //vm.Suppliers = null;
+            //vm.categories = null;
 
-          //  if (!ModelState.IsValid)
-            //{
-                //var categories = _CategoryService.GetAll();
-                //vm.categories = categories.Select(c => new SelectListItem
-                //{
-                //    Value = c.ID.ToString(),
-                //    Text = c.CategoryName,
-                //}).ToList();
-                //var Supplier = _SupplierService.GetAll();
-                //vm.Suppliers = Supplier.Select(c => new SelectListItem
-                //{
-                //    Value = c.Id.ToString(),
-                //    Text = c.Name,
-                //}).ToList();
-                //var User = _UserService.GetAll();
-                //vm.Users = User.Select(c => new SelectListItem
-                //{
-                //    Value = c.ID.ToString(),
-                //    Text = c.Name,
-                //}).ToList();
-
-               // return View(vm);
-          //  }
-
+      
             var product = new Product
             {
                 Name = vm.Name,
@@ -117,16 +94,37 @@ namespace Inventory.Controllers
             {
                 return NotFound("this Product doesn't exist");
             }
+            var categories = _CategoryService.GetAll();
+            var Suppliers = _SupplierService.GetAll();
+            var Users = _UserService.GetAll();
+
+            var selectCategoryItems = categories.Select(c => new SelectListItem
+            {
+                Value = c.ID.ToString(),
+                Text = c.CategoryName,
+                Selected = c.ID == Product.CategoryID
+            }).ToList();
+            var selecSupplierItem = Suppliers.Select(c => new SelectListItem
+            {
+                Value = c.Id.ToString(),
+                Text = c.Name,
+            }).ToList();
+            var selectUserItem = Users.Select(c => new SelectListItem
+            {
+                Value = c.ID.ToString(),
+                Text = c.Name,
+            }).ToList();
+
+           
 
             var viewModel = new ProductViewModel
             {
                 Name = Product.Name,
                 Description = Product.Description,
-                Price = Product.Price,
-                CreatedAt = Product.CreatedAt,
-                UpdatedAt = Product.UpdatedAt,
-                StockQuantity = Product.StockQuantity,
-                LowStockThreshold = Product.LowStockThreshold,
+             
+                categories = selectCategoryItems,
+                Suppliers = selecSupplierItem,
+                Users = selectUserItem
             };
 
             return View(viewModel);
@@ -135,8 +133,6 @@ namespace Inventory.Controllers
         [HttpPost]
         public IActionResult Update(int id, ProductViewModel viewModel)
         {
-            if (ModelState.IsValid)
-            {
                 var existingProduct = _productService.GetById(id);
                 if (existingProduct == null)
                 {
@@ -150,24 +146,28 @@ namespace Inventory.Controllers
                 existingProduct.UpdatedAt = viewModel.UpdatedAt;
                 existingProduct.StockQuantity = viewModel.StockQuantity;
                 existingProduct.LowStockThreshold = viewModel.LowStockThreshold;
+                existingProduct.CategoryID = viewModel.CategoryID;
+                existingProduct.UserID = viewModel.UserID;
+                existingProduct.SupplierID = viewModel.SupplierID;
+
 
                 _productService.Update(existingProduct);
 
                 return RedirectToAction(nameof(GetAll));
-            }
-            return View(viewModel);
         }
         public IActionResult GetAll()
         {
             var products = _productService.GetAll();
             return View("GetAll", products);
         }
+
         public IActionResult GetById(int id)
         {
             var product = _productService.GetById(id);
            
             return View("GetById", product);
         }
+
 
         public IActionResult Delete(int id)
         {

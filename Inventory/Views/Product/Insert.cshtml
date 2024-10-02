@@ -1,12 +1,12 @@
 ﻿ @using Inventory.DB.ViewModels;
  @model Inventory.DB.ViewModels.ProductViewModel;
 @{
-	ViewData["Title"] = "Create";
+    ViewData["Title"] = "Insert";
 }
  
 <h2>Add Product</h2>
 
-<form asp-action="Create" method="post">
+<form asp-action="Insert" method="post">
     <div class="form-group">
         <label asp-for="Name" class="control-label"></label>
         <input asp-for="Name" class="form-control" />

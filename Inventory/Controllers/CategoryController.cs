@@ -1,5 +1,6 @@
 ﻿using Inventory.DB.ViewModels;
 using Inventory.Service.Sevices.CategoryService;
+using Inventory.Service.Sevices.ProductService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,12 +9,14 @@ namespace Inventory.Controllers
     public class CategoryController : Controller
     {
         private readonly ICategoryService _CategoryService;
+        private readonly IProductService _productService;
 
 
-        public CategoryController(ICategoryService CategoryService)
+
+        public CategoryController(ICategoryService CategoryService, IProductService productService)
         {
             _CategoryService = CategoryService;
-
+            _productService = productService;
         }
         [HttpGet]
         public IActionResult Insert()
@@ -45,6 +48,7 @@ namespace Inventory.Controllers
         
         {
             var categories = _CategoryService.GetAll();
+            
             return View(categories);
         }
         public IActionResult GetById(int id)
@@ -52,6 +56,7 @@ namespace Inventory.Controllers
             var category = _CategoryService.GetById(id);
             return View("GetById", category);
         }
+
 
         [HttpGet]
         public IActionResult Update(int id)
