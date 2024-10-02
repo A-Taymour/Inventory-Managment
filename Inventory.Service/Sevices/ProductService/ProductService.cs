@@ -24,6 +24,10 @@ namespace Inventory.Service.Sevices.ProductService
         {
             return _productRepository.GetById(id);
         }
+        public IEnumerable< Product> GetByCategoryId(int Categoryid)
+        {
+            return _productRepository.Find(x=>x.CategoryID== Categoryid);
+        }
 
         public void Add(Product product)
         {

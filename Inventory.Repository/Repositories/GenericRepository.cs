@@ -1,5 +1,6 @@
 ﻿using Inventory.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace Task.Repositories
 {
@@ -30,6 +31,12 @@ namespace Task.Repositories
           _dbSet.Add(entity);
           _context.SaveChanges();
           
+        }
+        public IEnumerable<TEntity> Find(Expression<Func<TEntity,bool>> predicate)
+        {
+
+           return _dbSet.Where(predicate);
+
         }
 
         public void Update(TEntity entity)

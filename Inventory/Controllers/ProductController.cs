@@ -60,32 +60,35 @@ namespace Inventory.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public async Task<IActionResult> Create(ProductViewModel vm)
         {
-            if (!ModelState.IsValid)
-            {
-                var categories = _CategoryService.GetAll();
-                vm.categories = categories.Select(c => new SelectListItem
-                {
-                    Value = c.ID.ToString(),
-                    Text = c.CategoryName,
-                }).ToList();
-                var Supplier = _SupplierService.GetAll();
-                vm.Suppliers = Supplier.Select(c => new SelectListItem
-                {
-                    Value = c.Id.ToString(),
-                    Text = c.Name,
-                }).ToList();
-                var User = _UserService.GetAll();
-                vm.Users = User.Select(c => new SelectListItem
-                {
-                    Value = c.ID.ToString(),
-                    Text = c.Name,
-                }).ToList();
+            vm.Users = null;
+            vm.Suppliers = null;
+            vm.categories = null;
 
-                return View(vm);
-            }
+          //  if (!ModelState.IsValid)
+            //{
+                //var categories = _CategoryService.GetAll();
+                //vm.categories = categories.Select(c => new SelectListItem
+                //{
+                //    Value = c.ID.ToString(),
+                //    Text = c.CategoryName,
+                //}).ToList();
+                //var Supplier = _SupplierService.GetAll();
+                //vm.Suppliers = Supplier.Select(c => new SelectListItem
+                //{
+                //    Value = c.Id.ToString(),
+                //    Text = c.Name,
+                //}).ToList();
+                //var User = _UserService.GetAll();
+                //vm.Users = User.Select(c => new SelectListItem
+                //{
+                //    Value = c.ID.ToString(),
+                //    Text = c.Name,
+                //}).ToList();
+
+               // return View(vm);
+          //  }
 
             var product = new Product
             {
@@ -162,6 +165,7 @@ namespace Inventory.Controllers
         public IActionResult GetById(int id)
         {
             var product = _productService.GetById(id);
+           
             return View("GetById", product);
         }
 

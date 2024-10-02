@@ -13,5 +13,6 @@ namespace Inventory.Service.Sevices.ProductService
         void Add(Product product);
         void Update(Product product);
         void Delete(int id);
+        IEnumerable<Product> GetByCategoryId(int Categoryid);
     }
 }
