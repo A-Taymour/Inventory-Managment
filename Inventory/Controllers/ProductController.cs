@@ -46,7 +46,7 @@ namespace Inventory.Controllers
                 Text = c.Name,  
             }).ToList();
 
-            var viewModel = new CreateProductViewModel
+            var viewModel = new ProductViewModel
             {
                 categories = selectListItems,
                 Suppliers= selectListItem, 
@@ -58,7 +58,7 @@ namespace Inventory.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Create(CreateProductViewModel vm)
+        public async Task<IActionResult> Create(ProductViewModel vm)
         {
             if (!ModelState.IsValid)
             {
@@ -84,9 +84,6 @@ namespace Inventory.Controllers
                 Price = vm.Price,
                 StockQuantity = vm.StockQuantity,
                 LowStockThreshold = vm.LowStockThreshold,
-                CategoryID = vm.CategoryID,
-                SupplierID=vm.SupplierID,
-                UserID = vm.UserID,
                 CreatedAt=vm.CreatedAt,
                 UpdatedAt = vm.UpdatedAt
               
@@ -96,9 +93,6 @@ namespace Inventory.Controllers
 
             return RedirectToAction(nameof(GetAll));
         }
-
-
-
 
         public IActionResult Update(int id)
         {
