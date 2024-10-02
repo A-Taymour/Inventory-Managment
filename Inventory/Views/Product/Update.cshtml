@@ -1,9 +1,9 @@
-﻿@model Product
+﻿ @using Inventory.DB.ViewModels;
+ @model Inventory.DB.ViewModels.ProductViewModel;
 
 <h2>Edit Product</h2>
 
 <form asp-controller="Product" asp-action="Update" method="post">
-    <input type="hidden" asp-for="ID" />
 
     <!-- Validation Summary -->
     <div asp-validation-summary="All" class="text-danger"></div>
