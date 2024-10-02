@@ -1,4 +1,5 @@
-﻿using Inventory.Service.Sevices.UserService;
+﻿using Inventory.DB.ViewModels;
+using Inventory.Service.Sevices.UserService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Inventory.Controllers
@@ -26,18 +27,36 @@ namespace Inventory.Controllers
             return View(User);
         }
 
+        [HttpGet]
+        public IActionResult Insert()
+        {
 
-        public IActionResult Insert(User User)
+            return View();
+        }
+        [HttpPost]
+
+        public IActionResult Insert(UserViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                _UserService.Insert(User);
+
+                var user = new User
+                {
+                    Name = viewModel.Name,
+                    Email = viewModel.Email,
+                    Password = viewModel.Password,
+                    Phone = viewModel.Phone,
+                    IsAdmin = viewModel.IsAdmin
+                };
+
+                _UserService.Insert(user);
+
                 return RedirectToAction(nameof(GetAll));
             }
-       
-            return View(User);
+            return View(viewModel);
         }
 
+        [HttpGet]
         public IActionResult Update(int id)
         {
             var User = _UserService.GetById(id);
@@ -45,21 +64,42 @@ namespace Inventory.Controllers
             {
                 return NotFound("this User doesn't exist");
             }
-            return View(User);
+            var viewModel = new UserViewModel
+            {
+                Name = User.Name,
+                Email = User.Email,
+                Phone = User.Phone,
+                Password = User.Password,
+                IsAdmin = User.IsAdmin
+
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]
-        public IActionResult Update(User User)
+        public IActionResult Update(int id, UserViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                _UserService.Update(User);
+                var existingUser = _UserService.GetById(id);
+                if (existingUser == null)
+                {
+                    return NotFound("This supplier doesn't exist.");
+                }
+
+                existingUser.Name = viewModel.Name;
+                existingUser.Email = viewModel.Email;
+                existingUser.Phone = viewModel.Phone;
+                existingUser.Password = viewModel.Password;
+                existingUser.IsAdmin = viewModel.IsAdmin;
+
+                _UserService.Update(existingUser);
+
                 return RedirectToAction(nameof(GetAll));
             }
-            return View(User);
+            return View(viewModel);
         }
-
-
         public IActionResult Delete(int id)
         {
             _UserService.Delete(id);
