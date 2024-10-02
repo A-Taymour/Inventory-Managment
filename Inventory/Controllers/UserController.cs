@@ -85,7 +85,7 @@ namespace Inventory.Controllers
                 var existingUser = _UserService.GetById(id);
                 if (existingUser == null)
                 {
-                    return NotFound("This supplier doesn't exist.");
+                    return NotFound("This User doesn't exist.");
                 }
 
                 existingUser.Name = viewModel.Name;
