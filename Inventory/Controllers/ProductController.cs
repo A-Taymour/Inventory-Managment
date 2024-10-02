@@ -22,35 +22,38 @@ namespace Inventory.Controllers
             _productService = productService;
             _SupplierService = SupplierService;
             _CategoryService = CategoryService;
-            _UserService= UserService;
+            _UserService = UserService;
         }
 
 
         [HttpGet]
         public IActionResult Create()
         {
-            var categories = _CategoryService.GetAll(); 
-            var Suppliers = _SupplierService.GetAll();  
-            var Users = _UserService.GetAll();  
-         
-            var selectListItems = categories.Select(c => new SelectListItem
+            var categories = _CategoryService.GetAll();
+            var Suppliers = _SupplierService.GetAll();
+            var Users = _UserService.GetAll();
+
+            var selectCategoryItems = categories.Select(c => new SelectListItem
             {
-                Text = c.CategoryName, 
-            }).ToList();  
-            var selectListItem = Suppliers.Select(c => new SelectListItem
+                Value = c.ID.ToString(),
+                Text = c.CategoryName,
+            }).ToList();
+            var selecSupplierItem = Suppliers.Select(c => new SelectListItem
             {
-                Text = c.Name, 
+                Value = c.Id.ToString(),
+                Text = c.Name,
             }).ToList();
             var selectUserItem = Users.Select(c => new SelectListItem
             {
-                Text = c.Name,  
+                Value = c.ID.ToString(),
+                Text = c.Name,
             }).ToList();
 
             var viewModel = new ProductViewModel
             {
-                categories = selectListItems,
-                Suppliers= selectListItem, 
-                Users= selectUserItem 
+                categories = selectCategoryItems,
+                Suppliers = selecSupplierItem,
+                Users = selectUserItem
             };
 
             return View(viewModel);
@@ -65,15 +68,21 @@ namespace Inventory.Controllers
                 var categories = _CategoryService.GetAll();
                 vm.categories = categories.Select(c => new SelectListItem
                 {
+                    Value = c.ID.ToString(),
+                    Text = c.CategoryName,
                 }).ToList();
-                  var Supplier = _SupplierService.GetAll();
+                var Supplier = _SupplierService.GetAll();
                 vm.Suppliers = Supplier.Select(c => new SelectListItem
                 {
+                    Value = c.Id.ToString(),
+                    Text = c.Name,
                 }).ToList();
-                     var User = _UserService.GetAll();
-                 vm.Users = User.Select(c => new SelectListItem
-               {
-                 }).ToList();
+                var User = _UserService.GetAll();
+                vm.Users = User.Select(c => new SelectListItem
+                {
+                    Value = c.ID.ToString(),
+                    Text = c.Name,
+                }).ToList();
 
                 return View(vm);
             }
@@ -83,14 +92,14 @@ namespace Inventory.Controllers
                 Name = vm.Name,
                 Price = vm.Price,
                 Description = vm.Description,
-                CategoryID = 1,
-                SupplierID = 1 ,
-                UserID = 1,
+                CategoryID = vm.CategoryID,
+                SupplierID = vm.SupplierID,
+                UserID = vm.UserID,
                 StockQuantity = vm.StockQuantity,
                 LowStockThreshold = vm.LowStockThreshold,
-                CreatedAt=vm.CreatedAt,
+                CreatedAt = vm.CreatedAt,
                 UpdatedAt = vm.UpdatedAt
-              
+
             };
 
             _productService.Add(product);

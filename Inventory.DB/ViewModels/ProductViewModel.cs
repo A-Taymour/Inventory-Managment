@@ -34,6 +34,10 @@ namespace Inventory.DB.ViewModels
 
         public IEnumerable<SelectListItem> categories { get; set; }
         [Display(Name = "Supplier")]
+        public int UserID { get; set; }
+        public int CategoryID { get; set; }
+        public int SupplierID { get; set; }
+
 
         public IEnumerable<SelectListItem> Suppliers { get; set; }
         public ICollection<Alert> Alerts { get; set; } = new List<Alert>();
