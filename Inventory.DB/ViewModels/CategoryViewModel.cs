@@ -7,15 +7,9 @@ using System.Threading.Tasks;
 
 namespace Inventory.DB.ViewModels
 {
-    public class CategoryProductViewModel
+    public class CategoryViewModel
     {
-        [Required]
-        [MinLength(3), MaxLength(50)]
-
         public string CategoryName { get; set; }
-
-        [Required]
-        [MinLength(20), MaxLength(200)]
         public string Description { get; set; } = "sssssssssssssssssssssssssss";
     }
 }

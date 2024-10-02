@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\depi\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {}
+    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {}
   },
   "projects": {
-    "E:\\depi\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
+    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\depi\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
+        "projectUniqueName": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
         "projectName": "Inventory.DB",
-        "projectPath": "E:\\depi\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
-        "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
-        "outputPath": "E:\\depi\\Inventory-Managment\\Inventory.DB\\obj\\",
+        "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
+        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
+        "outputPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -93,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace Inventory.DB.ViewModels
 {
     [Keyless]
-    public class CreateProductViewModel
+    public class ProductViewModel
     {
 
         [Required]
@@ -27,16 +27,14 @@ namespace Inventory.DB.ViewModels
 
         public int LowStockThreshold { get; set; }
 
-        public int UserID { get; set; }
-         
-         public IEnumerable<SelectListItem> Users { get; set; }
+        [Display(Name = "User")]
+
+        public IEnumerable<SelectListItem> Users { get; set; }
         [Display(Name = "Category")]
-        public int CategoryID { get; set; }
 
         public IEnumerable<SelectListItem> categories { get; set; }
+        [Display(Name = "Supplier")]
 
-
-        public int SupplierID { get; set; }
         public IEnumerable<SelectListItem> Suppliers { get; set; }
         public ICollection<Alert> Alerts { get; set; } = new List<Alert>();
         public ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
