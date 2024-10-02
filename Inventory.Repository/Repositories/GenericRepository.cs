@@ -26,15 +26,10 @@ namespace Task.Repositories
 
         public void Add(TEntity entity)
         {
-            try
-            {
-                _dbSet.Add(entity);
-                _context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error saving entity: {ex.Message}");
-            }
+          
+          _dbSet.Add(entity);
+          _context.SaveChanges();
+          
         }
 
         public void Update(TEntity entity)

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Alert>
+
+<h2>Alert List</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Product</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ID</td>
+                <td>@product.Description</td>
+                <td>@product.ProductID</td>
+
+                <td>
+                    <a asp-action="Delete" asp-route-id="@product.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -82,6 +82,9 @@ namespace Inventory.Controllers
             {
                 Name = vm.Name,
                 Price = vm.Price,
+                CategoryID = 1,
+                SupplierID = 1 ,
+                UserID = 3,
                 StockQuantity = vm.StockQuantity,
                 LowStockThreshold = vm.LowStockThreshold,
                 CreatedAt=vm.CreatedAt,
