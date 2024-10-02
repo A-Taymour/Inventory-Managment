@@ -1,8 +1,9 @@
-﻿@model Transaction
+﻿ @using Inventory.DB.ViewModels;
+ @model Inventory.DB.ViewModels.TransactionViewModel;
 
 <h2>Create New Transaction</h2>
 
-<form asp-action="Insert">
+<form asp-action="Insert" method="post">
     <div class="form-group">
         <label asp-for="TransactionType" class="control-label"></label>
         <input asp-for="TransactionType" class="form-control" />
@@ -17,6 +18,26 @@
         <label asp-for="TransactionDate" class="control-label"></label>
         <input asp-for="TransactionDate" class="form-control" />
         <span asp-validation-for="TransactionDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="products" class="control-label"></label>
+        <select class="form-select" asp-for="products" asp-items="Model.products"></select>
+        <span asp-validation-for="products" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Users" class="control-label"></label>
+        <select class="form-select" asp-for="Users" asp-items="Model.Users"></select>
+        <span asp-validation-for="Users" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ProductID" class="control-label"></label>
+        <select class="form-select" asp-for="products" asp-items="Model.products"></select>
+        <span asp-validation-for="ProductID" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UserID" class="control-label"></label>
+        <select class="form-select" asp-for="Users" asp-items="Model.Users"></select>
+        <span asp-validation-for="UserID" class="text-danger"></span>
     </div>
     <div class="form-group">
         <input type="submit" value="Insert" class="btn btn-primary" />
