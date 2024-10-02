@@ -21,8 +21,9 @@ namespace Inventory.Controllers
            
             return View();
         }
+
         [HttpPost]
-        public IActionResult Insert(CategoryProductViewModel viewModel)
+        public IActionResult Insert(CategoryViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
@@ -32,21 +33,12 @@ namespace Inventory.Controllers
                     CategoryName = viewModel.CategoryName
                 };
 
-                
                 _CategoryService.Insert(category);
                
                 return RedirectToAction(nameof(GetAll));
             }
-
-         
             return View(viewModel);
         }
-
-
-
-
-
-
 
         public IActionResult GetAll()
         {
@@ -59,38 +51,43 @@ namespace Inventory.Controllers
             return View("GetById", category);
         }
 
-
-     /*   public IActionResult Insert(Category category)
-        {
-            if (ModelState.IsValid)
-            {
-                _CategoryService.Insert(category);
-                return RedirectToAction(nameof(GetAll));
-            }
-            return View(category);
-        }
-     */
+        [HttpGet]
         public IActionResult Update(int id)
         {
-            var category = _CategoryService.GetById(id);
-            if (category == null)
+            var Category = _CategoryService.GetById(id);
+            if (Category == null)
             {
                 return NotFound("this Category doesn't exist");
             }
-            return View(category);
+            var viewModel = new CategoryViewModel
+            {
+                CategoryName = Category.CategoryName,
+                Description = Category.Description,
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]
-        public IActionResult Update(Category category)
+        public IActionResult Update(int id, CategoryViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                _CategoryService.Update(category);
+                var existingCategory = _CategoryService.GetById(id);
+                if (existingCategory == null)
+                {
+                    return NotFound("This Category doesn't exist.");
+                }
+
+                existingCategory.CategoryName = viewModel.CategoryName;
+                existingCategory.Description = viewModel.Description;
+
+                _CategoryService.Update(existingCategory);
+
                 return RedirectToAction(nameof(GetAll));
             }
-            return View(category);
+            return View(viewModel);
         }
-
 
         public IActionResult Delete(int id)
         {
