@@ -1,3 +1,4 @@
+using Inventory.DB.ViewModels;
 using Inventory.Service.Sevices.ProductService;
 using Inventory.Service.Sevices.SupplierService;
 using Microsoft.AspNetCore.Mvc;
@@ -26,17 +27,35 @@ namespace Inventory.Controllers
             return View(Supplier);
         }
 
+        [HttpGet]
+        public IActionResult Insert()
+        {
 
-        public IActionResult Insert(Supplier Supplier)
+            return View();
+        }
+        [HttpPost]
+
+        public IActionResult Insert(SupplierViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                _SupplierService.Insert(Supplier);
+
+                var supplier = new Supplier
+                {
+                    Name = viewModel.Name,
+                    Email = viewModel.Email,
+                    Password = viewModel.Password,
+                    Phone = viewModel.Phone
+                };
+
+                _SupplierService.Insert(supplier);
+
                 return RedirectToAction(nameof(GetAll));
             }
-            return View("Insert",Supplier);
+            return View(viewModel);
         }
 
+        [HttpGet]
         public IActionResult Update(int id)
         {
             var Supplier = _SupplierService.GetById(id);
@@ -44,20 +63,39 @@ namespace Inventory.Controllers
             {
                 return NotFound("this Supplier doesn't exist");
             }
-            return View(Supplier);
+            var viewModel = new SupplierViewModel
+            {
+                Name = Supplier.Name,
+                Email = Supplier.Email,
+                Phone = Supplier.Phone,
+                Password = Supplier.Password 
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]
-        public IActionResult Update(Supplier Supplier)
+        public IActionResult Update(int id, SupplierViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                _SupplierService.Update(Supplier);
+                var existingSupplier = _SupplierService.GetById(id);
+                if (existingSupplier == null)
+                {
+                    return NotFound("This supplier doesn't exist.");
+                }
+
+                existingSupplier.Name = viewModel.Name;
+                existingSupplier.Email = viewModel.Email;
+                existingSupplier.Phone = viewModel.Phone;
+                existingSupplier.Password = viewModel.Password;
+
+                _SupplierService.Update(existingSupplier);
+
                 return RedirectToAction(nameof(GetAll));
             }
-            return View(Supplier);
+            return View(viewModel);
         }
-
 
         public IActionResult Delete(int id)
         {
