@@ -30,7 +30,8 @@ namespace Inventory.Controllers
               
                 var category = new Category
                 {
-                    CategoryName = viewModel.CategoryName
+                    CategoryName = viewModel.CategoryName,
+                     Description = viewModel.Description
                 };
 
                 _CategoryService.Insert(category);
@@ -41,6 +42,7 @@ namespace Inventory.Controllers
         }
 
         public IActionResult GetAll()
+        
         {
             var categories = _CategoryService.GetAll();
             return View(categories);

@@ -10,6 +10,6 @@ namespace Inventory.DB.ViewModels
     public class CategoryViewModel
     {
         public string CategoryName { get; set; }
-        public string Description { get; set; } = "sssssssssssssssssssssssssss";
+        public string Description { get; set; } 
     }
 }

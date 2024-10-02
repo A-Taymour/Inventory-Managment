@@ -9,7 +9,7 @@ public class Product
     public string Name { get; set; }
     [Required]
     [MinLength(20), MaxLength(200)]
-    public string Description { get; set; } = "sekosekosekosekosekosekosekosekoseko";
+    public string Description { get; set; }
     [Required]
 
     public decimal Price { get; set; }

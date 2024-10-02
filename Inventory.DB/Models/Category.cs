@@ -11,6 +11,6 @@ public class Category
     public string CategoryName { get; set; }
     [Required]
     [MinLength(20), MaxLength(200)]
-    public string Description { get; set; } = "sssssssssssssssssssssssssss";
+    public string Description { get; set; }
     public ICollection<Product> Products { get; set; }
 }

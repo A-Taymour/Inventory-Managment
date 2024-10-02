@@ -82,9 +82,10 @@ namespace Inventory.Controllers
             {
                 Name = vm.Name,
                 Price = vm.Price,
+                Description = vm.Description,
                 CategoryID = 1,
                 SupplierID = 1 ,
-                UserID = 3,
+                UserID = 1,
                 StockQuantity = vm.StockQuantity,
                 LowStockThreshold = vm.LowStockThreshold,
                 CreatedAt=vm.CreatedAt,
@@ -96,26 +97,53 @@ namespace Inventory.Controllers
 
             return RedirectToAction(nameof(GetAll));
         }
-
+        [HttpGet]
         public IActionResult Update(int id)
         {
-            var product = _productService.GetById(id);
-            if (product == null)
+            var Product = _productService.GetById(id);
+            if (Product == null)
             {
                 return NotFound("this Product doesn't exist");
             }
-            return View(product);
+
+            var viewModel = new ProductViewModel
+            {
+                Name = Product.Name,
+                Description = Product.Description,
+                Price = Product.Price,
+                CreatedAt = Product.CreatedAt,
+                UpdatedAt = Product.UpdatedAt,
+                StockQuantity = Product.StockQuantity,
+                LowStockThreshold = Product.LowStockThreshold,
+            };
+
+            return View(viewModel);
         }
 
         [HttpPost]
-        public IActionResult Update(Product product)
+        public IActionResult Update(int id, ProductViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                _productService.Update(product);
+                var existingProduct = _productService.GetById(id);
+                if (existingProduct == null)
+                {
+                    return NotFound("This Product doesn't exist.");
+                }
+
+                existingProduct.Name = viewModel.Name;
+                existingProduct.Description = viewModel.Description;
+                existingProduct.Price = viewModel.Price;
+                existingProduct.CreatedAt = viewModel.CreatedAt;
+                existingProduct.UpdatedAt = viewModel.UpdatedAt;
+                existingProduct.StockQuantity = viewModel.StockQuantity;
+                existingProduct.LowStockThreshold = viewModel.LowStockThreshold;
+
+                _productService.Update(existingProduct);
+
                 return RedirectToAction(nameof(GetAll));
             }
-            return View(product);
+            return View(viewModel);
         }
         public IActionResult GetAll()
         {
