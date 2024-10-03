@@ -1,29 +1,46 @@
 ﻿@model IEnumerable<Alert>
 
-<h2>Alert List</h2>
+<div class="container mt-4">
+    <!-- Header Section -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">Alert List</h2>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Add New Alert
+        </a>
+    </div>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Description</th>
-            <th>Product</th>
+    <!-- Table -->
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Product</th>
+                    <th scope="col" class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var alert in Model)
+                {
+                    <tr>
+                        <td>@alert.ID</td>
+                        <td>@alert.Description</td>
+                        <td>@alert.ProductID</td>
+                        <td class="text-center">
+                            <a asp-action="Edit" asp-route-id="@alert.ID" class="btn btn-warning btn-sm me-2">
+                                <i class="fas fa-edit"></i> Edit
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@alert.ID" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
 
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var product in Model)
-        {
-            <tr>
-                <td>@product.ID</td>
-                <td>@product.Description</td>
-                <td>@product.ProductID</td>
-
-                <td>
-                    <a asp-action="Delete" asp-route-id="@product.ID">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
+<!-- Add FontAwesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />

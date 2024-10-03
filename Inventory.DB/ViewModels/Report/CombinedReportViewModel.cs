@@ -8,8 +8,8 @@ namespace Inventory.DB.ViewModels.Report
 {
     public class CombinedReportViewModel
     {
-        public IEnumerable<StockReportViewModel> StockReports { get; set; }
-        public IEnumerable<ProductReportViewModel> ProductReports { get; set; }
-        public IEnumerable<SupplierReportViewModel> SupplierReports { get; set; }
+        public IEnumerable<StockReportViewModel> StockReports { get; set; } = new List<StockReportViewModel>();
+        public IEnumerable<ProductReportViewModel> ProductReports { get; set; } = new List<ProductReportViewModel>();
+        public IEnumerable<SupplierReportViewModel> SupplierReports { get; set; } = new List<SupplierReportViewModel>();
     }
 }

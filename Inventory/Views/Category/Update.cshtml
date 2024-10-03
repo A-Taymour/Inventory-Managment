@@ -1,25 +1,34 @@
-﻿ @using Inventory.DB.ViewModels;
- @model CategoryViewModel;
+﻿@using Inventory.DB.ViewModels
+@model CategoryViewModel
 
-<h2>Edit category</h2>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Edit Category</h2>
 
-<form asp-controller="Category" asp-action="Update" method="post">
+    <form asp-controller="Category" asp-action="Update" method="post">
+        <!-- Validation Summary -->
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
 
-    <!-- Validation Summary -->
-    <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label asp-for="CategoryName" class="form-label">
+                    <i class="fas fa-tag"></i> Category Name
+                </label>
+                <input asp-for="CategoryName" class="form-control" placeholder="Enter category name" />
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
 
-    <!-- Fields -->
-    <div class="form-group">
-        <label asp-for="CategoryName" class="control-label"></label>
-        <input asp-for="CategoryName" class="form-control" />
-        <span asp-validation-for="CategoryName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Description" class="control-label"></label>
-        <input asp-for="Description" class="form-control" />
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Save" class="btn btn-primary" />
-    </div>
-</form>
+            <div class="col-md-6 mb-3">
+                <label asp-for="Description" class="form-label">
+                    <i class="fas fa-pencil-alt"></i> Description
+                </label>
+                <input asp-for="Description" class="form-control" placeholder="Enter description" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <input type="submit" value="Save" class="btn btn-primary me-2" />
+            <a asp-action="GetAll" class="btn btn-secondary">Back to List</a>
+        </div>
+    </form>
+</div>

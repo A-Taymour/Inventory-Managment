@@ -1,60 +1,82 @@
-﻿ @using Inventory.DB.ViewModels;
- @model Inventory.DB.ViewModels.ProductViewModel;
+﻿@using Inventory.DB.ViewModels
+@model Inventory.DB.ViewModels.ProductViewModel
 
 <h2>Edit Product</h2>
 
 <form asp-controller="Product" asp-action="Update" method="post">
-
     <!-- Validation Summary -->
-    <div asp-validation-summary="All" class="text-danger"></div>
+    <div asp-validation-summary="All" class="text-danger mb-3"></div>
 
-    <!-- Fields -->
-    <div class="form-group">
-        <label asp-for="Name" class="control-label"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="Description" class="control-label"></label>
-        <input asp-for="Description" class="form-control" />
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Price" class="control-label"></label>
-        <input asp-for="Price" class="form-control" step="0.01" />
-        <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="StockQuantity" class="control-label"></label>
-        <input asp-for="StockQuantity" class="form-control" />
-        <span asp-validation-for="StockQuantity" class="text-danger"></span>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
     </div>
 
-    <div class="form-group">
-        <label asp-for="LowStockThreshold" class="control-label"></label>
-        <input asp-for="LowStockThreshold" class="form-control" />
-        <span asp-validation-for="LowStockThreshold" class="text-danger"></span>
-    </div>
-<div class="form-group">
-        <label asp-for="CategoryID" class="control-label"></label>
-        <select class="form-select" asp-for="CategoryID" asp-items="Model.categories"></select>
-        <span asp-validation-for="CategoryID" class="text-danger"></span>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" step="0.01" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="StockQuantity" class="control-label"></label>
+                <input asp-for="StockQuantity" class="form-control" />
+                <span asp-validation-for="StockQuantity" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="LowStockThreshold" class="control-label"></label>
+                <input asp-for="LowStockThreshold" class="form-control" />
+                <span asp-validation-for="LowStockThreshold" class="text-danger"></span>
+            </div>
+        </div>
     </div>
 
-    <div class="form-group">
-        <label asp-for="SupplierID" class="control-label"></label>
-        <select class="form-select" asp-for="SupplierID" asp-items="Model.Suppliers"></select>
-        <span asp-validation-for="SupplierID" class="text-danger"></span>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="CategoryID" class="control-label"></label>
+                <select class="form-select" asp-for="CategoryID" asp-items="Model.categories"></select>
+                <span asp-validation-for="CategoryID" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="SupplierID" class="control-label"></label>
+                <select class="form-select" asp-for="SupplierID" asp-items="Model.Suppliers"></select>
+                <span asp-validation-for="SupplierID" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="UserID" class="control-label"></label>
+                <select class="form-select" asp-for="UserID" asp-items="Model.Users"></select>
+                <span asp-validation-for="UserID" class="text-danger"></span>
+            </div>
+        </div>
     </div>
 
-    <div class="form-group">
-        <label asp-for="UserID" class="control-label"></label>
-        <select class="form-select" asp-for="UserID" asp-items="Model.Users"></select>
-        <span asp-validation-for="UserID" class="text-danger"></span>
-    </div>
     <div class="form-group">
         <input type="submit" value="Save" class="btn btn-primary" />
     </div>

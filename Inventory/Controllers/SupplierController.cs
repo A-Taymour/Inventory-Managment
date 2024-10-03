@@ -88,7 +88,10 @@ namespace Inventory.Controllers
                 existingSupplier.Name = viewModel.Name;
                 existingSupplier.Email = viewModel.Email;
                 existingSupplier.Phone = viewModel.Phone;
-                existingSupplier.Password = viewModel.Password;
+                if (!string.IsNullOrEmpty(viewModel.Password))
+                {
+                    existingSupplier.Password = viewModel.Password;
+                }
 
                 _SupplierService.Update(existingSupplier);
 
