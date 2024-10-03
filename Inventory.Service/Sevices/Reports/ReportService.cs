@@ -68,17 +68,17 @@ namespace Inventory.Service.Sevices.Reports
             }
             else if (stockQuantity == lowStockThreshold + 1 || stockQuantity == lowStockThreshold + 2)
             {
-                return "About to run out"; // Stock is just above the threshold
+                return "About to run out"; 
             }
 
             if (stockQuantity >= lowStockThreshold)
             {
-                return "NO"; // Stock is low
+                return "NO";
             }
 
             else
             {
-                return "YES"; // Stock is sufficient
+                return "YES"; 
             }
         }
     }
