@@ -62,11 +62,6 @@ namespace Inventory.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Insert(ProductViewModel vm)
         {
-            //vm.Users = null;
-            //vm.Suppliers = null;
-            //vm.categories = null;
-
-      
             var product = new Product
             {
                 Name = vm.Name,
@@ -108,11 +103,15 @@ namespace Inventory.Controllers
             {
                 Value = c.Id.ToString(),
                 Text = c.Name,
+                Selected = c.Id == Product.SupplierID
+
             }).ToList();
             var selectUserItem = Users.Select(c => new SelectListItem
             {
                 Value = c.ID.ToString(),
                 Text = c.Name,
+                Selected = c.ID == Product.UserID
+
             }).ToList();
 
            
@@ -121,7 +120,12 @@ namespace Inventory.Controllers
             {
                 Name = Product.Name,
                 Description = Product.Description,
-             
+                Price = Product.Price,
+                StockQuantity = Product.StockQuantity,
+                LowStockThreshold = Product.LowStockThreshold,
+                CategoryID = Product.CategoryID,
+                SupplierID = Product.SupplierID,
+                UserID = Product.UserID,
                 categories = selectCategoryItems,
                 Suppliers = selecSupplierItem,
                 Users = selectUserItem
