@@ -44,11 +44,15 @@ namespace Inventory.Controllers
             return View(viewModel);
         }
 
-        public IActionResult GetAll()
+        public IActionResult GetAll(string searchString)
         
         {
             var categories = _CategoryService.GetAll();
-            
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                categories = categories.Where(x => x.CategoryName.Contains(searchString)).ToList();
+            }
+
             return View(categories);
         }
         public IActionResult GetById(int id)

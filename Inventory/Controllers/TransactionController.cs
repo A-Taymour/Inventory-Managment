@@ -22,15 +22,19 @@ namespace Inventory.Controllers
             _productService = productService;
         }
 
-        public IActionResult GetAll()
+        public IActionResult GetAll(string searchString)
         {
-            var products = _transactionService.GetAll();
-            return View("GetAll", products);
+            var Transactions = _transactionService.GetAll();
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                Transactions = Transactions.Where(x => x.TransactionType.Contains(searchString)).ToList();
+            }
+            return View("GetAll", Transactions);
         }
         public IActionResult GetById(int id)
         {
-            var product = _transactionService.GetById(id);
-            return View("GetById", product);
+            var Transactions = _transactionService.GetById(id);
+            return View("GetById", Transactions);
         }
 
         [HttpGet]

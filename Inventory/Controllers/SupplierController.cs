@@ -16,9 +16,13 @@ namespace Inventory.Controllers
 
         }
 
-        public IActionResult GetAll()
+        public IActionResult GetAll(string searchString)
         {
             var Suppliers = _SupplierService.GetAll();
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                Suppliers = Suppliers.Where(x => x.Name.Contains(searchString)).ToList();
+            }
             return View(Suppliers);
         }
         public IActionResult GetById(int id)

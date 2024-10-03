@@ -16,9 +16,13 @@ namespace Inventory.Controllers
 
         }
 
-        public IActionResult GetAll()
+        public IActionResult GetAll(string searchString)
         {
             var Users = _UserService.GetAll();
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                Users = Users.Where(x => x.Name.Contains(searchString)).ToList();
+            }
             return View(Users);
         }
         public IActionResult GetById(int id)

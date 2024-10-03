@@ -159,9 +159,13 @@ namespace Inventory.Controllers
 
                 return RedirectToAction(nameof(GetAll));
         }
-        public IActionResult GetAll()
+        public IActionResult GetAll(string searchString)
         {
             var products = _productService.GetAll();
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(x => x.Name.Contains(searchString)).ToList();
+			}
             return View("GetAll", products);
         }
 

@@ -8,9 +8,9 @@
     <h2 class="mb-4">All Suppliers</h2>
 
     <div class="mb-3">
-        <form asp-action="Index" method="get" class="d-flex">
-            <input type="text" name="search" class="form-control me-2" placeholder="Search Suppliers..." />
-            <button type="submit" class="btn btn-primary">Search</button>
+        <form method="get" asp-action="GetAll" class="d-flex" asp-controller="Supplier">
+            <input type="search" name="searchString" class="form-control me-2" placeholder="Search Supplier" />
+            <button type="submit" class="btn btn-dark">Search</button>
         </form>
     </div>
 
