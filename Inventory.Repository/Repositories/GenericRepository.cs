@@ -19,6 +19,10 @@ namespace Task.Repositories
         {
             return _dbSet.ToList();
         }
+        public IQueryable<TEntity> GetAllQueryable()
+        {
+            return _dbSet; // Allows for further querying with Includes
+        }
 
         public TEntity GetById(int id)
         {

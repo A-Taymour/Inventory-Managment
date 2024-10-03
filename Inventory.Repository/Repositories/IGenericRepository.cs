@@ -10,5 +10,6 @@ namespace Task.Repositories
         void Update(TEntity entity);
         void Delete(int id);
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
+        public IQueryable<TEntity> GetAllQueryable();   
     }
 }

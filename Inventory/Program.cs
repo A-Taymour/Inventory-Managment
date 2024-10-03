@@ -2,6 +2,7 @@ using Inventory.Data;
 using Inventory.Service.Sevices.AlertService;
 using Inventory.Service.Sevices.CategoryService;
 using Inventory.Service.Sevices.ProductService;
+using Inventory.Service.Sevices.Reports;
 using Inventory.Service.Sevices.SupplierService;
 using Inventory.Service.Sevices.TransactionService;
 using Inventory.Service.Sevices.UserService;
@@ -23,6 +24,7 @@ namespace Inventory
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<ISupplierService, SupplierService>();
+            builder.Services.AddScoped<IReportService, ReportService>();
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<IAlertService, AlertService>();
             builder.Services.AddDbContext<ApplicationDBcontext>(options =>
