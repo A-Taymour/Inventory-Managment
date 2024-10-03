@@ -30,14 +30,5 @@ namespace Inventory.Service.Sevices.TransactionService
             _TransactionRepository.Add(product);
         }
 
-        public void Update(Transaction product)
-        {
-            _TransactionRepository.Update(product);
-        }
-
-        public void Delete(int id)
-        {
-            _TransactionRepository.Delete(id);
-        }
     }
 }

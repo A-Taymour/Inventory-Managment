@@ -36,44 +36,73 @@ namespace Inventory.Controllers
         [HttpGet]
         public IActionResult Insert()
         {
-            var Products = _productService.GetAll();
-            var Users = _userService.GetAll();
+            var products = _productService.GetAll();
+            var users = _userService.GetAll();
 
-            var selectListItems = Products.Select(c => new SelectListItem
+            
+            if (products == null || users == null)
             {
-                Text = c.Name,
-            }).ToList();
-            var selectListItem = Users.Select(c => new SelectListItem
+                return NotFound("Products or Users data is not available.");
+            }
+
+            
+            var selectProductItems = products.Select(p => new SelectListItem
             {
-                Text = c.Name,
+                Value = p.ID.ToString(),
+                Text = p.Name,
             }).ToList();
 
+            var selectUserItems = users.Select(u => new SelectListItem
+            {
+                Value = u.ID.ToString(),
+                Text = u.Name,
+            }).ToList();
+
+            
             var viewModel = new TransactionViewModel
             {
-                products = selectListItem,
-                Users = selectListItem
+                products = selectProductItems,
+                Users = selectUserItems
             };
 
             return View(viewModel);
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> create(TransactionViewModel vm)
+        [HttpPost]
+        public async Task<IActionResult> Insert(TransactionViewModel vm)
         {
-            if (!ModelState.IsValid)
+           
+            var product = _productService.GetById(vm.ProductID);
+
+            if (product == null)
             {
-                var products = _productService.GetAll();
-                vm.products = products.Select(c => new SelectListItem
-                {
-                }).ToList();
-                var users = _userService.GetAll();
-                vm.Users = users.Select(c => new SelectListItem
-                {
-                }).ToList();
+                ModelState.AddModelError("", "Product not found.");
                 return View(vm);
             }
 
+            
+            if (vm.TransactionType == "Withdraw")
+            {
+                
+                if (product.StockQuantity < vm.Quantity)
+                {
+                    ModelState.AddModelError("", "Not enough stock available for withdrawal.");
+                    return View(vm);  
+                }
+
+                
+                product.StockQuantity -= vm.Quantity;
+            }
+            else if (vm.TransactionType == "Add")
+            {
+                
+                product.StockQuantity += vm.Quantity;
+            }
+
+           
+            _productService.Update(product);
+
+            
             var transaction = new Transaction
             {
                 TransactionType = vm.TransactionType,
@@ -81,41 +110,19 @@ namespace Inventory.Controllers
                 TransactionDate = vm.TransactionDate,
                 UserID = vm.UserID,
                 ProductID = vm.ProductID,
-
             };
 
+            
             _transactionService.Insert(transaction);
 
             return RedirectToAction(nameof(GetAll));
         }
 
-        public IActionResult Update(int id)
-        {
-            var product = _transactionService.GetById(id);
-            if (product == null)
-            {
-                return NotFound("this Product doesn't exist");
-            }
-            return View(product);
-        }
-
-        [HttpPost]
-        public IActionResult Update(Transaction transaction)
-        {
-            if (ModelState.IsValid)
-            {
-                _transactionService.Update(transaction);
-                return RedirectToAction(nameof(GetAll));
-            }
-            return View(transaction);
-        }
 
 
-        public IActionResult Delete(int id)
-        {
-            _transactionService.Delete(id);
-            return RedirectToAction(nameof(GetAll));
-        }
+
+
+
 
     }
 }
