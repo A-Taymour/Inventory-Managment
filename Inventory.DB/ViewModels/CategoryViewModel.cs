@@ -9,7 +9,14 @@ namespace Inventory.DB.ViewModels
 {
     public class CategoryViewModel
     {
+        [Display(Name = "Category Name")]
+        [Required(ErrorMessage = "Category name is required.")]
+        [MinLength(3, ErrorMessage = "Category name must be at least 3 characters long.")]
+        [MaxLength(50, ErrorMessage = "Category name cannot exceed 50 characters.")]
         public string CategoryName { get; set; }
-        public string Description { get; set; } 
+
+        [Display(Name = "Description")]
+        [MaxLength(200, ErrorMessage = "Description cannot exceed 200 characters.")]
+        public string Description { get; set; }
     }
 }

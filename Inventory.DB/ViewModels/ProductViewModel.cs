@@ -8,23 +8,28 @@ namespace Inventory.DB.ViewModels
     public class ProductViewModel
     {
 
-        [Required]
-        [MinLength(3), MaxLength(50)]
+        [Required(ErrorMessage = "Product name is required.")]
+        [MinLength(3, ErrorMessage = "Product name must be at least 3 characters long.")]
+        [MaxLength(50, ErrorMessage = "Product name cannot exceed 50 characters.")]
         public string Name { get; set; }
-        [Required]
-        [MinLength(20), MaxLength(200)]
+        [Required(ErrorMessage = "Description is required.")]
+        [MinLength(10, ErrorMessage = "Description must be at least 10 characters long.")]
+        [MaxLength(50, ErrorMessage = "Description cannot exceed 50 characters.")]
         public string Description { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Price is required.")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Price must be a positive value.")]
 
         public decimal Price { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
-        [Required]
+        [Required(ErrorMessage = "Stock quantity is required.")]
+        [Range(0, int.MaxValue, ErrorMessage = "Stock quantity must be a non-negative integer.")]
         public int StockQuantity { get; set; }
 
-
+        [Required(ErrorMessage = "LowStockThreshold  is required.")]
+        [Range(0, int.MaxValue, ErrorMessage = "LowStockThreshold must be a non-negative integer.")]
         public int LowStockThreshold { get; set; }
 
         [Display(Name = "User")]
