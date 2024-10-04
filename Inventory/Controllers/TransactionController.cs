@@ -1,4 +1,5 @@
 ﻿using Inventory.DB.ViewModels;
+using Inventory.Service.Sevices.AlertService;
 using Inventory.Service.Sevices.ProductService;
 using Inventory.Service.Sevices.TransactionService;
 using Inventory.Service.Sevices.UserService;
@@ -12,14 +13,16 @@ namespace Inventory.Controllers
         private readonly ITransactionService _transactionService;
         private readonly IUserService _userService;
         private readonly IProductService _productService;
+        private readonly IAlertService _alertService;
 
 
 
-        public TransactionController(ITransactionService transactionService, IUserService userService, IProductService productService)
+        public TransactionController(ITransactionService transactionService, IUserService userService, IProductService productService, IAlertService alertService)
         {
             _transactionService = transactionService;
             _userService = userService;
             _productService = productService;
+            _alertService = alertService;
         }
 
         public IActionResult GetAll(string searchString)
@@ -72,6 +75,22 @@ namespace Inventory.Controllers
             return View(viewModel);
         }
 
+
+        public Alert MakeAlert(int productID)
+        {
+            Alert ourAlert = new Alert();
+            ourAlert.ProductID = productID;
+            ourAlert.Product = _productService.GetById(productID);
+            if (ourAlert.Product == null)
+            {
+                throw new Exception($"Product with ID {productID} not found.");
+            }
+            ourAlert.AlertDate = DateTime.Now;
+            ourAlert.IsResolved = false;
+            ourAlert.Description = $"The {ourAlert.Product.Name} Item is low, with {ourAlert.Product.StockQuantity} in the stock ";
+            return ourAlert;
+        }
+
         [HttpPost]
         public async Task<IActionResult> Insert(TransactionViewModel vm)
         {
@@ -96,6 +115,11 @@ namespace Inventory.Controllers
 
                 
                 product.StockQuantity -= vm.Quantity;
+                if (product.StockQuantity < product.LowStockThreshold)
+                {
+                    Alert enzar = MakeAlert(product.ID);
+                    _alertService.Insert(enzar);
+                }
             }
             else if (vm.TransactionType == "Add")
             {

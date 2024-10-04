@@ -74,17 +74,6 @@ namespace Inventory.Controllers
         //    return RedirectToAction(nameof(GetAll));
         //}
 
-        public Alert MakeAlert(int productID)
-        {
-            Alert ourAlert = new Alert();
-            ourAlert.ProductID = productID;
-            ourAlert.Product = _productService.GetById(productID);
-            ourAlert.AlertDate = DateTime.Now;
-            ourAlert.IsResolved = false;
-            ourAlert.Description = $"The {ourAlert.Product.Name} Item is low, with {ourAlert.Product.StockQuantity} in the stock ";
-            return ourAlert;
-        }
-
 
         public IActionResult Delete(int id)
         {
