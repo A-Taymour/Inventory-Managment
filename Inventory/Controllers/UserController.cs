@@ -50,7 +50,6 @@ namespace Inventory.Controllers
                     Email = viewModel.Email,
                     Password = viewModel.Password,
                     Phone = viewModel.Phone,
-                    IsAdmin = viewModel.IsAdmin
                 };
 
                 _UserService.Insert(user);
@@ -74,7 +73,6 @@ namespace Inventory.Controllers
                 Email = User.Email,
                 Phone = User.Phone,
                 Password = User.Password,
-                IsAdmin = User.IsAdmin
 
             };
 
@@ -95,8 +93,6 @@ namespace Inventory.Controllers
                 existingUser.Name = viewModel.Name;
                 existingUser.Email = viewModel.Email;
                 existingUser.Phone = viewModel.Phone;
-                existingUser.Password = viewModel.Password;
-                existingUser.IsAdmin = viewModel.IsAdmin;
 
                 _UserService.Update(existingUser);
 
@@ -109,6 +105,5 @@ namespace Inventory.Controllers
             _UserService.Delete(id);
             return RedirectToAction(nameof(GetAll));
         }
-
     }
 }

@@ -36,6 +36,5 @@ namespace Inventory.DB.ViewModels
         [StringLength(11, ErrorMessage = "Phone number cannot be longer than 11 characters")]
         public string Phone { get; set; }
 
-        public bool IsAdmin { get; set; }
     }
 }
