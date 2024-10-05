@@ -2,6 +2,7 @@
 using Inventory.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Inventory.Service.Sevices.TransactionService
 {
@@ -28,6 +29,12 @@ namespace Inventory.Service.Sevices.TransactionService
         public void Insert(Transaction product)
         {
             _TransactionRepository.Add(product);
+        }
+
+        public void Add(Transaction transaction)
+        {
+            _TransactionRepository.Add(transaction);
+            
         }
 
     }

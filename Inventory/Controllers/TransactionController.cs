@@ -16,7 +16,6 @@ namespace Inventory.Controllers
         private readonly IAlertService _alertService;
 
 
-
         public TransactionController(ITransactionService transactionService, IUserService userService, IProductService productService, IAlertService alertService)
         {
             _transactionService = transactionService;
@@ -32,8 +31,15 @@ namespace Inventory.Controllers
             {
                 Transactions = Transactions.Where(x => x.TransactionType.Contains(searchString)).ToList();
             }
+
+            foreach (var transaction in Transactions)
+            {
+                transaction.Product = _productService.GetById(transaction.ProductID);
+            }
             return View("GetAll", Transactions);
         }
+
+
         public IActionResult GetById(int id)
         {
             var Transactions = _transactionService.GetById(id);

@@ -3,6 +3,7 @@ using Inventory.Models;
 using Inventory.Service.Sevices.CategoryService;
 using Inventory.Service.Sevices.ProductService;
 using Inventory.Service.Sevices.SupplierService;
+using Inventory.Service.Sevices.TransactionService;
 using Inventory.Service.Sevices.UserService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,14 +16,15 @@ namespace Inventory.Controllers
         private readonly ICategoryService _CategoryService;
         private readonly ISupplierService _SupplierService;
         private readonly IUserService _UserService;
+        private readonly ITransactionService _transactionService;
 
-
-        public ProductController(IProductService productService, ICategoryService CategoryService, ISupplierService SupplierService, IUserService UserService)
+        public ProductController(IProductService productService, ICategoryService CategoryService, ISupplierService SupplierService, IUserService UserService, ITransactionService transactionService)
         {
             _productService = productService;
             _SupplierService = SupplierService;
             _CategoryService = CategoryService;
             _UserService = UserService;
+            _transactionService = transactionService;
         }
 
 
@@ -58,10 +60,11 @@ namespace Inventory.Controllers
 
             return View(viewModel);
         }
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Insert(ProductViewModel vm)
         {
+            
             var product = new Product
             {
                 Name = vm.Name,
@@ -69,18 +72,34 @@ namespace Inventory.Controllers
                 Description = vm.Description,
                 CategoryID = vm.CategoryID,
                 SupplierID = vm.SupplierID,
-                UserID = vm.UserID,
+                UserID = vm.UserID, 
                 StockQuantity = vm.StockQuantity,
                 LowStockThreshold = vm.LowStockThreshold,
                 CreatedAt = vm.CreatedAt,
                 UpdatedAt = vm.UpdatedAt
-
             };
 
+            
             _productService.Add(product);
 
-            return RedirectToAction(nameof(GetAll));
+            
+            var transaction = new Transaction
+            {
+                TransactionType = "Add New Product",
+                TransactionDate = DateTime.Now,
+                ProductID = product.ID,
+                Quantity = vm.StockQuantity,
+                UserID = vm.UserID 
+            };
+
+            
+            _transactionService.Add(transaction);
+
+            
+            return RedirectToAction("GetAll", "Transaction");
         }
+
+
         [HttpGet]
         public IActionResult Update(int id)
         {

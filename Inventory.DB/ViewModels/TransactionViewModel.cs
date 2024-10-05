@@ -25,5 +25,6 @@ namespace Inventory.DB.ViewModels
         [Display(Name = "Product")]
 
         public IEnumerable<SelectListItem> products { get; set; }
+        public int? SelectedProductId { get; set; }
     }
 }

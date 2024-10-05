@@ -11,5 +11,6 @@ namespace Inventory.Service.Sevices.TransactionService
         IEnumerable<Transaction> GetAll();
         Transaction GetById(int id);
         void Insert(Transaction product);
+        void Add(Transaction transaction);
     }
 }
