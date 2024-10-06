@@ -67,8 +67,8 @@ namespace Inventory.Controllers
 
             var selectUserItems = users.Select(u => new SelectListItem
             {
-                Value = u.ID.ToString(),
-                Text = u.Name,
+                Value = u.Id.ToString(),
+                Text = u.UserName,
             }).ToList();
 
             
@@ -142,7 +142,7 @@ namespace Inventory.Controllers
                 TransactionType = vm.TransactionType,
                 Quantity = vm.Quantity,
                 TransactionDate = vm.TransactionDate,
-                UserID = vm.UserID,
+                UserId = vm.UserID,
                 ProductID = vm.ProductID,
             };
 

@@ -67,6 +67,12 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="DashBoard" asp-action="Index">
+								<i class="fas fa-home"></i> DashBoard
+							</a>
+						</li>
+						 
+						<li class="nav-item">
 							<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
 								<i class="fas fa-home"></i> Home
 							</a>
@@ -75,7 +81,7 @@
 							<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">
 								<i class="fas fa-user-shield"></i> Privacy
 							</a>
-						</li>
+						</li> 
 						<li class="nav-item">
 							<a class="nav-link" asp-area="" asp-controller="User" asp-action="GetAll">
 								<i class="fas fa-users"></i> Users
@@ -104,6 +110,16 @@
 						<li class="nav-item">
 							<a class="nav-link" asp-area="" asp-controller="Alert" asp-action="GetAll">
 								<i class="fas fa-bell"></i> Alerts
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link"  href="/Identity/account/register">
+								<i class="fas fa-home"></i> Register
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/Identity/account/Login">
+								<i class="fas fa-home"></i> Login
 							</a>
 						</li>
 					</ul>

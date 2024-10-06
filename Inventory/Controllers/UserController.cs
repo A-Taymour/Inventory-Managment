@@ -21,7 +21,7 @@ namespace Inventory.Controllers
             var Users = _UserService.GetAll();
             if (!String.IsNullOrEmpty(searchString))
             {
-                Users = Users.Where(x => x.Name.Contains(searchString)).ToList();
+                Users = Users.Where(x => x.UserName.Contains(searchString)).ToList();
             }
             return View(Users);
         }
@@ -46,10 +46,10 @@ namespace Inventory.Controllers
 
                 var user = new User
                 {
-                    Name = viewModel.Name,
+                    UserName = viewModel.Name,
                     Email = viewModel.Email,
-                    Password = viewModel.Password,
-                    Phone = viewModel.Phone,
+                    PasswordHash = viewModel.Password,
+                    PhoneNumber = viewModel.Phone,
                 };
 
                 _UserService.Insert(user);
@@ -69,10 +69,10 @@ namespace Inventory.Controllers
             }
             var viewModel = new UserViewModel
             {
-                Name = User.Name,
+                Name = User.UserName,
                 Email = User.Email,
-                Phone = User.Phone,
-                Password = User.Password,
+                Phone = User.PhoneNumber,
+                Password = User.PasswordHash,
 
             };
 
@@ -90,9 +90,9 @@ namespace Inventory.Controllers
                     return NotFound("This User doesn't exist.");
                 }
 
-                existingUser.Name = viewModel.Name;
+                existingUser.UserName = viewModel.Name;
                 existingUser.Email = viewModel.Email;
-                existingUser.Phone = viewModel.Phone;
+                existingUser.PhoneNumber = viewModel.Phone;
 
                 _UserService.Update(existingUser);
 

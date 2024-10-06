@@ -10,7 +10,7 @@ public class Transaction
 
     public DateTime TransactionDate { get; set; }
 
-    public int UserID { get; set; }
+    public int UserId { get; set; }
     public User User { get; set; }
 
     public int ProductID { get; set; }
