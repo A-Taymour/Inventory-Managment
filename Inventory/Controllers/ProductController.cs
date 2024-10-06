@@ -4,6 +4,7 @@ using Inventory.Service.Sevices.CategoryService;
 using Inventory.Service.Sevices.ProductService;
 using Inventory.Service.Sevices.SupplierService;
 using Inventory.Service.Sevices.UserService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -27,6 +28,7 @@ namespace Inventory.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles ="Admin")]
         public IActionResult Insert()
         {
             var categories = _CategoryService.GetAll();
@@ -45,8 +47,8 @@ namespace Inventory.Controllers
             }).ToList();
             var selectUserItem = Users.Select(c => new SelectListItem
             {
-                Value = c.ID.ToString(),
-                Text = c.Name,
+                Value = c.Id.ToString(),
+                Text = c.UserName,
             }).ToList();
 
             var viewModel = new ProductViewModel
@@ -69,7 +71,7 @@ namespace Inventory.Controllers
                 Description = vm.Description,
                 CategoryID = vm.CategoryID,
                 SupplierID = vm.SupplierID,
-                UserID = vm.UserID,
+                UserId = vm.UserID,
                 StockQuantity = vm.StockQuantity,
                 LowStockThreshold = vm.LowStockThreshold,
                 CreatedAt = vm.CreatedAt,
@@ -108,9 +110,9 @@ namespace Inventory.Controllers
             }).ToList();
             var selectUserItem = Users.Select(c => new SelectListItem
             {
-                Value = c.ID.ToString(),
-                Text = c.Name,
-                Selected = c.ID == Product.UserID
+                Value = c.Id.ToString(),
+                Text = c.UserName,
+                Selected = c.Id == Product.UserId.ToString()
 
             }).ToList();
 
@@ -125,7 +127,7 @@ namespace Inventory.Controllers
                 LowStockThreshold = Product.LowStockThreshold,
                 CategoryID = Product.CategoryID,
                 SupplierID = Product.SupplierID,
-                UserID = Product.UserID,
+                UserID = Product.UserId,
                 categories = selectCategoryItems,
                 Suppliers = selecSupplierItem,
                 Users = selectUserItem
@@ -151,7 +153,7 @@ namespace Inventory.Controllers
                 existingProduct.StockQuantity = viewModel.StockQuantity;
                 existingProduct.LowStockThreshold = viewModel.LowStockThreshold;
                 existingProduct.CategoryID = viewModel.CategoryID;
-                existingProduct.UserID = viewModel.UserID;
+                existingProduct.UserId = viewModel.UserID;
                 existingProduct.SupplierID = viewModel.SupplierID;
 
 

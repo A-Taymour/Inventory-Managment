@@ -25,15 +25,15 @@
             @foreach (var User in Model)
             {
                 <tr>
-                    <td>@User.ID</td>
-                    <td>@User.Name</td>
-                    <td>@User.Email</td>
-                    <td>@User.Phone</td>
+                    <td>@User.Id</td>
+                    <td>@User.UserName</td>
+                    <td>@User.NormalizedEmail</td>
+                    
                     <td>
-                        <a class="btn btn-warning btn-sm" asp-action="Update" asp-route-id="@User.ID">
+                        <a class="btn btn-warning btn-sm" asp-action="Update" asp-route-id="@User.Id">
                             <i class="bi bi-pencil-fill"></i> Edit
                         </a>
-                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@User.ID" onclick="return confirm('Are you sure you want to delete this user?');">
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@User.Id" onclick="return confirm('Are you sure you want to delete this user?');">
                             <i class="bi bi-trash-fill"></i> Delete
                         </a>
                     </td>

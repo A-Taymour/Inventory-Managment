@@ -14,7 +14,7 @@ namespace Inventory
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async System.Threading.Tasks.Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -30,7 +30,12 @@ namespace Inventory
             builder.Services.AddDbContext<ApplicationDBcontext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDBcontext>();
+            builder.Services.AddIdentity<User,IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDBcontext>()
+                .AddDefaultUI()
+                .AddRoles<IdentityRole>()
+                .AddDefaultTokenProviders();
+           
            //adding identity
             
            
@@ -57,6 +62,41 @@ namespace Inventory
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                var roles = new[] { "admin", "user" };
+
+                foreach (var role in roles)
+                {
+                    if (!await roleManager.RoleExistsAsync(role))
+                    {
+                        await roleManager.CreateAsync(new IdentityRole(role));
+                    }
+                }
+            }
+
+            //using (var scope = app.Services.CreateScope())
+            //{
+            //    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+            //    //string userNam = "Admin";
+            //    //string email = "admin@admin.com";
+            //    //string password = "Admin123??";
+            //    if (await userManager.FindByEmailAsync(email) == null)
+            //    {
+            //        var user = new User();
+            //        user.UserName = userName;
+            //        user.NormalizedEmail = email;
+
+            //        await userManager.CreateAsync(user, password);
+
+            //        userManager.AddToRoleAsync(user, "admin");
+            //    }
+
+            //}
 
             app.Run();
         }
