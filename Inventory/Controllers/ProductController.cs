@@ -91,7 +91,8 @@ namespace Inventory.Controllers
                 TransactionDate = DateTime.Now,
                 ProductID = product.ID,
                 Quantity = vm.StockQuantity,
-                UserID = vm.UserID 
+                UserId = vm.UserID 
+
             };
 
             
