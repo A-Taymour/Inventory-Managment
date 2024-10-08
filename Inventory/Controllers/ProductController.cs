@@ -11,7 +11,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Inventory.Controllers
 {
-    public class ProductController : Controller
+	[Authorize(Roles = "admin")]
+	public class ProductController : Controller
     {
         private readonly IProductService _productService;
         private readonly ICategoryService _CategoryService;
@@ -27,10 +28,8 @@ namespace Inventory.Controllers
             _UserService = UserService;
             _transactionService = transactionService;
         }
-
-
         [HttpGet]
-        [Authorize(Roles ="admin")]
+
         public IActionResult Insert()
         {
             var categories = _CategoryService.GetAll();

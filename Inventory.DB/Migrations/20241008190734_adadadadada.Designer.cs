@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Inventory.DB.Migrations
 {
     [DbContext(typeof(ApplicationDBcontext))]
-    [Migration("20241008064849_RolesMigration")]
-    partial class RolesMigration
+    [Migration("20241008190734_adadadadada")]
+    partial class adadadadada
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
