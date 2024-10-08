@@ -30,7 +30,7 @@ namespace Inventory.Controllers
 
 
         [HttpGet]
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles ="admin")]
         public IActionResult Insert()
         {
             var categories = _CategoryService.GetAll();

@@ -1,5 +1,4 @@
-﻿
-using Inventory.Models;
+﻿using Inventory.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -20,13 +19,12 @@ namespace Inventory.Data
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Alert> Alerts { get; set; }
 
-		protected override void OnModelCreating(ModelBuilder builder)
-		{
-			base.OnModelCreating(builder);
-
-            builder.Entity<User>().ToTable("users");
-            builder.Entity<IdentityRole>().ToTable("Roles");
-		}
+		//protected override void OnModelCreating(ModelBuilder builder)
+		//{
+		//	//base.OnModelCreating(builder);
+  //          //builder.Entity<User>().ToTable("users");
+  //          //builder.Entity<IdentityRole>().ToTable("Roles");
+		//}
 
 	}
 }

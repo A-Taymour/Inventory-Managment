@@ -8508,19 +8508,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\omar\\.nuget\\packages\\": {}
+    "C:\\Users\\Boody\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\depi\\Inventory-Managment\\Inventory\\Inventory.csproj",
+      "projectUniqueName": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory\\Inventory.csproj",
       "projectName": "Inventory",
-      "projectPath": "E:\\depi\\Inventory-Managment\\Inventory\\Inventory.csproj",
-      "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
-      "outputPath": "E:\\depi\\Inventory-Managment\\Inventory\\obj\\",
+      "projectPath": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory\\Inventory.csproj",
+      "packagesPath": "C:\\Users\\Boody\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Boody\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8528,14 +8528,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\depi\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj": {
-              "projectPath": "E:\\depi\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj"
+            "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj": {
+              "projectPath": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj"
             }
           }
         }
@@ -8544,6 +8545,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -8606,7 +8612,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

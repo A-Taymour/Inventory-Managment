@@ -24,8 +24,12 @@ namespace Inventory.Service.Sevices.UserService
         {
             return _UserRepository.GetById(id);
         }
+		public User GetById(string id)
+		{
+			return _UserRepository.GetById(id);
+		}
 
-        public void Insert(User user)
+		public void Insert(User user)
         {
             _UserRepository.Add(user);
         }
@@ -39,5 +43,9 @@ namespace Inventory.Service.Sevices.UserService
         {
             _UserRepository.Delete(id);
         }
-    }
+		public void Delete(string id)
+		{
+			_UserRepository.Delete(id);
+		}
+	}
 }

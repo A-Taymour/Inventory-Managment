@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Inventory.DB.Migrations
 {
     [DbContext(typeof(ApplicationDBcontext))]
-    [Migration("20241006165954_init")]
-    partial class init
+    [Migration("20241008064849_RolesMigration")]
+    partial class RolesMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -98,7 +98,7 @@ namespace Inventory.DB.Migrations
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("Roles", (string)null);
+                    b.ToTable("AspNetRoles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -359,13 +359,7 @@ namespace Inventory.DB.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
@@ -394,7 +388,7 @@ namespace Inventory.DB.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
-                    b.ToTable("users", (string)null);
+                    b.ToTable("AspNetUsers", (string)null);
                 });
 
             modelBuilder.Entity("Alert", b =>
@@ -474,7 +468,7 @@ namespace Inventory.DB.Migrations
                         .IsRequired();
 
                     b.HasOne("User", "User")
-                        .WithMany("Products")
+                        .WithMany()
                         .HasForeignKey("UserId1");
 
                     b.Navigation("Category");
@@ -493,7 +487,7 @@ namespace Inventory.DB.Migrations
                         .IsRequired();
 
                     b.HasOne("User", "User")
-                        .WithMany("Transactions")
+                        .WithMany()
                         .HasForeignKey("UserId1");
 
                     b.Navigation("Product");
@@ -516,13 +510,6 @@ namespace Inventory.DB.Migrations
             modelBuilder.Entity("Supplier", b =>
                 {
                     b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("User", b =>
-                {
-                    b.Navigation("Products");
-
-                    b.Navigation("Transactions");
                 });
 #pragma warning restore 612, 618
         }

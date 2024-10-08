@@ -28,8 +28,12 @@ namespace Task.Repositories
         {
             return _dbSet.Find(id);
         }
+		public TEntity GetById(string id)
+		{
+			return _dbSet.Find(id);
+		}
 
-        public void Add(TEntity entity)
+		public void Add(TEntity entity)
         {
           
           _dbSet.Add(entity);
@@ -58,5 +62,14 @@ namespace Task.Repositories
                 _context.SaveChanges();
             }
         }
-    }
+		public void Delete(string id)
+		{
+			var entity = _dbSet.Find(id);
+			if (entity != null)
+			{
+				_dbSet.Remove(entity);
+				_context.SaveChanges();
+			}
+		}
+	}
 }

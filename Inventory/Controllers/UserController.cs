@@ -1,5 +1,6 @@
 ﻿using Inventory.DB.ViewModels;
 using Inventory.Service.Sevices.UserService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Inventory.Controllers
@@ -16,6 +17,7 @@ namespace Inventory.Controllers
 
         }
 
+        [Authorize]
         public IActionResult GetAll(string searchString)
         {
             var Users = _UserService.GetAll();
@@ -25,13 +27,18 @@ namespace Inventory.Controllers
             }
             return View(Users);
         }
-        public IActionResult GetById(int id)
-        {
-            var User = _UserService.GetById(id);
-            return View(User);
-        }
+        //public IActionResult GetById(int id)
+        //{
+        //    var User = _UserService.GetById(id);
+        //    return View(User);
+        //}
+		public IActionResult GetById(string id)
+		{
+			var User = _UserService.GetById(id);
+			return View(User);
+		}
 
-        [HttpGet]
+		[HttpGet]
         public IActionResult Insert()
         {
 
@@ -60,7 +67,7 @@ namespace Inventory.Controllers
         }
 
         [HttpGet]
-        public IActionResult Update(int id)
+        public IActionResult Update(string id)
         {
             var User = _UserService.GetById(id);
             if (User == null)
@@ -80,7 +87,7 @@ namespace Inventory.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(int id, UserViewModel viewModel)
+        public IActionResult Update(string id, UserViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
@@ -100,10 +107,15 @@ namespace Inventory.Controllers
             }
             return View(viewModel);
         }
-        public IActionResult Delete(int id)
-        {
-            _UserService.Delete(id);
-            return RedirectToAction(nameof(GetAll));
-        }
-    }
+        //public IActionResult Delete(int id)
+        //{
+        //    _UserService.Delete(id);
+        //    return RedirectToAction(nameof(GetAll));
+        //}
+		public IActionResult Delete(string id)
+		{
+			_UserService.Delete(id);
+			return RedirectToAction(nameof(GetAll));
+		}
+	}
 }
