@@ -30,7 +30,15 @@ namespace Inventory
             builder.Services.AddDbContext<ApplicationDBcontext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddIdentity<User,IdentityRole>()
+            builder.Services.AddIdentity<User,IdentityRole>(option =>
+            {
+                //options for editing in register rules
+
+                option.Password.RequiredLength = 6;
+                option.Password.RequireDigit = true;
+                option.Password.RequireUppercase = false;
+
+            })
                 .AddEntityFrameworkStores<ApplicationDBcontext>()
                 .AddDefaultUI()
                 .AddRoles<IdentityRole>()
@@ -54,51 +62,35 @@ namespace Inventory
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            app.MapRazorPages();    
+            app.MapRazorPages();      
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
 
-            using (var scope = app.Services.CreateScope())
-            {
-                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+			app.Use(async (context, next) =>
+			{
+				if (context.Request.Path == "/Identity/Account/Login")
+				{
+					context.Response.Redirect("/Account/Login");
+					return;
+				}
+				await next();
+			});
+			app.Use(async (context, next) =>
+			{
+				if (context.Request.Path == "/Identity/Account/Register")
+				{
+					context.Response.Redirect("/Account/Register");
+					return;
+				}
+				await next();
+			});
 
-                var roles = new[] { "admin", "user" };
-
-                foreach (var role in roles)
-                {
-                    if (!await roleManager.RoleExistsAsync(role))
-                    {
-                        await roleManager.CreateAsync(new IdentityRole(role));
-                    }
-                }
-            }
-
-            //using (var scope = app.Services.CreateScope())
-            //{
-            //    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
-            //    //string userNam = "Admin";
-            //    //string email = "admin@admin.com";
-            //    //string password = "Admin123??";
-            //    if (await userManager.FindByEmailAsync(email) == null)
-            //    {
-            //        var user = new User();
-            //        user.UserName = userName;
-            //        user.NormalizedEmail = email;
-
-            //        await userManager.CreateAsync(user, password);
-
-            //        userManager.AddToRoleAsync(user, "admin");
-            //    }
-
-            //}
-
-            app.Run();
+			app.Run();
         }
     }
 }

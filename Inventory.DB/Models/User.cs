@@ -8,12 +8,5 @@ using System.Runtime.InteropServices;
 
 public class User:IdentityUser
 {
-  
 
-   
- 
-
-    
-    public ICollection<Product> Products { get; set; }
-    public ICollection<Transaction> Transactions { get; set; }
 }
