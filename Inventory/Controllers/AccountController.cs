@@ -51,11 +51,13 @@ namespace Inventory.Controllers
 			}
 			return View("Register");
 		}
+
 		[HttpGet]
 		public IActionResult Login()
 		{
 			return View("login");
 		}
+
 		[HttpPost]
 		public async Task<IActionResult> SaveLogin(LoginViewModel loginViewModel)
 		{
@@ -71,7 +73,6 @@ namespace Inventory.Controllers
 					{
 						await signInManager.SignInAsync(appuser, loginViewModel.RememberMe);
 						return RedirectToAction("Index", "Home");
-
 					}
 				}
 				ModelState.AddModelError("", "Username Or Password Wrong");
@@ -82,7 +83,7 @@ namespace Inventory.Controllers
 		public async Task<IActionResult> SignOut()
 		{
 			await signInManager.SignOutAsync();
-			return View("Index", "Home");
+			return View("Login");
 		}
 	}
 }

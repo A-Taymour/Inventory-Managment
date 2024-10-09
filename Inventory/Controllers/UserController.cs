@@ -16,12 +16,15 @@ namespace Inventory.Controllers
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<User> _userManager;
-        public UserController(IUserService UserService, IPasswordHasher<User> passwordHasher, RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
+        private readonly SignInManager<User> _signinManager;
+
+        public UserController(IUserService UserService, IPasswordHasher<User> passwordHasher, RoleManager<IdentityRole> roleManager, UserManager<User> userManager, SignInManager<User> signinManager)
         {
             _UserService = UserService;
             _passwordHasher = passwordHasher;
             _roleManager = roleManager;
             _userManager = userManager;
+            _signinManager = signinManager;
         }
 
 
@@ -41,11 +44,6 @@ namespace Inventory.Controllers
             }
             return View(Users);
         }
-        //public IActionResult GetById(int id)
-        //{
-        //    var User = _UserService.GetById(id);
-        //    return View(User);
-        //}
 		public IActionResult GetById(string id)
 		{
 			var User = _UserService.GetById(id);
@@ -81,27 +79,33 @@ namespace Inventory.Controllers
         }
 
         [HttpGet]
-        public IActionResult Update(string id)
+        public async Task<IActionResult> Update(string id)
         {
-            var User = _UserService.GetById(id);
-            if (User == null)
+            var user = _UserService.GetById(id);
+            if (user == null)
             {
-                return NotFound("this User doesn't exist");
+                return NotFound("This user doesn't exist");
             }
+
+            // Get the user's assigned roles
+            var userRoles = await _userManager.GetRolesAsync(user); // Assuming this method returns a list of role names
+
+            // Get all available roles and mark the ones assigned to the user as selected
             var roles = GetAllRoles();
-            var selectRole = roles.Select(c => new SelectListItem
+            var selectRole = roles.Select(role => new SelectListItem
             {
-                Value = c.Name,
-                Text = c.Name,
+                Value = role.Name,
+                Text = role.Name,
+                Selected = userRoles.Contains(role.Name) 
             }).ToList();
+
             var viewModel = new UserViewModel
             {
-                Name = User.UserName,
-                Email = User.Email,
-                Phone = User.PhoneNumber,
+                Name = user.UserName,
+                Email = user.Email,
+                Phone = user.PhoneNumber,
                 Password = string.Empty,
-                Roles = selectRole,
-
+                Roles = selectRole
             };
 
             return View(viewModel);
@@ -120,25 +124,28 @@ namespace Inventory.Controllers
             existingUser.UserName = viewModel.Name;
             existingUser.Email = viewModel.Email;
             existingUser.PhoneNumber = viewModel.Phone;
-            await _userManager.AddToRoleAsync(existingUser, viewModel.role);
+
+            var currentRoles = await _userManager.GetRolesAsync(existingUser);
+            if (currentRoles.Any())
+            {
+                await _userManager.RemoveFromRolesAsync(existingUser, currentRoles);
+
+            }
+
+            if (!string.IsNullOrEmpty(viewModel.role))
+            {
+                await _userManager.AddToRoleAsync(existingUser, viewModel.role);
+            }
+                await _signinManager.RefreshSignInAsync(existingUser);
+
             if (!string.IsNullOrEmpty(viewModel.Password))
             {
                 existingUser.PasswordHash = _passwordHasher.HashPassword(existingUser, viewModel.Password);
             }
-
-
-
-
-
             _UserService.Update(existingUser);
 
             return RedirectToAction(nameof(GetAll));
         }
-        //public IActionResult Delete(int id)
-        //{
-        //    _UserService.Delete(id);
-        //    return RedirectToAction(nameof(GetAll));
-        //}
 		public IActionResult Delete(string id)
 		{
 			_UserService.Delete(id);

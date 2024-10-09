@@ -40,6 +40,9 @@
                 <select class="form-select" asp-for="role" asp-items="Model.Roles"></select>
                 <span asp-validation-for="role" class="text-danger"></span>
             </div>
+        <div class="mt-4">
+            <a href="/Identity/Account/Manage" class="btn btn-primary">Change Password</a>
+        </div>
 
         <div class="mt-4">
             <input type="submit" value="Save" class="btn btn-primary" />

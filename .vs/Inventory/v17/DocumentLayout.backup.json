@@ -3,48 +3,20 @@
   "WorkspaceRootPath": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3A31E44-A151-4ACE-93D1-1FE874E97F27}|Inventory.DB\\Inventory.DB.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory.db\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3A31E44-A151-4ACE-93D1-1FE874E97F27}|Inventory.DB\\Inventory.DB.csproj|solutionrelative:inventory.db\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3A31E44-A151-4ACE-93D1-1FE874E97F27}|Inventory.DB\\Inventory.DB.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory.db\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3A31E44-A151-4ACE-93D1-1FE874E97F27}|Inventory.DB\\Inventory.DB.csproj|solutionrelative:inventory.db\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5999B6AA-2DCC-49EE-BF27-B94E3D977AC0}|Inventory.Service\\Inventory.Service.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory.service\\sevices\\userservice\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5999B6AA-2DCC-49EE-BF27-B94E3D977AC0}|Inventory.Service\\Inventory.Service.csproj|solutionrelative:inventory.service\\sevices\\userservice\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5999B6AA-2DCC-49EE-BF27-B94E3D977AC0}|Inventory.Service\\Inventory.Service.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory.service\\sevices\\userservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5999B6AA-2DCC-49EE-BF27-B94E3D977AC0}|Inventory.Service\\Inventory.Service.csproj|solutionrelative:inventory.service\\sevices\\userservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\views\\user\\getbyid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\views\\user\\getbyid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\views\\user\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\views\\user\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\views\\dashboard\\displaydash.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\views\\dashboard\\displaydash.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\views\\report\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\views\\report\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5999B6AA-2DCC-49EE-BF27-B94E3D977AC0}|Inventory.Service\\Inventory.Service.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory.service\\sevices\\reports\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5999B6AA-2DCC-49EE-BF27-B94E3D977AC0}|Inventory.Service\\Inventory.Service.csproj|solutionrelative:inventory.service\\sevices\\reports\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 83,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,140 +42,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Service\\Sevices\\UserService\\IUserService.cs",
-              "RelativeDocumentMoniker": "Inventory.Service\\Sevices\\UserService\\IUserService.cs",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Service\\Sevices\\UserService\\IUserService.cs",
-              "RelativeToolTip": "Inventory.Service\\Sevices\\UserService\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Program.cs",
+              "RelativeDocumentMoniker": "Inventory\\Program.cs",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Program.cs",
+              "RelativeToolTip": "Inventory\\Program.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAywEIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T16:30:09.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Service\\Sevices\\UserService\\UserService.cs",
-              "RelativeDocumentMoniker": "Inventory.Service\\Sevices\\UserService\\UserService.cs",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Service\\Sevices\\UserService\\UserService.cs",
-              "RelativeToolTip": "Inventory.Service\\Sevices\\UserService\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T16:29:55.731Z",
+              "WhenOpened": "2024-10-09T21:19:12.494Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserViewModel.cs",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\ViewModels\\UserViewModel.cs",
-              "RelativeDocumentMoniker": "Inventory.DB\\ViewModels\\UserViewModel.cs",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\ViewModels\\UserViewModel.cs*",
-              "RelativeToolTip": "Inventory.DB\\ViewModels\\UserViewModel.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAiwBcAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T16:28:03.402Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Inventory\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "Inventory\\Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAIQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-09T21:15:10.069Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Inventory\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Inventory\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAzwDQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T21:02:43.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Inventory\\Controllers\\UserController.cs",
               "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\UserController.cs",
               "RelativeToolTip": "Inventory\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAkwIsAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAqwIwAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T15:05:43.681Z",
+              "WhenOpened": "2024-10-09T20:50:56.634Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetById.cshtml",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\User\\GetById.cshtml",
-              "RelativeDocumentMoniker": "Inventory\\Views\\User\\GetById.cshtml",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\User\\GetById.cshtml",
-              "RelativeToolTip": "Inventory\\Views\\User\\GetById.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-09T15:05:33.224Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetAll.cshtml",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\User\\GetAll.cshtml",
-              "RelativeDocumentMoniker": "Inventory\\Views\\User\\GetAll.cshtml",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\User\\GetAll.cshtml",
-              "RelativeToolTip": "Inventory\\Views\\User\\GetAll.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABQAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-09T14:53:14.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Inventory.DB\\Models\\User.cs",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Models\\User.cs",
-              "RelativeToolTip": "Inventory.DB\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T14:53:00.47Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ReportService.cs",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Service\\Sevices\\Reports\\ReportService.cs",
-              "RelativeDocumentMoniker": "Inventory.Service\\Sevices\\Reports\\ReportService.cs",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory.Service\\Sevices\\Reports\\ReportService.cs",
-              "RelativeToolTip": "Inventory.Service\\Sevices\\Reports\\ReportService.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAIwE8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T14:37:55.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\Report\\Index.cshtml",
-              "RelativeDocumentMoniker": "Inventory\\Views\\Report\\Index.cshtml",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\Report\\Index.cshtml",
-              "RelativeToolTip": "Inventory\\Views\\Report\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-09T14:34:20.463Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DisplayDash.cshtml",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\Dashboard\\DisplayDash.cshtml",
-              "RelativeDocumentMoniker": "Inventory\\Views\\Dashboard\\DisplayDash.cshtml",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\Dashboard\\DisplayDash.cshtml",
-              "RelativeToolTip": "Inventory\\Views\\Dashboard\\DisplayDash.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-09T14:27:23.575Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "Inventory\\Controllers\\DashboardController.cs",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "Inventory\\Controllers\\DashboardController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAiwCcAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T14:18:04.465Z"
             }
           ]
         },

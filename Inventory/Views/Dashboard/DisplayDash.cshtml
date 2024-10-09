@@ -1,8 +1,5 @@
 ﻿<div class="container-fluid px-4">
     <h1 class="mt-4">Dashboard</h1>
-    <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Dashboard</li>
-    </ol>
     <div class="row">
         <div class="col-xl-3 col-md-6">
             <div class="card bg-primary text-white mb-4">
@@ -41,43 +38,6 @@
             </div>
         </div>
     </div>
-
-    <div class="card mb-4">
-        <div class="card-header">
-            <i class="fas fa-chart-bar me-1"></i>
-            Product Quantities Chart
-        </div>
-        <div class="card-body">
-            <canvas id="productChart"></canvas>
-        </div>
-    </div>
-
-    <script>
-        console.log('Product Names:', @Html.Raw(Json.Serialize(ViewBag.ProductNames))); // Debugging
-        console.log('Product Quantities:', @Html.Raw(Json.Serialize(ViewBag.ProductQuantities))); // Debugging
-
-        var ctx = document.getElementById('productChart').getContext('2d');
-        var productChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: @Html.Raw(Json.Serialize(ViewBag.ProductNames)),
-                datasets: [{
-                    label: 'Stock Quantity',
-                    data: @Html.Raw(Json.Serialize(ViewBag.ProductQuantities)),
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
 
     <div class="card mb-4">
         <div class="card-header">
@@ -128,6 +88,5 @@
 
     <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </div>

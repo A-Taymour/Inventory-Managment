@@ -13,11 +13,9 @@ namespace Inventory.DB.ViewModels
         public string Name { get; set; }
 
         [Display(Name = "Password")]
-        //[Required(ErrorMessage = "Password is required")]
-        [StringLength(100, MinimumLength = 8, ErrorMessage = "Password must be at least 8 characters long")]
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$ ",
-        ErrorMessage = "Password must contain at least one uppercase letter, one lowercase letter, one number," +
-        " one special character, and be at least 8 characters long.")]
+        [StringLength(100, MinimumLength = 8, ErrorMessage = "Password must be at least 8 characters long.")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$",
+        ErrorMessage = "Password must contain at least one uppercase letter, one lowercase letter, one number, one special character, and be at least 8 characters long.")]
         [DataType(DataType.Password)]
         public string? Password { get; set; }
 
