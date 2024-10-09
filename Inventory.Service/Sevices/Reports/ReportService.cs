@@ -72,12 +72,12 @@ namespace Inventory.Service.Sevices.Reports
 
 			if (stockQuantity >= lowStockThreshold)
 			{
-				return "NO";
+				return "Accepted";
 			}
 
 			else
 			{
-				return "YES";
+				return "Not Accepted";
 			}
 		}
 	}

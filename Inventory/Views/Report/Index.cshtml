@@ -38,7 +38,7 @@
                         <th>Supplier</th>
                         <th>Price</th>
                         <th>Stock Quantity</th>
-                        <th>Low Stock Status</th>
+                        <th>Stock Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,15 +51,20 @@
                                 <td>@product.Price.ToString("C")</td>
                                 <td>@product.StockQuantity</td>
                                 <td>
-                                @if (product.LowStockStatus == "Low Stock")
+                                @if (product.LowStockStatus == "About to run out")
                                 {
-                                            <span class="badge badge-danger">Low Stock</span>
+                                    <span >About to run out</span>
+                                }
+                                else if (product.LowStockStatus == "Accepted")
+                                {
+                                    <span >Accepted</span>
                                 }
                                 else
                                 {
-                                            <span class="badge badge-success">In Stock</span>
+                                    <span >Not Accepted</span>
+
                                 }
-                                </td>
+                            </td>
                             </tr>
                     }
                 </tbody>
