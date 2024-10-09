@@ -1,0 +1,146 @@
+﻿
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Dashboard</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="row">
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-primary text-white mb-4">
+                <div class="card-body fs-2">Number of Products</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="fs-2 text-white stretched-link" href="/product/getall">@ViewBag.ProductCount</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-warning text-white mb-4">
+                <div class="card-body fs-2">Number of Categories</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="fs-2 text-white stretched-link" href="/category/getall">@ViewBag.CategoryCount</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-success text-white mb-4">
+                <div class="card-body fs-2">Number of Suppliers</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="fs-2 text-white stretched-link" href="/supplier/getall">@ViewBag.SupplierCount</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-danger text-white mb-4">
+                <div class="card-body fs-2">Number of Users</div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="fs-2 text-white stretched-link" href="/user/getall">@ViewBag.UserCount</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-chart-bar me-1"></i>
+            Product Quantities Chart
+        </div>
+        <div class="card-body">
+            <canvas id="productChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        var ctx = document.getElementById('productChart').getContext('2d');
+        var productChart = new Chart(ctx, {
+            type: 'bar', // You can change this to 'line', 'pie', etc.
+            data: {
+                labels: @Html.Raw(Json.Serialize(ViewBag.ProductNames)),
+                datasets: [{
+                    label: 'Stock Quantity',
+                    data: @Html.Raw(Json.Serialize(ViewBag.ProductQuantities)),
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            DataTable
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col" class="text-right">Price</th>
+                        <th scope="col" class="text-right">Stock Quantity</th>
+                        <th scope="col">Low Stock Threshold</th>
+                        <th scope="col">Created At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.Products)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td class="text-right">@item.Price</td>
+                            <td class="text-right">@item.StockQuantity</td>
+                            <td>@item.LowStockThreshold</td>
+                            <td>@item.CreatedAt</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#datatablesSimple').DataTable({
+                "order": [], // Default no order, you can set initial order here
+                "columnDefs": [
+                    { "orderable": false, "targets": [5] } // Disable sorting for Created At column
+                ]
+            });
+        });
+    </script>
+
+
+
+    <div />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+
+
+

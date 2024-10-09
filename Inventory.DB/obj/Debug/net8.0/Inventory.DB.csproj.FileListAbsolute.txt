@@ -133,3 +133,18 @@ D:\the newest\the newest\newest\Inventory-Managment\Inventory.DB\obj\Debug\net8.
 D:\the newest\the newest\newest\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.pdb
 D:\the newest\the newest\newest\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.genruntimeconfig.cache
 D:\the newest\the newest\newest\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\ref\Inventory.DB.dll
+F:\depii2\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.deps.json
+F:\depii2\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.runtimeconfig.json
+F:\depii2\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.dll
+F:\depii2\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.pdb
+F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.csproj.AssemblyReference.cache
+F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.GeneratedMSBuildEditorConfig.editorconfig
+F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.AssemblyInfoInputs.cache
+F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.AssemblyInfo.cs
+F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.csproj.CoreCompileInputs.cache
+F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.sourcelink.json
+F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.dll
+F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\refint\Inventory.DB.dll
+F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.pdb
+F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.genruntimeconfig.cache
+F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\ref\Inventory.DB.dll

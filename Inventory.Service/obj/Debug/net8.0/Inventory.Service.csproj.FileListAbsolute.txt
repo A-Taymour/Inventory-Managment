@@ -160,3 +160,21 @@ D:\the newest\the newest\newest\Inventory-Managment\Inventory.Service\obj\Debug\
 D:\the newest\the newest\newest\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\refint\Inventory.Service.dll
 D:\the newest\the newest\newest\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.pdb
 D:\the newest\the newest\newest\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\ref\Inventory.Service.dll
+F:\depii2\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.deps.json
+F:\depii2\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.dll
+F:\depii2\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.pdb
+F:\depii2\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.DB.dll
+F:\depii2\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Repository.dll
+F:\depii2\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Repository.pdb
+F:\depii2\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.DB.pdb
+F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.csproj.AssemblyReference.cache
+F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.GeneratedMSBuildEditorConfig.editorconfig
+F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.AssemblyInfoInputs.cache
+F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.AssemblyInfo.cs
+F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.csproj.CoreCompileInputs.cache
+F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.sourcelink.json
+F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.csproj.CopyComplete
+F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.dll
+F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\refint\Inventory.Service.dll
+F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.pdb
+F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\ref\Inventory.Service.dll

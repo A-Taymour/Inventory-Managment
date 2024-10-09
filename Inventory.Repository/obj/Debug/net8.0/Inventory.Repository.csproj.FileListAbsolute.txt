@@ -142,3 +142,19 @@ D:\the newest\the newest\newest\Inventory-Managment\Inventory.Repository\obj\Deb
 D:\the newest\the newest\newest\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\refint\Inventory.Repository.dll
 D:\the newest\the newest\newest\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.pdb
 D:\the newest\the newest\newest\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\ref\Inventory.Repository.dll
+F:\depii2\Inventory-Managment\Inventory.Repository\bin\Debug\net8.0\Inventory.Repository.deps.json
+F:\depii2\Inventory-Managment\Inventory.Repository\bin\Debug\net8.0\Inventory.Repository.dll
+F:\depii2\Inventory-Managment\Inventory.Repository\bin\Debug\net8.0\Inventory.Repository.pdb
+F:\depii2\Inventory-Managment\Inventory.Repository\bin\Debug\net8.0\Inventory.DB.dll
+F:\depii2\Inventory-Managment\Inventory.Repository\bin\Debug\net8.0\Inventory.DB.pdb
+F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.csproj.AssemblyReference.cache
+F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.GeneratedMSBuildEditorConfig.editorconfig
+F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.AssemblyInfoInputs.cache
+F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.AssemblyInfo.cs
+F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.csproj.CoreCompileInputs.cache
+F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.sourcelink.json
+F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.csproj.CopyComplete
+F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.dll
+F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\refint\Inventory.Repository.dll
+F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.pdb
+F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\ref\Inventory.Repository.dll
