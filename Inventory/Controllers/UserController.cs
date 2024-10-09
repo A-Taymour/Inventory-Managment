@@ -1,7 +1,11 @@
 ﻿using Inventory.DB.ViewModels;
 using Inventory.Service.Sevices.UserService;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+
 
 namespace Inventory.Controllers
 {
@@ -9,12 +13,22 @@ namespace Inventory.Controllers
     public class UserController : Controller
     {
         private readonly IUserService _UserService;
-
-
-        public UserController(IUserService UserService)
+        private readonly IPasswordHasher<User> _passwordHasher;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly UserManager<User> _userManager;
+        public UserController(IUserService UserService, IPasswordHasher<User> passwordHasher, RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
         {
             _UserService = UserService;
+            _passwordHasher = passwordHasher;
+            _roleManager = roleManager;
+            _userManager = userManager;
+        }
 
+
+        public List<IdentityRole> GetAllRoles()
+        {
+            var roles = _roleManager.Roles.ToList();
+            return roles;
         }
 
         [Authorize]
@@ -74,12 +88,19 @@ namespace Inventory.Controllers
             {
                 return NotFound("this User doesn't exist");
             }
+            var roles = GetAllRoles();
+            var selectRole = roles.Select(c => new SelectListItem
+            {
+                Value = c.Name,
+                Text = c.Name,
+            }).ToList();
             var viewModel = new UserViewModel
             {
                 Name = User.UserName,
                 Email = User.Email,
                 Phone = User.PhoneNumber,
-                Password = User.PasswordHash,
+                Password = string.Empty,
+                Roles = selectRole,
 
             };
 
@@ -87,25 +108,31 @@ namespace Inventory.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(string id, UserViewModel viewModel)
+        public async Task<IActionResult> Update(string id, UserViewModel viewModel)
         {
-            if (ModelState.IsValid)
+
+            var existingUser = _UserService.GetById(id);
+            if (existingUser == null)
             {
-                var existingUser = _UserService.GetById(id);
-                if (existingUser == null)
-                {
-                    return NotFound("This User doesn't exist.");
-                }
-
-                existingUser.UserName = viewModel.Name;
-                existingUser.Email = viewModel.Email;
-                existingUser.PhoneNumber = viewModel.Phone;
-
-                _UserService.Update(existingUser);
-
-                return RedirectToAction(nameof(GetAll));
+                return NotFound("This User doesn't exist.");
             }
-            return View(viewModel);
+
+            existingUser.UserName = viewModel.Name;
+            existingUser.Email = viewModel.Email;
+            existingUser.PhoneNumber = viewModel.Phone;
+            await _userManager.AddToRoleAsync(existingUser, viewModel.role);
+            if (!string.IsNullOrEmpty(viewModel.Password))
+            {
+                existingUser.PasswordHash = _passwordHasher.HashPassword(existingUser, viewModel.Password);
+            }
+
+
+
+
+
+            _UserService.Update(existingUser);
+
+            return RedirectToAction(nameof(GetAll));
         }
         //public IActionResult Delete(int id)
         //{

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Inventory.DB.ViewModels
 {
@@ -25,16 +26,24 @@ namespace Inventory.DB.ViewModels
         public string Password { get; set; }
 
         [Display(Name = "Email Address")]
-        [Required(ErrorMessage = "Email is required")]
+        //[Required(ErrorMessage = "Email is required")]
         [EmailAddress(ErrorMessage = "Invalid email format")]
         public string Email { get; set; }
 
         [Display(Name = "Phone Number")]
-        [Required(ErrorMessage = "Phone number is required")]
+        //[Required(ErrorMessage = "Phone number is required")]
         [RegularExpression(@"^(012|011|010|015)\d{8}$",
         ErrorMessage = "Phone number is Invalid.")]
         [StringLength(11, ErrorMessage = "Phone number cannot be longer than 11 characters")]
         public string Phone { get; set; }
+
+    
+        public string role { get; set; }
+
+
+        [Display(Name = "Role")]
+
+        public IEnumerable<SelectListItem> Roles { get; set; }
 
     }
 }
