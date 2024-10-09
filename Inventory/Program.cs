@@ -90,7 +90,27 @@ namespace Inventory
 				await next();
 			});
 
-			app.Run();
+            using (var scope = app.Services.CreateScope())
+            {
+                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                var roles = new[] { "admin", "user" };
+
+                foreach (var role in roles)
+                {
+                    if (!roleManager.RoleExistsAsync(role).Result)
+                    {
+                        roleManager.CreateAsync(new IdentityRole(role)).Wait();
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Role '{role}' already exists. Skipping creation.");
+                    }
+                }
+            }
+
+
+            app.Run();
         }
     }
 }

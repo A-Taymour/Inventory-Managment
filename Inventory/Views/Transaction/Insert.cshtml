@@ -51,14 +51,6 @@
             <button type="button" id="addProductBtn" class="btn btn-secondary">Add Another Product</button>
         </div>
 
-        <div class="mb-3 mt-3">
-            <label asp-for="UserID" class="form-label"></label>
-            <select class="form-select" asp-for="UserID" asp-items="Model.Users" required>
-                <option value="" disabled selected>Select User</option>
-            </select>
-            <span asp-validation-for="UserID" class="text-danger"></span>
-        </div>
-
         <div>
             <input type="submit" value="Insert" class="btn btn-primary" />
         </div>

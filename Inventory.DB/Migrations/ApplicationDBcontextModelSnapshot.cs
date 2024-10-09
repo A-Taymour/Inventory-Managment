@@ -241,19 +241,11 @@ namespace Inventory.DB.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId1")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("ID");
 
                     b.HasIndex("CategoryID");
 
                     b.HasIndex("SupplierID");
-
-                    b.HasIndex("UserId1");
 
                     b.ToTable("Products");
                 });
@@ -308,17 +300,9 @@ namespace Inventory.DB.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId1")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("ID");
 
                     b.HasIndex("ProductID");
-
-                    b.HasIndex("UserId1");
 
                     b.ToTable("Transactions");
                 });
@@ -464,13 +448,7 @@ namespace Inventory.DB.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId1");
-
                     b.Navigation("Category");
-
-                    b.Navigation("User");
 
                     b.Navigation("supplier");
                 });
@@ -483,13 +461,7 @@ namespace Inventory.DB.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId1");
-
                     b.Navigation("Product");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Category", b =>

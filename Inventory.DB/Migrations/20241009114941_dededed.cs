@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Inventory.DB.Migrations
 {
     /// <inheritdoc />
-    public partial class adadadadada : Migration
+    public partial class dededed : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -199,19 +199,12 @@ namespace Inventory.DB.Migrations
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StockQuantity = table.Column<int>(type: "int", nullable: false),
                     LowStockThreshold = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     CategoryID = table.Column<int>(type: "int", nullable: false),
                     SupplierID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.ID);
-                    table.ForeignKey(
-                        name: "FK_Products_AspNetUsers_UserId1",
-                        column: x => x.UserId1,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Products_Categories_CategoryID",
                         column: x => x.CategoryID,
@@ -257,18 +250,11 @@ namespace Inventory.DB.Migrations
                     TransactionType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     TransactionDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     ProductID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Transactions", x => x.ID);
-                    table.ForeignKey(
-                        name: "FK_Transactions_AspNetUsers_UserId1",
-                        column: x => x.UserId1,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Transactions_Products_ProductID",
                         column: x => x.ProductID,
@@ -332,19 +318,9 @@ namespace Inventory.DB.Migrations
                 column: "SupplierID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_UserId1",
-                table: "Products",
-                column: "UserId1");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Transactions_ProductID",
                 table: "Transactions",
                 column: "ProductID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Transactions_UserId1",
-                table: "Transactions",
-                column: "UserId1");
         }
 
         /// <inheritdoc />
@@ -375,10 +351,10 @@ namespace Inventory.DB.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "Categories");
