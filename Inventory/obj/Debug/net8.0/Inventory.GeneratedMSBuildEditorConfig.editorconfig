@@ -17,143 +17,143 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Inventory
 build_property.RootNamespace = Inventory
-build_property.ProjectDir = C:\Users\anton\OneDrive\Desktop\final\Inventory-Managment\Inventory\
+build_property.ProjectDir = D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\anton\OneDrive\Desktop\final\Inventory-Managment\Inventory
+build_property.MSBuildProjectDirectory = D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Account/Login.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Account/Register.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Alert/index.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Alert/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxlcnRcaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Category/GetAll.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Category/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcR2V0QWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Category/GetById.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Category/GetById.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcR2V0QnlJZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Category/Insert.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Category/Insert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5zZXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Category/Update.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Category/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Dashboard/DisplayDash.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Dashboard/DisplayDash.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERpc3BsYXlEYXNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Home/Index.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Home/Privacy.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Product/GetAll.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Product/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxHZXRBbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Product/GetById.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Product/GetById.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxHZXRCeUlkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Product/Insert.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Product/Insert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbnNlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Product/Update.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Product/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Report/Index.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Report/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Role/AddRole.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Role/AddRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxBZGRSb2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Shared/Error.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Shared/_LoginPartial.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Supplier/GetAll.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Supplier/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcR2V0QWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Supplier/GetById.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Supplier/GetById.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcR2V0QnlJZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Supplier/Insert.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Supplier/Insert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcSW5zZXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Supplier/Update.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Supplier/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Transaction/GetAll.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Transaction/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25cR2V0QWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Transaction/GetById.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Transaction/GetById.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25cR2V0QnlJZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Transaction/Insert.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Transaction/Insert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25cSW5zZXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/User/GetAll.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/User/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxHZXRBbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/User/GetById.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/User/GetById.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxHZXRCeUlkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/User/Insert.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/User/Insert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbnNlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/User/Update.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/User/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/_ViewImports.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/_ViewStart.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/OneDrive/Desktop/final/Inventory-Managment/Inventory/Views/Shared/_Layout.cshtml]
+[D:/مبادره مصر الرقميه/Technical/Project/Inventory-Managment/Inventory/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-jkjl1e234n

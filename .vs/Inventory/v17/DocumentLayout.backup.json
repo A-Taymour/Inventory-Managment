@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\technical\\project\\inventory-managment\\inventory\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 83,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,55 +33,33 @@
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Program.cs",
-              "RelativeDocumentMoniker": "Inventory\\Program.cs",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Program.cs",
-              "RelativeToolTip": "Inventory\\Program.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAywEIAAAAjAAAAAAAAAA==",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Inventory\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Inventory\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAywCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T21:19:12.494Z",
+              "WhenOpened": "2024-10-09T23:27:02.741Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Inventory\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Views\\Shared\\_Layout.cshtml*",
-              "RelativeToolTip": "Inventory\\Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAAAIQAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-09T21:15:10.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Inventory\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Inventory\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAzwDQAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T21:02:43.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Inventory\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Inventory\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAqwIwAAAA6AAAAAAAAAA==",
+              "ToolTip": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\Inventory\\Controllers\\UserController.cs*",
+              "RelativeToolTip": "Inventory\\Controllers\\UserController.cs*",
+              "ViewState": "AgIAAD0AAAAAAAAAAAA2wFEAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T20:50:56.634Z",
+              "WhenOpened": "2024-10-09T23:25:17.632Z",
               "EditorCaption": ""
             }
           ]

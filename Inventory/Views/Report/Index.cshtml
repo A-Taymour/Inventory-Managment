@@ -50,21 +50,7 @@
                                 <td>@product.Supplier</td>
                                 <td>@product.Price.ToString("C")</td>
                                 <td>@product.StockQuantity</td>
-                                <td>
-                                @if (product.LowStockStatus == "About to run out")
-                                {
-                                    <span >About to run out</span>
-                                }
-                                else if (product.LowStockStatus == "Accepted")
-                                {
-                                    <span >Accepted</span>
-                                }
-                                else
-                                {
-                                    <span >Not Accepted</span>
-
-                                }
-                            </td>
+                                <td>@product.LowStockStatus </td>
                             </tr>
                     }
                 </tbody>

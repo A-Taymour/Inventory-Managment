@@ -10,10 +10,9 @@ namespace Inventory.Controllers
     public class DashboardController : Controller
     {
         private readonly IProductService _productService;
-        private readonly ICategoryService _categoryService; // Change to lowercase 'c'
-        private readonly ISupplierService _supplierService; // Change to lowercase 's'
-        private readonly IUserService _userService; // Change to lowercase 'u'
-        private readonly ITransactionService _transactionService;
+        private readonly ICategoryService _categoryService; 
+        private readonly ISupplierService _supplierService; 
+        private readonly IUserService _userService; 
 
         public DashboardController(IProductService productService,
             ICategoryService categoryService,
@@ -25,7 +24,6 @@ namespace Inventory.Controllers
             _categoryService = categoryService;
             _supplierService = supplierService;
             _userService = userService;
-            _transactionService = transactionService;
         }
 
         public IActionResult DisplayDash()
@@ -33,21 +31,41 @@ namespace Inventory.Controllers
             var productCount = _productService.GetAll().Count();
             var categoryCount = _categoryService.GetAll().Count();
             var usersCount = _userService.GetAll().Count();
-            var transactionCount = _transactionService.GetAll().Count();
-            var products = _productService.GetAll();
+            var supplierCount = _supplierService.GetAll().Count();
 
-            // Ensure these lines are included and correct
-            ViewBag.ProductNames = products.Select(p => p.Name).ToList();
-            ViewBag.ProductQuantities = products.Select(p => p.StockQuantity).ToList();
 
-            ViewBag.ProductCount = products.Count(); // Ensure to count products directly from the collection
-                                                     // Other ViewBag properties...
+            var ProductsWithMostStocked = _productService.GetAll()
+                .OrderByDescending(p => p.StockQuantity) 
+                .ToList();
+
+            var categoriesWithMostProducts = _categoryService.GetAll()
+                .Select(c => new
+                {
+                    Category = c,
+                    ProductCount = _productService.GetAll().Count(p => p.CategoryID == c.ID)
+                })
+                .OrderByDescending(c => c.ProductCount)
+                .ToList();
+
+            var suppliersWithMostProducts = _supplierService.GetAll()
+                .Select(s => new
+                {
+                    Supplier = s,
+                    ProductCount = _productService.GetAll().Count(p => p.SupplierID == s.Id)
+                })
+                .OrderByDescending(s => s.ProductCount)
+                .ToList();
+
+            ViewBag.ProductCount = productCount;
             ViewBag.CategoryCount = categoryCount;
             ViewBag.UserCount = usersCount;
-            ViewBag.SupplierCount = transactionCount;
-            ViewBag.Products = products; // Changed to 'Products' for consistency
+            ViewBag.SupplierCount = supplierCount;
+            ViewBag.CategoriesWithMostProducts = categoriesWithMostProducts;
+            ViewBag.ProductsWithMostStocked = ProductsWithMostStocked; 
+            ViewBag.SuppliersWithMostProducts = suppliersWithMostProducts;
 
             return View();
         }
+
     }
 }

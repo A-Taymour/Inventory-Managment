@@ -61,7 +61,7 @@ namespace Inventory.Service.Sevices.Reports
 		private static string GetLowStockStatus(int stockQuantity, int lowStockThreshold)
 		{
 
-			if (lowStockThreshold <= 0)
+			if (lowStockThreshold < 0)
 			{
 				return "Invalid threshold";
 			}
