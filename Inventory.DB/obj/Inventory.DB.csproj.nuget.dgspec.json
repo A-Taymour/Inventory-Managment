@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {}
+    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
+    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
+        "projectUniqueName": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
         "projectName": "Inventory.DB",
-        "projectPath": "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
-        "packagesPath": "C:\\Users\\Omar Hatem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.DB\\obj\\",
+        "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
+        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
+        "outputPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Omar Hatem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

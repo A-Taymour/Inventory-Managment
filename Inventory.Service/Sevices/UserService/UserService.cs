@@ -20,10 +20,6 @@ namespace Inventory.Service.Sevices.UserService
             return _UserRepository.GetAll();
         }
 
-        public User GetById(int id)
-        {
-            return _UserRepository.GetById(id);
-        }
 		public User GetById(string id)
 		{
 			return _UserRepository.GetById(id);
@@ -37,11 +33,6 @@ namespace Inventory.Service.Sevices.UserService
         public void Update(User user)
         {
             _UserRepository.Update(user);
-        }
-
-        public void Delete(int id)
-        {
-            _UserRepository.Delete(id);
         }
 		public void Delete(string id)
 		{
