@@ -14,14 +14,9 @@ namespace Inventory.DB.ViewModels
         public int Quantity { get; set; }
 
         public DateTime TransactionDate { get; set; }
-        public int UserID { get; set; }
-        public User User { get; set; }
 
         public int ProductID { get; set; }
         public Product Product { get; set; }
-        [Display(Name = "User")]
-
-        public IEnumerable<SelectListItem> Users { get; set; }
         [Display(Name = "Product")]
 
         public IEnumerable<SelectListItem> products { get; set; }

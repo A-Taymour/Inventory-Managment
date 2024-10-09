@@ -56,7 +56,6 @@ namespace Inventory.Controllers
             {
                 categories = selectCategoryItems,
                 Suppliers = selecSupplierItem,
-                Users = selectUserItem
             };
 
             return View(viewModel);
@@ -73,7 +72,6 @@ namespace Inventory.Controllers
                 Description = vm.Description,
                 CategoryID = vm.CategoryID,
                 SupplierID = vm.SupplierID,
-                UserId = vm.UserID,
                 StockQuantity = vm.StockQuantity,
                 LowStockThreshold = vm.LowStockThreshold,
                 CreatedAt = vm.CreatedAt,
@@ -90,7 +88,6 @@ namespace Inventory.Controllers
                 TransactionDate = DateTime.Now,
                 ProductID = product.ID,
                 Quantity = vm.StockQuantity,
-                UserId = vm.UserID 
 
             };
 
@@ -98,7 +95,7 @@ namespace Inventory.Controllers
             _transactionService.Add(transaction);
 
             
-            return RedirectToAction("GetAll", "Transaction");
+            return RedirectToAction("GetAll", "Product");
         }
 
 
@@ -131,7 +128,6 @@ namespace Inventory.Controllers
             {
                 Value = c.Id.ToString(),
                 Text = c.UserName,
-                Selected = c.Id == Product.UserId.ToString()
 
             }).ToList();
 
@@ -146,10 +142,8 @@ namespace Inventory.Controllers
                 LowStockThreshold = Product.LowStockThreshold,
                 CategoryID = Product.CategoryID,
                 SupplierID = Product.SupplierID,
-                UserID = Product.UserId,
                 categories = selectCategoryItems,
                 Suppliers = selecSupplierItem,
-                Users = selectUserItem
             };
 
             return View(viewModel);
@@ -172,7 +166,6 @@ namespace Inventory.Controllers
                 existingProduct.StockQuantity = viewModel.StockQuantity;
                 existingProduct.LowStockThreshold = viewModel.LowStockThreshold;
                 existingProduct.CategoryID = viewModel.CategoryID;
-                existingProduct.UserId = viewModel.UserID;
                 existingProduct.SupplierID = viewModel.SupplierID;
 
 

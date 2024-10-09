@@ -31,15 +31,10 @@ namespace Inventory.DB.ViewModels
         [Required(ErrorMessage = "LowStockThreshold  is required.")]
         [Range(0, int.MaxValue, ErrorMessage = "LowStockThreshold must be a non-negative integer.")]
         public int LowStockThreshold { get; set; }
-
-        [Display(Name = "User")]
-
-        public IEnumerable<SelectListItem> Users { get; set; }
         [Display(Name = "Category")]
 
         public IEnumerable<SelectListItem> categories { get; set; }
         [Display(Name = "Supplier")]
-        public int UserID { get; set; }
         public int CategoryID { get; set; }
         public int SupplierID { get; set; }
 

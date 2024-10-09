@@ -75,7 +75,6 @@ namespace Inventory.Controllers
             var viewModel = new TransactionViewModel
             {
                 products = selectProductItems,
-                Users = selectUserItems
             };
 
             return View(viewModel);
@@ -142,7 +141,6 @@ namespace Inventory.Controllers
                 TransactionType = vm.TransactionType,
                 Quantity = vm.Quantity,
                 TransactionDate = vm.TransactionDate,
-                UserId = vm.UserID,
                 ProductID = vm.ProductID,
             };
 
