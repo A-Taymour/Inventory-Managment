@@ -148,3 +148,18 @@ F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\refint\Inventory.DB.
 F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.pdb
 F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.genruntimeconfig.cache
 F:\depii2\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\ref\Inventory.DB.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.deps.json
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.runtimeconfig.json
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\bin\Debug\net8.0\Inventory.DB.pdb
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.csproj.AssemblyReference.cache
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.AssemblyInfoInputs.cache
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.AssemblyInfo.cs
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.csproj.CoreCompileInputs.cache
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.sourcelink.json
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\refint\Inventory.DB.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.pdb
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\Inventory.DB.genruntimeconfig.cache
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.DB\obj\Debug\net8.0\ref\Inventory.DB.dll

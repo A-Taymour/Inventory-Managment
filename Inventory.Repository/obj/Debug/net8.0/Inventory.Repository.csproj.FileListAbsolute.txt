@@ -158,3 +158,19 @@ F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Re
 F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\refint\Inventory.Repository.dll
 F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.pdb
 F:\depii2\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\ref\Inventory.Repository.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\bin\Debug\net8.0\Inventory.Repository.deps.json
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\bin\Debug\net8.0\Inventory.Repository.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\bin\Debug\net8.0\Inventory.Repository.pdb
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\bin\Debug\net8.0\Inventory.DB.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\bin\Debug\net8.0\Inventory.DB.pdb
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.csproj.AssemblyReference.cache
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.AssemblyInfoInputs.cache
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.AssemblyInfo.cs
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.sourcelink.json
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventor.001127E0.Up2Date
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\refint\Inventory.Repository.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\Inventory.Repository.pdb
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Repository\obj\Debug\net8.0\ref\Inventory.Repository.dll

@@ -178,3 +178,21 @@ F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Servi
 F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\refint\Inventory.Service.dll
 F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.pdb
 F:\depii2\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\ref\Inventory.Service.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.deps.json
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.pdb
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.DB.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Repository.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Repository.pdb
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.DB.pdb
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.csproj.AssemblyReference.cache
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.AssemblyInfoInputs.cache
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.AssemblyInfo.cs
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.csproj.CoreCompileInputs.cache
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.sourcelink.json
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventor.7932B3AC.Up2Date
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\refint\Inventory.Service.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.pdb
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\ref\Inventory.Service.dll
