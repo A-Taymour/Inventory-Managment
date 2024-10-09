@@ -1,4 +1,6 @@
 ﻿using Inventory.DB.ViewModels;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
@@ -80,9 +82,9 @@ namespace Inventory.Controllers
 			}
 			return View("Login", loginViewModel);
 		}
-		public async Task<IActionResult> SignOut()
+		public async Task<IActionResult>SignOut()
 		{
-			await signInManager.SignOutAsync();
+			await signInManager.SignOutAsync(); 
 			return View("Login");
 		}
 	}

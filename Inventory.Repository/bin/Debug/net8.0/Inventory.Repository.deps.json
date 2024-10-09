@@ -2114,10 +2114,7 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.5"
         },
         "runtime": {
-          "Inventory.DB.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Inventory.DB.dll": {}
         }
       }
     }
