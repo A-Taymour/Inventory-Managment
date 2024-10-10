@@ -28,7 +28,9 @@ namespace Inventory.DB.ViewModels
         [Range(0, int.MaxValue, ErrorMessage = "Stock quantity must be a non-negative integer.")]
         public int StockQuantity { get; set; }
 
-        [Required(ErrorMessage = "LowStockThreshold  is required.")]
+		public string imageurl { get; set; }
+
+		[Required(ErrorMessage = "LowStockThreshold  is required.")]
         [Range(0, int.MaxValue, ErrorMessage = "LowStockThreshold must be a non-negative integer.")]
         public int LowStockThreshold { get; set; }
         [Display(Name = "Category")]

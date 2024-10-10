@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Inventory.DB.Migrations
 {
     /// <inheritdoc />
-    public partial class dededed : Migration
+    public partial class omar : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -199,6 +199,7 @@ namespace Inventory.DB.Migrations
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StockQuantity = table.Column<int>(type: "int", nullable: false),
                     LowStockThreshold = table.Column<int>(type: "int", nullable: false),
+                    imageurl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CategoryID = table.Column<int>(type: "int", nullable: false),
                     SupplierID = table.Column<int>(type: "int", nullable: false)
                 },

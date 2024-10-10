@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Inventory.bundle.scp.css"
     },
     {
+      "Id": "F:\\depii2\\Inventory-Managment\\Inventory\\wwwroot\\assets\\ProductImages\\phone.jpeg",
+      "PackagePath": "staticwebassets\\assets\\ProductImages\\phone.jpeg"
+    },
+    {
       "Id": "F:\\depii2\\Inventory-Managment\\Inventory\\wwwroot\\assets\\favicon.ico",
       "PackagePath": "staticwebassets\\assets\\favicon.ico"
     },

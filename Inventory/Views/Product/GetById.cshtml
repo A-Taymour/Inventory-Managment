@@ -24,6 +24,7 @@
                 <dd class="col-sm-9">
                     @Model.Price.ToString("C")
                 </dd>
+ 
                 <dt class="col-sm-3 font-weight-bold">
                     Stock Quantity
                 </dt>
@@ -47,6 +48,15 @@
                 </dt>
                 <dd class="col-sm-9">
                     @Model.UpdatedAt.ToString("yyyy-MM-dd")
+                </dd>
+                <dt class="col-sm-3 font-weight-bold">
+                    Image
+                </dt>
+                <dd class="col-sm-9">
+                <dt class="col-sm-3 font-weight-bold">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="~/assets/ProductImages/@Model.imageurl" alt="@Model.imageurl"  />
+                    </dt>
                 </dd>
             </dl>
         </div>

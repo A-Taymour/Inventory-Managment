@@ -16,6 +16,8 @@ public class Product
     
     public int LowStockThreshold { get; set; }
 
+    public string imageurl { get; set; }
+
     public int CategoryID { get; set; }
     public Category Category { get; set; }
    

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Inventory.DB.Migrations
 {
     [DbContext(typeof(ApplicationDBcontext))]
-    [Migration("20241009114941_dededed")]
-    partial class dededed
+    [Migration("20241010161640_omar")]
+    partial class omar
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -243,6 +243,10 @@ namespace Inventory.DB.Migrations
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("imageurl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 

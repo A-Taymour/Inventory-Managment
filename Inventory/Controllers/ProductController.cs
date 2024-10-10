@@ -75,8 +75,9 @@ namespace Inventory.Controllers
                 StockQuantity = vm.StockQuantity,
                 LowStockThreshold = vm.LowStockThreshold,
                 CreatedAt = vm.CreatedAt,
-                UpdatedAt = vm.UpdatedAt
-            };
+                UpdatedAt = vm.UpdatedAt,
+				imageurl=vm.imageurl
+			};
 
             
             _productService.Add(product);
@@ -144,7 +145,8 @@ namespace Inventory.Controllers
                 SupplierID = Product.SupplierID,
                 categories = selectCategoryItems,
                 Suppliers = selecSupplierItem,
-            };
+				imageurl = Product.imageurl
+			};
 
             return View(viewModel);
         }
@@ -167,6 +169,7 @@ namespace Inventory.Controllers
                 existingProduct.LowStockThreshold = viewModel.LowStockThreshold;
                 existingProduct.CategoryID = viewModel.CategoryID;
                 existingProduct.SupplierID = viewModel.SupplierID;
+                existingProduct.imageurl = viewModel.imageurl;
 
 
                 _productService.Update(existingProduct);

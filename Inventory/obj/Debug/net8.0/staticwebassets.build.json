@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JWwcrMK4GaKvuhV+r5AGgBIXC8DuAHPVPmLpqUIz2ww=",
+  "Hash": "bB/5zd66uwUFoautcqEJ0WES/fjeQFvQZTr784EaZOo=",
   "Source": "Inventory",
   "BasePath": "_content/Inventory",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\bg-masthead.jpg"
+    },
+    {
+      "Identity": "F:\\depii2\\Inventory-Managment\\Inventory\\wwwroot\\assets\\ProductImages\\phone.jpeg",
+      "SourceId": "Inventory",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\depii2\\Inventory-Managment\\Inventory\\wwwroot\\",
+      "BasePath": "_content/Inventory",
+      "RelativePath": "assets/ProductImages/phone.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\ProductImages\\phone.jpeg"
     },
     {
       "Identity": "F:\\depii2\\Inventory-Managment\\Inventory\\wwwroot\\css\\site.css",
