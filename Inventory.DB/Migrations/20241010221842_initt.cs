@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Inventory.DB.Migrations
 {
     /// <inheritdoc />
-    public partial class omar : Migration
+    public partial class initt : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

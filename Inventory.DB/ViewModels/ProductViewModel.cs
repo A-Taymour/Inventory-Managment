@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Http;
 
 namespace Inventory.DB.ViewModels
 {
@@ -45,7 +46,8 @@ namespace Inventory.DB.ViewModels
         public ICollection<Alert> Alerts { get; set; } = new List<Alert>();
         public ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
 
-    }
+		 
+	}
 
 
 }

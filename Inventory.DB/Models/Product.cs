@@ -1,4 +1,5 @@
 ﻿using Inventory.Models;
+using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
 public class Product

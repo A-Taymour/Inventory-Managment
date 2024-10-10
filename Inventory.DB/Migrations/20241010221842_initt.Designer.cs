@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Inventory.DB.Migrations
 {
     [DbContext(typeof(ApplicationDBcontext))]
-    [Migration("20241010161640_omar")]
-    partial class omar
+    [Migration("20241010221842_initt")]
+    partial class initt
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
