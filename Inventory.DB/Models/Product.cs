@@ -18,7 +18,7 @@ public class Product
 
     public int CategoryID { get; set; }
     public Category Category { get; set; }
-
+   
     public int SupplierID { get; set; }
     public Supplier supplier { get; set; }
 
