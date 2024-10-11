@@ -3,11 +3,14 @@ using Inventory.Service.Sevices.ProductService;
 using Inventory.Service.Sevices.SupplierService;
 using Inventory.Service.Sevices.TransactionService;
 using Inventory.Service.Sevices.UserService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Inventory.Controllers
 {
-    public class DashboardController : Controller
+	[Authorize]
+	[Authorize(Roles = "admin")]
+	public class DashboardController : Controller
     {
         private readonly IProductService _productService;
         private readonly ICategoryService _categoryService; 

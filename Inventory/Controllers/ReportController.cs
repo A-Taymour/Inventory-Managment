@@ -1,9 +1,12 @@
 ﻿using Inventory.Service.Sevices.Reports;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Inventory.Controllers
 {
-    public class ReportController : Controller
+	[Authorize]
+	[Authorize(Roles = "admin")]
+	public class ReportController : Controller
     {
         private readonly IReportService _reportService;
 

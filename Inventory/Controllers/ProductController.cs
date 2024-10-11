@@ -9,10 +9,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Data;
 
 namespace Inventory.Controllers
 {
-	[Authorize(Roles = "admin")]
+
 	public class ProductController : Controller
 	{
 
@@ -30,6 +31,8 @@ namespace Inventory.Controllers
 			_UserService = UserService;
 			_transactionService = transactionService;
 		}
+		[Authorize]
+		[Authorize(Roles = "admin")]
 		[HttpGet]
 
 		public IActionResult Insert()
@@ -62,7 +65,8 @@ namespace Inventory.Controllers
 
 			return View(viewModel);
 		}
-
+		[Authorize]
+		[Authorize(Roles = "admin")]
 		[HttpPost]
 		public async Task<IActionResult> Insert(ProductViewModel vm, IFormFile Photo)
 		{
@@ -101,7 +105,8 @@ namespace Inventory.Controllers
 			return RedirectToAction("GetAll", "Product");
 		}
 
-
+		[Authorize]
+		[Authorize(Roles = "admin")]
 		[HttpGet]
 		public IActionResult Update(int id)
 		{
@@ -152,7 +157,8 @@ namespace Inventory.Controllers
 
 			return View(viewModel);
 		}
-
+		[Authorize]
+		[Authorize(Roles = "admin")]
 		[HttpPost]
 		public IActionResult Update(int id, ProductViewModel viewModel)
 		{
@@ -186,16 +192,17 @@ namespace Inventory.Controllers
 				products = products.Where(x => x.Name.Contains(searchString)).ToList();
 			}
 			return View("GetAll", products);
-		}
-
-		public IActionResult GetById(int id)
+        }
+        
+        public IActionResult GetById(int id)
 		{
 			var product = _productService.GetById(id);
 
 			return View("GetById", product);
 		}
 
-
+		[Authorize]
+		[Authorize(Roles = "admin")]
 		public IActionResult Delete(int id)
 		{
 			_productService.Delete(id);

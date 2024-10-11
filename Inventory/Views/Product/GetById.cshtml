@@ -1,4 +1,6 @@
 ﻿@model Product
+@if (Context.User.IsInRole("admin") || Context.User.IsInRole("user"))
+{
 
 <!DOCTYPE html>
 <html lang="en">
@@ -66,3 +68,4 @@
     </main>
 </body>
 </html>
+}

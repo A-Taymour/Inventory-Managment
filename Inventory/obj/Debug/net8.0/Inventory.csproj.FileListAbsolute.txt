@@ -2735,7 +2735,6 @@ C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\ne
 C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\af\Humanizer.resources.dll
 C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\ar\Humanizer.resources.dll
@@ -3236,3 +3235,6 @@ C:\Users\Boody\Documents\GitHub\Inventory-Managment\Inventory\bin\Debug\net8.0\M
 C:\Users\Boody\Documents\GitHub\Inventory-Managment\Inventory\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inventory\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Formats.Asn1.dll

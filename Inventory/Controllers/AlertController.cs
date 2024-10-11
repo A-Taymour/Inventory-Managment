@@ -1,12 +1,15 @@
 ﻿using Inventory.DB.ViewModels;
 using Inventory.Service.Sevices.AlertService;
 using Inventory.Service.Sevices.ProductService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Inventory.Controllers
 {
-    public class AlertController : Controller
+	[Authorize]
+	[Authorize(Roles = "admin")]
+	public class AlertController : Controller
     {
         private readonly IAlertService _alertService;
         private readonly IProductService _productService;

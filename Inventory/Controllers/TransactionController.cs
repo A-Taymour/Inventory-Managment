@@ -3,12 +3,15 @@ using Inventory.Service.Sevices.AlertService;
 using Inventory.Service.Sevices.ProductService;
 using Inventory.Service.Sevices.TransactionService;
 using Inventory.Service.Sevices.UserService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Inventory.Controllers
 {
-    public class TransactionController : Controller
+	[Authorize]
+	[Authorize(Roles = "admin")]
+	public class TransactionController : Controller
     {
         private readonly ITransactionService _transactionService;
         private readonly IUserService _userService;

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj": {}
+    "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj": {}
   },
   "projects": {
-    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
+    "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
+        "projectUniqueName": "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
         "projectName": "Inventory.DB",
-        "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
-        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-        "outputPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\obj\\",
+        "projectPath": "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
+        "packagesPath": "C:\\Users\\Omar Hatem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.DB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Omar Hatem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,21 +99,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj": {
+    "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj",
         "projectName": "Inventory.Repository",
-        "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj",
-        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-        "outputPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\obj\\",
+        "projectPath": "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj",
+        "packagesPath": "C:\\Users\\Omar Hatem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Omar Hatem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,8 +128,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
-                "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj"
+              "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
+                "projectPath": "C:\\Users\\Omar Hatem\\Desktop\\Inventory\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj"
               }
             }
           }
@@ -170,7 +170,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

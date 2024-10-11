@@ -1,4 +1,6 @@
 ﻿@model Category
+@if (Context.User.IsInRole("admin"))
+{
 
 <div class="container mt-5">
     <h2 class="text-center mb-4">Category Details</h2>
@@ -24,3 +26,4 @@
         </a>
     </div>
 </div>
+}

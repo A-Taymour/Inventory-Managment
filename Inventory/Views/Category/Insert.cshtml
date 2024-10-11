@@ -1,5 +1,7 @@
 ﻿@using Inventory.DB.ViewModels
 @model CategoryViewModel
+@if (Context.User.IsInRole("admin"))
+{
 
 <!-- Header -->
 <header class="bg-dark py-5">
@@ -46,3 +48,4 @@
         </div>
     </form>
 </div>
+}

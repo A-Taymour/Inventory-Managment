@@ -1,6 +1,7 @@
 ﻿using Inventory.DB.ViewModels;
 using Inventory.Service.Sevices.CategoryService;
 using Inventory.Service.Sevices.ProductService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,14 +19,17 @@ namespace Inventory.Controllers
             _CategoryService = CategoryService;
             _productService = productService;
         }
-        [HttpGet]
+		[Authorize]
+		[Authorize(Roles = "admin")]
+		[HttpGet]
         public IActionResult Insert()
         {
            
             return View();
         }
-
-        [HttpPost]
+		[Authorize]
+		[Authorize(Roles = "admin")]
+		[HttpPost]
         public IActionResult Insert(CategoryViewModel viewModel)
         {
             if (ModelState.IsValid)
@@ -57,14 +61,17 @@ namespace Inventory.Controllers
 
             return View(categories);
         }
-        public IActionResult GetById(int id)
+		[Authorize]
+		[Authorize(Roles = "admin")]
+		public IActionResult GetById(int id)
         {
             var category = _CategoryService.GetById(id);
             return View("GetById", category);
         }
 
-
-        [HttpGet]
+		[Authorize]
+		[Authorize(Roles = "admin")]
+		[HttpGet]
         public IActionResult Update(int id)
         {
             var Category = _CategoryService.GetById(id);
@@ -82,8 +89,9 @@ namespace Inventory.Controllers
 
             return View(viewModel);
         }
-
-        [HttpPost]
+		[Authorize]
+		[Authorize(Roles = "admin")]
+		[HttpPost]
         public IActionResult Update(int id, CategoryViewModel viewModel)
         {
             if (ModelState.IsValid)
@@ -105,8 +113,9 @@ namespace Inventory.Controllers
             }
             return View(viewModel);
         }
-
-        public IActionResult Delete(int id)
+		[Authorize]
+		[Authorize(Roles = "admin")]
+		public IActionResult Delete(int id)
         {
             _CategoryService.Delete(id);
             return RedirectToAction(nameof(GetAll));

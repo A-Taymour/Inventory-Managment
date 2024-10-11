@@ -1,11 +1,14 @@
 using Inventory.DB.ViewModels;
 using Inventory.Service.Sevices.ProductService;
 using Inventory.Service.Sevices.SupplierService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Inventory.Controllers
 {
-    public class SupplierController : Controller
+	[Authorize]
+	[Authorize(Roles = "admin")]
+	public class SupplierController : Controller
     {
         private readonly ISupplierService _SupplierService;
 

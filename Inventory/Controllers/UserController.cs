@@ -9,8 +9,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Inventory.Controllers
 {
+	[Authorize]
+	[Authorize(Roles = "admin")]
 
-    public class UserController : Controller
+	public class UserController : Controller
     {
         private readonly IUserService _UserService;
         private readonly IPasswordHasher<User> _passwordHasher;
