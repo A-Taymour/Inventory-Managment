@@ -95,25 +95,7 @@ namespace Inventory.Controllers
 				Quantity = vm.StockQuantity,
 
 			};
-			if (Photo != null && Photo.Length > 0)
-			{
-
-				var fileName = Path.GetFileNameWithoutExtension(Photo.FileName);
-				var extension = Path.GetExtension(Photo.FileName);
-				var uniqueFileName = $"{fileName}_{Guid.NewGuid()}{extension}";
-
-
-				var uploadPath = Path.Combine(_webHostenvironment.WebRootPath, "assets", "ProductImages", uniqueFileName);
-
-
-				using (var stream = new FileStream(uploadPath, FileMode.Create))
-				{
-					Photo.CopyTo(stream);
-				}
-
-
-				vm.imageurl = $"assets/ProductImages/{uniqueFileName}";
-			}
+			
 
 			_transactionService.Add(transaction);
 
