@@ -18,5 +18,6 @@ namespace Inventory.DB.ViewModels
         [Display(Name = "Description")]
         [MaxLength(200, ErrorMessage = "Description cannot exceed 200 characters.")]
         public string Description { get; set; }
+        public string imageurl { get; set; }
     }
 }

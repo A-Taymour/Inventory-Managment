@@ -49,7 +49,9 @@ namespace Inventory.Controllers
                     Name = viewModel.Name,
                     Email = viewModel.Email,
                     Password = viewModel.Password,
-                    Phone = viewModel.Phone
+                    Phone = viewModel.Phone,
+                    imageurl = viewModel.imageurl
+
                 };
 
                 _SupplierService.Insert(supplier);
@@ -72,7 +74,9 @@ namespace Inventory.Controllers
                 Name = Supplier.Name,
                 Email = Supplier.Email,
                 Phone = Supplier.Phone,
-                Password = Supplier.Password 
+                Password = Supplier.Password,
+                imageurl = Supplier.imageurl
+
             };
 
             return View(viewModel);
@@ -92,6 +96,8 @@ namespace Inventory.Controllers
                 existingSupplier.Name = viewModel.Name;
                 existingSupplier.Email = viewModel.Email;
                 existingSupplier.Phone = viewModel.Phone;
+                existingSupplier.imageurl = viewModel.imageurl;
+
                 if (!string.IsNullOrEmpty(viewModel.Password))
                 {
                     existingSupplier.Password = viewModel.Password;

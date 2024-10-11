@@ -1,9 +1,17 @@
 ﻿@using Inventory.DB.ViewModels
 @model Inventory.DB.ViewModels.SupplierViewModel
 
-@{
-    ViewData["Title"] = "Edit Supplier";
-}
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Update Supplier</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
 <div class="container mt-5">
     <h2 class="text-center mb-4">Edit Supplier</h2>
@@ -28,6 +36,12 @@
             <input asp-for="Phone" class="form-control" required />
             <span asp-validation-for="Phone" class="text-danger"></span>
         </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="imageurl" class="control-label"></label>
+                <input asp-for="imageurl" class="form-control" />
+                <span asp-validation-for="imageurl" class="text-danger"></span>
+            </div>
 
         <div class="mb-3">
             <label asp-for="Password" class="form-label"></label>

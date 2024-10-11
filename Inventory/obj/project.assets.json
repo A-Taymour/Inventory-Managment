@@ -9200,19 +9200,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Boody\\.nuget\\packages\\": {}
+    "C:\\Users\\georg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory\\Inventory.csproj",
+      "projectUniqueName": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\Inventory.csproj",
       "projectName": "Inventory",
-      "projectPath": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory\\Inventory.csproj",
-      "packagesPath": "C:\\Users\\Boody\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory\\obj\\",
+      "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\Inventory.csproj",
+      "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
+      "outputPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Boody\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9227,8 +9227,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj": {
-              "projectPath": "C:\\Users\\Boody\\Documents\\GitHub\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj"
+            "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj": {
+              "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Service\\Inventory.Service.csproj"
             }
           }
         }

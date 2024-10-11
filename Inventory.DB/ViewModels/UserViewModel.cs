@@ -27,8 +27,7 @@ namespace Inventory.DB.ViewModels
         [RegularExpression(@"^(012|011|010|015)\d{8}$", ErrorMessage = "Phone number is Invalid, it must be 11 characters and starts with (012|011|010|015) ")]
         [StringLength(11, ErrorMessage = "it cannot be longer than 11 characters")]
         public string? Phone { get; set; }
-
-    
+        public string? imageurl { get; set; }
         public string role { get; set; }
 
 

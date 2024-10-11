@@ -8,5 +8,5 @@ using System.Runtime.InteropServices;
 
 public class User:IdentityUser
 {
-
+    public string? imageurl { get; set; }
 }

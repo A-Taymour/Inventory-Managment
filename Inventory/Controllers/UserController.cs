@@ -69,6 +69,8 @@ namespace Inventory.Controllers
                     Email = viewModel.Email,
                     PasswordHash = viewModel.Password,
                     PhoneNumber = viewModel.Phone,
+                    imageurl = viewModel.imageurl
+
                 };
 
                 _UserService.Insert(user);
@@ -105,7 +107,9 @@ namespace Inventory.Controllers
                 Email = user.Email,
                 Phone = user.PhoneNumber,
                 Password = string.Empty,
-                Roles = selectRole
+                Roles = selectRole,
+                    imageurl = user.imageurl
+
             };
 
             return View(viewModel);
@@ -124,6 +128,7 @@ namespace Inventory.Controllers
             existingUser.UserName = viewModel.Name;
             existingUser.Email = viewModel.Email;
             existingUser.PhoneNumber = viewModel.Phone;
+            existingUser.imageurl = viewModel.imageurl;
 
             var currentRoles = await _userManager.GetRolesAsync(existingUser);
             if (currentRoles.Any())

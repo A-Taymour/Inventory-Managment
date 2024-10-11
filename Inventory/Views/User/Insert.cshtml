@@ -1,7 +1,19 @@
 ﻿ @using Inventory.DB.ViewModels;
  @model Inventory.DB.ViewModels.UserViewModel;
+
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Insert new User</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
 <div class="container mt-5">
-    <h2 class="text-center">Create New User</h2>
 
     <form asp-action="Insert" class="mt-4 p-4 border rounded shadow-lg">
         <div class="mb-3">
@@ -26,6 +38,11 @@
             <label asp-for="Phone" class="form-label">Phone Number</label>
             <input asp-for="Phone" class="form-control" placeholder="Enter phone number" />
             <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="imageurl" class="control-label"></label>
+            <input asp-for="imageurl" type="text" class="form-control" />
+            <span asp-validation-for="imageurl" class="text-danger"></span>
         </div>
 
         <button type="submit" class="btn btn-primary w-100">Create User</button>

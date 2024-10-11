@@ -1,6 +1,17 @@
 ﻿@using Inventory.DB.ViewModels
 @model CategoryViewModel
 
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Update Category</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 <div class="container mt-5">
     <h2 class="text-center mb-4">Edit Category</h2>
 
@@ -23,6 +34,11 @@
                 </label>
                 <input asp-for="Description" class="form-control" placeholder="Enter description" />
                 <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="imageurl" class="control-label"></label>
+                <input asp-for="imageurl" type="text" class="form-control" />
+                <span asp-validation-for="imageurl" class="text-danger"></span>
             </div>
         </div>
 

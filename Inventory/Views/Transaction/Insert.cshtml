@@ -1,12 +1,19 @@
 ﻿@using Inventory.DB.ViewModels
 @model Inventory.DB.ViewModels.TransactionViewModel
 
-@{
-    ViewData["Title"] = "Create New Transaction";
-}
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Create Transaction</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
 <div class="container mt-5">
-    <h2 class="text-center mb-4">Create New Transaction</h2>
 
     <form asp-action="Insert" method="post" class="needs-validation" novalidate>
         <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>

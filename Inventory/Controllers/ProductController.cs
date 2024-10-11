@@ -21,16 +21,14 @@ namespace Inventory.Controllers
 		private readonly ISupplierService _SupplierService;
 		private readonly IUserService _UserService;
 		private readonly ITransactionService _transactionService;
-		private readonly IWebHostEnvironment _webHostenvironment;
 
-		public ProductController(IProductService productService, ICategoryService CategoryService, ISupplierService SupplierService, IUserService UserService, ITransactionService transactionService, IWebHostEnvironment webHostenvironment)
+		public ProductController(IProductService productService, ICategoryService CategoryService, ISupplierService SupplierService, IUserService UserService, ITransactionService transactionService)
 		{
 			_productService = productService;
 			_SupplierService = SupplierService;
 			_CategoryService = CategoryService;
 			_UserService = UserService;
 			_transactionService = transactionService;
-			_webHostenvironment = webHostenvironment;
 		}
 		[HttpGet]
 

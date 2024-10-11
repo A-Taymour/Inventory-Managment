@@ -34,7 +34,9 @@ namespace Inventory.Controllers
                 var category = new Category
                 {
                     CategoryName = viewModel.CategoryName,
-                     Description = viewModel.Description
+                     Description = viewModel.Description,
+                     imageurl = viewModel.imageurl
+
                 };
 
                 _CategoryService.Insert(category);
@@ -74,6 +76,8 @@ namespace Inventory.Controllers
             {
                 CategoryName = Category.CategoryName,
                 Description = Category.Description,
+                imageurl = Category.imageurl
+
             };
 
             return View(viewModel);
@@ -92,6 +96,8 @@ namespace Inventory.Controllers
 
                 existingCategory.CategoryName = viewModel.CategoryName;
                 existingCategory.Description = viewModel.Description;
+                existingCategory.imageurl = viewModel.imageurl;
+
 
                 _CategoryService.Update(existingCategory);
 

@@ -33,5 +33,6 @@ namespace Inventory.DB.ViewModels
         ErrorMessage = "Phone number is Invalid.")]
         [StringLength(11, ErrorMessage = "Phone number cannot be longer than 11 characters")]
         public string Phone { get; set; }
+        public string imageurl { get; set; }
     }
 }
