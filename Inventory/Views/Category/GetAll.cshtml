@@ -15,7 +15,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card border shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title">@category.CategoryName</h5>
+                        <a asp-action="GetAllProducts" asp-route-id="@category.ID"> <h5 class="card-title">@category.CategoryName</h5> </a>
                         <p class="card-text">@category.Description</p>
                         <div class="d-flex justify-content-between">
                             <a asp-action="Update" asp-route-id="@category.ID" class="btn btn-warning btn-sm">

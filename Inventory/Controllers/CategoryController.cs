@@ -106,6 +106,13 @@ namespace Inventory.Controllers
             return RedirectToAction(nameof(GetAll));
         }
 
+        public IActionResult GetAllProducts(int id)
+        {
+            var products = _productService.GetAll();
+            var ourProducts = products.Where(p => p.CategoryID == id).ToList();
+            return View("CategoryProducts", ourProducts);
+        }
+
     }
 }
 

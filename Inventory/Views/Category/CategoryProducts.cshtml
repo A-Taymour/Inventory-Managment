@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Product>
+
+<html lang="en">
+<head>
+	<title>Product List</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif; /* Set a common font */
+		}
+
+		.table thead th {
+			background-color: #f8f9fa; /* Light gray for header */
+			color: black; /* Text color for header */
+		}
+
+		.table tbody tr {
+			background-color: #f8f9fa; /* Light color for table rows */
+		}
+
+			.table tbody tr:hover {
+				background-color: #f1f1f1; /* Light hover color */
+			}
+
+		.btn-custom {
+			background-color: #28a745; /* Green for "Create New Product" */
+			color: white;
+		}
+
+			.btn-custom:hover {
+				background-color: #218838; /* Darker green on hover */
+			}
+
+		.btn-primary {
+			background-color: #007bff; /* Blue for Search button */
+			color: white;
+		}
+
+			.btn-primary:hover {
+				background-color: #0056b3; /* Darker blue on hover */
+			}
+
+		.btn-warning {
+			background-color: #ffc107; /* Yellow for Edit button */
+			color: black;
+		}
+
+			.btn-warning:hover {
+				background-color: #e0a800; /* Darker yellow on hover */
+			}
+
+		.btn-danger {
+			background-color: #dc3545; /* Red for Delete button */
+			color: white;
+		}
+
+			.btn-danger:hover {
+				background-color: #c82333; /* Darker red on hover */
+			}
+	</style>
+</head>
+<body>
+	<div class="container mt-4">
+		<h2 class="mb-4">Product List</h2>
+
+		<!-- Search Form -->
+		<div class="mb-3">
+			<form method="get" asp-action="GetAll" class="d-flex" asp-controller="Product">
+				<input type="search" name="searchString" class="form-control me-2" placeholder="Search Product With Name" />
+				<button type="submit" class="btn btn-dark">Search</button>
+			</form>
+		</div>
+
+		<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+			@foreach (var product in Model)
+			{
+
+				<div class="col mb-5">
+					<div class="card h-100">
+						<!-- Product image-->
+						<img class="card-img-top" src="~/assets/ProductImages/@product.imageurl" alt="@product.imageurl" />
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">@product.Name</h5>
+								<!-- Product price-->
+								@product.Price
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Details</a></div>
+						</div>
+					</div>
+				</div>
+
+			}
+		</div>
+
+	</div>
+</body>
+</html>

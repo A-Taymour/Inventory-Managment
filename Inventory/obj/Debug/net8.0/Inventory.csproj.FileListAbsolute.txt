@@ -3232,3 +3232,5 @@ C:\Users\anton\OneDrive\Desktop\final\Inventory-Managment\Inventory\obj\Debug\ne
 C:\Users\anton\OneDrive\Desktop\final\Inventory-Managment\Inventory\obj\Debug\net8.0\Inventory.pdb
 C:\Users\anton\OneDrive\Desktop\final\Inventory-Managment\Inventory\obj\Debug\net8.0\Inventory.genruntimeconfig.cache
 C:\Users\anton\OneDrive\Desktop\final\Inventory-Managment\Inventory\obj\Debug\net8.0\ref\Inventory.dll
+C:\Users\Boody\Documents\GitHub\Inventory-Managment\Inventory\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Boody\Documents\GitHub\Inventory-Managment\Inventory\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

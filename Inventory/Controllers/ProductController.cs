@@ -204,5 +204,6 @@ namespace Inventory.Controllers
 			return RedirectToAction(nameof(GetAll));
 		}
 
+		
 	}
 }
