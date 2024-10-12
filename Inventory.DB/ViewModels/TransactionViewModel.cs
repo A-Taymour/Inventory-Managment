@@ -11,6 +11,8 @@ namespace Inventory.DB.ViewModels
     public class TransactionViewModel
     {
         public string TransactionType { get; set; }
+        [Required(ErrorMessage = "Stock quantity is required.")]
+        [Range(1, int.MaxValue, ErrorMessage = "Stock quantity must be a non-negative integer.")]
         public int Quantity { get; set; }
 
         public DateTime TransactionDate { get; set; } = DateTime.Now;

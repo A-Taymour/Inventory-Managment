@@ -9,6 +9,7 @@ namespace Inventory.DB.ViewModels
 {
     public class SupplierViewModel
     {
+
         [Display(Name = "Supplier Name")]
         [Required(ErrorMessage = "Supplier name is required")]
         [StringLength(100, ErrorMessage = "Supplier name cannot be longer than 100 characters")]
@@ -33,6 +34,8 @@ namespace Inventory.DB.ViewModels
         ErrorMessage = "Phone number is Invalid.")]
         [StringLength(11, ErrorMessage = "Phone number cannot be longer than 11 characters")]
         public string Phone { get; set; }
+        [RegularExpression(@"(.*\.(jpg|jpeg|png|gif|bmp|webp))$", ErrorMessage = "Only image files are allowed (.jpg, .jpeg, .png, .gif, .bmp, .webp)")]
+
         public string imageurl { get; set; }
     }
 }

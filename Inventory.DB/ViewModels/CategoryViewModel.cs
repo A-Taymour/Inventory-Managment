@@ -18,6 +18,8 @@ namespace Inventory.DB.ViewModels
         [Display(Name = "Description")]
         [MaxLength(200, ErrorMessage = "Description cannot exceed 200 characters.")]
         public string Description { get; set; }
+
+        [RegularExpression(@"(.*\.(jpg|jpeg|png|gif|bmp|webp))$", ErrorMessage = "Only image files are allowed (.jpg, .jpeg, .png, .gif, .bmp, .webp)")]
         public string imageurl { get; set; }
     }
 }

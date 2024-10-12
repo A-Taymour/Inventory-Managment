@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pgUkNrHe4RUG0T7l2ld+483JE7vYNO3Aj0kCrQawhGk=",
+  "Hash": "saSFpA7hPG+PQvYhKwS9cyeOgke3x3yTuP9+K/Sl7g8=",
   "Source": "Inventory",
   "BasePath": "_content/Inventory",
   "Mode": "Default",
@@ -1423,6 +1423,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\ProductImages\\ma762-1_1.jpg"
     },
     {
+      "Identity": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\wwwroot\\assets\\ProductImages\\mouse.jpeg",
+      "SourceId": "Inventory",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\wwwroot\\",
+      "BasePath": "_content/Inventory",
+      "RelativePath": "assets/ProductImages/mouse.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\ProductImages\\mouse.jpeg"
+    },
+    {
       "Identity": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\wwwroot\\assets\\ProductImages\\Shawmy.jpeg",
       "SourceId": "Inventory",
       "SourceType": "Discovered",
@@ -1440,6 +1459,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\ProductImages\\Shawmy.jpeg"
+    },
+    {
+      "Identity": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\wwwroot\\assets\\ProductImages\\XMDNCcbVWnrYj3zdapKrGb.jpg",
+      "SourceId": "Inventory",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\wwwroot\\",
+      "BasePath": "_content/Inventory",
+      "RelativePath": "assets/ProductImages/XMDNCcbVWnrYj3zdapKrGb.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\ProductImages\\XMDNCcbVWnrYj3zdapKrGb.jpg"
     },
     {
       "Identity": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\wwwroot\\assets\\Suppliers\\istockphoto-1399565382-612x612.jpg",

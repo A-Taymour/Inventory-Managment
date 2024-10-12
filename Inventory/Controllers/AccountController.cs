@@ -84,8 +84,8 @@ namespace Inventory.Controllers
 		}
 		public async Task<IActionResult>SignOut()
 		{
-			await signInManager.SignOutAsync(); 
-			return View("Login");
-		}
+			await signInManager.SignOutAsync();
+            return RedirectToAction("Login");
+        }
 	}
 }

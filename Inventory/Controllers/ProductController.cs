@@ -70,8 +70,7 @@ namespace Inventory.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Insert(ProductViewModel vm, IFormFile Photo)
 		{
-
-			var product = new Product
+            var product = new Product
 			{
 				Name = vm.Name,
 				Price = vm.Price,
@@ -85,8 +84,12 @@ namespace Inventory.Controllers
 				imageurl = vm.imageurl
 			};
 
-
-			_productService.Add(product);
+            if (product.StockQuantity <= 0)
+            {
+                ModelState.AddModelError("", "Can not be 0 or low.");
+                return View(vm);
+            }
+            _productService.Add(product);
 
 
 			var transaction = new Transaction

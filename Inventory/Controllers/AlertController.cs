@@ -31,8 +31,6 @@ namespace Inventory.Controllers
             var alert = _alertService.GetById(id);
             return View("GetById", alert);
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
             _alertService.Delete(id);

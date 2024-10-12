@@ -25,11 +25,13 @@ namespace Inventory.DB.ViewModels
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
         [Required(ErrorMessage = "Stock quantity is required.")]
-        [Range(0, int.MaxValue, ErrorMessage = "Stock quantity must be a non-negative integer.")]
+        [Range(1, int.MaxValue, ErrorMessage = "Stock quantity must be a non-negative integer.")]
         public int StockQuantity { get; set; }
 
-		public string imageurl { get; set; }
+        [RegularExpression(@"(.*\.(jpg|jpeg|png|gif|bmp|webp))$", ErrorMessage = "Only image files are allowed (.jpg, .jpeg, .png, .gif, .bmp, .webp)")]
+        public string imageurl { get; set; }
 
 		[Required(ErrorMessage = "LowStockThreshold  is required.")]
         [Range(0, int.MaxValue, ErrorMessage = "LowStockThreshold must be a non-negative integer.")]

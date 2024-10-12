@@ -30,6 +30,7 @@ namespace Inventory.Controllers
         public IActionResult GetAll(string searchString)
         {
             var Transactions = _transactionService.GetAll();
+
             if (!String.IsNullOrEmpty(searchString))
             {
                 Transactions = Transactions.Where(x => x.TransactionType.Contains(searchString)).ToList();
@@ -83,6 +84,59 @@ namespace Inventory.Controllers
             return View(viewModel);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Insert(TransactionViewModel vm)
+        {
+
+            var product = _productService.GetById(vm.ProductID);
+
+            if (product == null)
+            {
+                ModelState.AddModelError("", "Product not found.");
+                return View(vm);
+            }
+
+
+            if (vm.TransactionType == "Withdraw")
+            {
+
+                if (product.StockQuantity < vm.Quantity)
+                {
+                    ModelState.AddModelError("", "Not enough stock available for withdrawal.");
+                    return View(vm);
+                }
+
+
+                product.StockQuantity -= vm.Quantity;
+                if (product.StockQuantity < product.LowStockThreshold)
+                {
+                    Alert enzar = MakeAlert(product.ID);
+                    _alertService.Insert(enzar);
+                }
+            }
+            else if (vm.TransactionType == "Add")
+            {
+
+                product.StockQuantity += vm.Quantity;
+            }
+
+
+            _productService.Update(product);
+
+
+            var transaction = new Transaction
+            {
+                TransactionType = vm.TransactionType,
+                Quantity = vm.Quantity,
+                TransactionDate = vm.TransactionDate,
+                ProductID = vm.ProductID,
+            };
+
+
+            _transactionService.Insert(transaction);
+
+            return RedirectToAction(nameof(GetAll));
+        }
 
         public Alert MakeAlert(int productID)
         {
@@ -98,66 +152,5 @@ namespace Inventory.Controllers
             ourAlert.Description = $"The {ourAlert.Product.Name} Item is low, with {ourAlert.Product.StockQuantity} in the stock ";
             return ourAlert;
         }
-
-        [HttpPost]
-        public async Task<IActionResult> Insert(TransactionViewModel vm)
-        {
-           
-            var product = _productService.GetById(vm.ProductID);
-
-            if (product == null)
-            {
-                ModelState.AddModelError("", "Product not found.");
-                return View(vm);
-            }
-
-            
-            if (vm.TransactionType == "Withdraw")
-            {
-                
-                if (product.StockQuantity < vm.Quantity)
-                {
-                    ModelState.AddModelError("", "Not enough stock available for withdrawal.");
-                    return View(vm);  
-                }
-
-                
-                product.StockQuantity -= vm.Quantity;
-                if (product.StockQuantity < product.LowStockThreshold)
-                {
-                    Alert enzar = MakeAlert(product.ID);
-                    _alertService.Insert(enzar);
-                }
-            }
-            else if (vm.TransactionType == "Add")
-            {
-                
-                product.StockQuantity += vm.Quantity;
-            }
-
-           
-            _productService.Update(product);
-
-            
-            var transaction = new Transaction
-            {
-                TransactionType = vm.TransactionType,
-                Quantity = vm.Quantity,
-                TransactionDate = vm.TransactionDate,
-                ProductID = vm.ProductID,
-            };
-
-            
-            _transactionService.Insert(transaction);
-
-            return RedirectToAction(nameof(GetAll));
-        }
-
-
-
-
-
-
-
     }
 }
