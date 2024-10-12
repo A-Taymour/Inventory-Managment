@@ -26,14 +26,6 @@ namespace Inventory.Service.Sevices.AlertService
             return _alertRepository.GetById(id);
         }
 
-
-        /*
-         When withdrawing a product, we check the count, if its lower than stocklowlevel
-         we create an alert using MakeAlert method in controller, u can place it f ay 7eta
-         then pass the created Object to Insert x
-                                                |
-                                                v
-         */
         public void Insert(Alert alert)
         {
             _alertRepository.Add(alert);

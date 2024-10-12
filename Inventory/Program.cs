@@ -108,8 +108,6 @@ namespace Inventory
                     }
                 }
             }
-
-
             app.Run();
         }
     }

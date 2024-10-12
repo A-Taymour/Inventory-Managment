@@ -40,6 +40,7 @@ namespace Inventory.Controllers
 
             return View();
         }
+
         [HttpPost]
 
         public IActionResult Insert(SupplierViewModel viewModel)

@@ -208,7 +208,5 @@ namespace Inventory.Controllers
 			_productService.Delete(id);
 			return RedirectToAction(nameof(GetAll));
 		}
-
-		
 	}
 }

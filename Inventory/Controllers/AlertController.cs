@@ -24,60 +24,15 @@ namespace Inventory.Controllers
         public IActionResult GetAll()
         {
             var alerts = _alertService.GetAll();
-            return View("index", alerts);
+            return View("GetAll", alerts);
         }
         public IActionResult GetById(int id)
         {
             var alert = _alertService.GetById(id);
             return View("GetById", alert);
         }
-
-        [HttpGet]
-        public IActionResult Create()
-        {
-            var products = _productService.GetAll();
-
-            var selectListItems = products.Select(c => new SelectListItem
-            {
-                Text = c.Name,
-            }).ToList();
-
-            var viewModel = new AlertViewModel
-            {
-                products = selectListItems,
-            };
-
-            return View(viewModel);
-        }
         [HttpPost]
         [ValidateAntiForgeryToken]
-
-        //public async Task<IActionResult> Create(AlertViewModel vm)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        var products = _productService.GetAll();
-        //        vm.products = products.Select(c => new SelectListItem
-        //        {
-        //        }).ToList();
-
-        //        return View(vm);
-        //    }
-
-        //    var alert = new Alert
-        //    {
-        //        AlertDate = vm.AlertDate,
-        //        Description = vm.Description,
-        //        IsResolved = vm.IsResolved,
-
-        //    };
-
-        //    _alertService.Insert(alert);
-
-        //    return RedirectToAction(nameof(GetAll));
-        //}
-
-
         public IActionResult Delete(int id)
         {
             _alertService.Delete(id);

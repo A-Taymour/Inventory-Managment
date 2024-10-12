@@ -27,6 +27,7 @@ namespace Inventory.Controllers
            
             return View();
         }
+
 		[Authorize]
 		[Authorize(Roles = "admin")]
 		[HttpPost]

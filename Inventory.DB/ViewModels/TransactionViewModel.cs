@@ -13,7 +13,7 @@ namespace Inventory.DB.ViewModels
         public string TransactionType { get; set; }
         public int Quantity { get; set; }
 
-        public DateTime TransactionDate { get; set; }
+        public DateTime TransactionDate { get; set; } = DateTime.Now;
 
         public int ProductID { get; set; }
         public Product Product { get; set; }

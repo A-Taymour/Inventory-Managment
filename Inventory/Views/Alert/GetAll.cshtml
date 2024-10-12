@@ -11,21 +11,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Search and Add New Button -->
-    <div class="container mt-3">
-        <div class="row mb-3">
-            <div class="col-md-8">
-                <form method="get" asp-action="GetAll" class="d-flex" asp-controller="Alert">
-                    <input type="search" name="searchString" class="form-control me-2" placeholder="Search Category By Name" style="max-width: 300px;" />
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </form>
-            </div>
-            <div class="col-md-4 text-end">
-                <a asp-action="Insert" class="btn btn-primary">Add New Alert</a>
-            </div>
-        </div>
-    </div>
 </header>
 
 <!-- Add margin to separate table from header -->
@@ -53,7 +38,7 @@
                         <td>@alert.Description</td>
                         <td>@alert.ProductID</td>
                         <td class="text-center">
-                            <a asp-action="Delete" asp-route-id="@alert.ID" class="btn btn-danger btn-sm">
+                            <a asp-action="Delete" asp-route-id="@alert.ID" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this category?');">
                                 <i class="fas fa-trash-alt"></i> Delete
                             </a>
                         </td>

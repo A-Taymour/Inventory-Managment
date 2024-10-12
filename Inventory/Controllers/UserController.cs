@@ -46,11 +46,15 @@ namespace Inventory.Controllers
             }
             return View(Users);
         }
-		public IActionResult GetById(string id)
+
+		public async Task<IActionResult> GetByIdAsync(string id)
 		{
 			var User = _UserService.GetById(id);
-			return View(User);
+            var roles = await _userManager.GetRolesAsync(User);
+            ViewBag.RoleName = roles.FirstOrDefault(); 
+            return View(User);
 		}
+
 
 		[HttpGet]
         public IActionResult Insert()
@@ -91,10 +95,8 @@ namespace Inventory.Controllers
                 return NotFound("This user doesn't exist");
             }
 
-            // Get the user's assigned roles
-            var userRoles = await _userManager.GetRolesAsync(user); // Assuming this method returns a list of role names
+            var userRoles = await _userManager.GetRolesAsync(user); 
 
-            // Get all available roles and mark the ones assigned to the user as selected
             var roles = GetAllRoles();
             var selectRole = roles.Select(role => new SelectListItem
             {
@@ -110,7 +112,7 @@ namespace Inventory.Controllers
                 Phone = user.PhoneNumber,
                 Password = string.Empty,
                 Roles = selectRole,
-                    imageurl = user.imageurl
+                imageurl = user.imageurl
 
             };
 
@@ -143,7 +145,7 @@ namespace Inventory.Controllers
             {
                 await _userManager.AddToRoleAsync(existingUser, viewModel.role);
             }
-                await _signinManager.RefreshSignInAsync(existingUser);
+                //await _signinManager.RefreshSignInAsync(existingUser);
 
             if (!string.IsNullOrEmpty(viewModel.Password))
             {
@@ -153,6 +155,7 @@ namespace Inventory.Controllers
 
             return RedirectToAction(nameof(GetAll));
         }
+
 		public IActionResult Delete(string id)
 		{
 			_UserService.Delete(id);
