@@ -2441,7 +2441,6 @@ F:\depii2\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Reflection.Metad
 F:\depii2\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Runtime.Caching.dll
 F:\depii2\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 F:\depii2\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Security.Permissions.dll
-F:\depii2\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Text.Json.dll
 F:\depii2\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Windows.Extensions.dll
 F:\depii2\Inventory-Managment\Inventory\bin\Debug\net8.0\af\Humanizer.resources.dll
 F:\depii2\Inventory-Managment\Inventory\bin\Debug\net8.0\ar\Humanizer.resources.dll
@@ -3238,3 +3237,6 @@ D:\مبادره مصر الرقميه\Technical\Project\Inventory-Managment\Inve
 C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Omar Hatem\Desktop\Inventory\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Formats.Asn1.dll
+F:\depii2\Inventory-Managment\Inventory\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+F:\depii2\Inventory-Managment\Inventory\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\depii2\Inventory-Managment\Inventory\bin\Debug\net8.0\System.Formats.Asn1.dll

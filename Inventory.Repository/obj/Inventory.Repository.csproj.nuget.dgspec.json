@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj": {}
+    "F:\\depii2\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj": {}
   },
   "projects": {
-    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
+    "F:\\depii2\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
+        "projectUniqueName": "F:\\depii2\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
         "projectName": "Inventory.DB",
-        "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
-        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-        "outputPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\obj\\",
+        "projectPath": "F:\\depii2\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj",
+        "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
+        "outputPath": "F:\\depii2\\Inventory-Managment\\Inventory.DB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -99,21 +93,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj": {
+    "F:\\depii2\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj",
+        "projectUniqueName": "F:\\depii2\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj",
         "projectName": "Inventory.Repository",
-        "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj",
-        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-        "outputPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.Repository\\obj\\",
+        "projectPath": "F:\\depii2\\Inventory-Managment\\Inventory.Repository\\Inventory.Repository.csproj",
+        "packagesPath": "C:\\Users\\omar\\.nuget\\packages\\",
+        "outputPath": "F:\\depii2\\Inventory-Managment\\Inventory.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\omar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -121,15 +115,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
-                "projectPath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj"
+              "F:\\depii2\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj": {
+                "projectPath": "F:\\depii2\\Inventory-Managment\\Inventory.DB\\Inventory.DB.csproj"
               }
             }
           }
@@ -138,11 +131,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -170,7 +158,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
