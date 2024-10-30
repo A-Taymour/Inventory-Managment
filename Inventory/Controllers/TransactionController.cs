@@ -29,18 +29,15 @@ namespace Inventory.Controllers
 
         public IActionResult GetAll(string searchString)
         {
-            var Transactions = _transactionService.GetAll();
+            var transactions = _transactionService.GetAll();
 
-            if (!String.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(searchString))
             {
-                Transactions = Transactions.Where(x => x.TransactionType.Contains(searchString)).ToList();
+                transactions = transactions
+                    .Where(t => t.Product != null && t.Product.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase));
             }
 
-            foreach (var transaction in Transactions)
-            {
-                transaction.Product = _productService.GetById(transaction.ProductID);
-            }
-            return View("GetAll", Transactions);
+            return View("GetAll", transactions);
         }
 
 

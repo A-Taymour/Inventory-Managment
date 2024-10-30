@@ -18,7 +18,9 @@ namespace Inventory.Service.Sevices.TransactionService
 
         public IEnumerable<Transaction> GetAll()
         {
-            return _TransactionRepository.GetAll();
+            return _TransactionRepository.GetAllQueryable()
+                .Include(t => t.Product)
+                .ToList();
         }
 
         public Transaction GetById(int id)
