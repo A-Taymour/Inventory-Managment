@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,9 @@ namespace Inventory.Service.Sevices.SupplierService
         void Insert(Supplier User);
         void Update(Supplier User);
         void Delete(int id);
+        public string UploadFile(IFormFile file, string FolderName);
+        public void DeleteFile(string FolderName, string FileName);
+
+
     }
 }

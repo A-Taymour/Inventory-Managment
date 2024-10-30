@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace Inventory.DB.ViewModels
         public string Description { get; set; }
 
         [RegularExpression(@"(.*\.(jpg|jpeg|png|gif|bmp|webp))$", ErrorMessage = "Only image files are allowed (.jpg, .jpeg, .png, .gif, .bmp, .webp)")]
-        public string imageurl { get; set; }
-    }
+		public string? imageurl { get; set; }
+		public IFormFile? Image { get; set; }
+	}
 }

@@ -45,7 +45,8 @@ namespace Inventory.Controllers
 
         public IActionResult Insert(SupplierViewModel viewModel)
         {
-            if (ModelState.IsValid)
+
+			if (ModelState.IsValid)
             {
 
                 var supplier = new Supplier
@@ -54,11 +55,16 @@ namespace Inventory.Controllers
                     Email = viewModel.Email,
                     Password = viewModel.Password,
                     Phone = viewModel.Phone,
-                    imageurl = viewModel.imageurl
+					imageurl = viewModel.imageurl
 
-                };
+				};
 
-                _SupplierService.Insert(supplier);
+				if (viewModel.Image != null)
+				{
+					supplier.imageurl = _SupplierService.UploadFile(viewModel.Image, "Suppliers");
+				}
+
+				_SupplierService.Insert(supplier);
 
                 return RedirectToAction(nameof(GetAll));
             }
@@ -69,7 +75,7 @@ namespace Inventory.Controllers
         public IActionResult Update(int id)
         {
             var Supplier = _SupplierService.GetById(id);
-            if (Supplier == null)
+            if (Supplier == null
             {
                 return NotFound("this Supplier doesn't exist");
             }
@@ -79,9 +85,8 @@ namespace Inventory.Controllers
                 Email = Supplier.Email,
                 Phone = Supplier.Phone,
                 Password = Supplier.Password,
-                imageurl = Supplier.imageurl
-
-            };
+				imageurl = Supplier.imageurl
+			};
 
             return View(viewModel);
         }
@@ -106,8 +111,12 @@ namespace Inventory.Controllers
                 {
                     existingSupplier.Password = viewModel.Password;
                 }
+				if (viewModel.Image != null)
+				{
+					existingSupplier.imageurl = _SupplierService.UploadFile(viewModel.Image, "Suppliers");
+				}
 
-                _SupplierService.Update(existingSupplier);
+				_SupplierService.Update(existingSupplier);
 
                 return RedirectToAction(nameof(GetAll));
             }

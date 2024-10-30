@@ -78,8 +78,12 @@ namespace Inventory.Controllers
                     imageurl = viewModel.imageurl
 
                 };
+				if (viewModel.Image != null)
+				{
+					user.imageurl = _UserService.UploadFile(viewModel.Image, "Users");
+				}
 
-                _UserService.Insert(user);
+				_UserService.Insert(user);
 
                 return RedirectToAction(nameof(GetAll));
             }
@@ -134,7 +138,12 @@ namespace Inventory.Controllers
             existingUser.PhoneNumber = viewModel.Phone;
             existingUser.imageurl = viewModel.imageurl;
 
-            var currentRoles = await _userManager.GetRolesAsync(existingUser);
+			if (viewModel.Image != null)
+			{
+				existingUser.imageurl = _UserService.UploadFile(viewModel.Image, "Users");
+			}
+
+			var currentRoles = await _userManager.GetRolesAsync(existingUser);
             if (currentRoles.Any())
             {
                 await _userManager.RemoveFromRolesAsync(existingUser, currentRoles);

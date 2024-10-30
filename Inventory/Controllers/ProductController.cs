@@ -68,7 +68,7 @@ namespace Inventory.Controllers
 		[Authorize]
 		[Authorize(Roles = "admin")]
 		[HttpPost]
-		public async Task<IActionResult> Insert(ProductViewModel vm, IFormFile Photo)
+		public async Task<IActionResult> Insert(ProductViewModel vm)
 		{
             var product = new Product
 			{
@@ -83,8 +83,12 @@ namespace Inventory.Controllers
 				UpdatedAt = vm.UpdatedAt,
 				imageurl = vm.imageurl
 			};
+			if (vm.Image != null)
+			{
+				product.imageurl = _CategoryService.UploadFile(vm.Image, "ProductImages");
+			}
 
-            if (product.StockQuantity <= 0)
+			if (product.StockQuantity <= 0)
             {
                 ModelState.AddModelError("", "Can not be 0 or low.");
                 return View(vm);
@@ -158,6 +162,7 @@ namespace Inventory.Controllers
 				imageurl = Product.imageurl
 			};
 
+
 			return View(viewModel);
 		}
 		[Authorize]
@@ -182,6 +187,10 @@ namespace Inventory.Controllers
 			existingProduct.SupplierID = viewModel.SupplierID;
 			existingProduct.imageurl = viewModel.imageurl;
 
+			if (viewModel.Image != null)
+			{
+				existingProduct.imageurl = _CategoryService.UploadFile(viewModel.Image, "ProductImages");
+			}
 
 			_productService.Update(existingProduct);
 

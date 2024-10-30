@@ -2,6 +2,7 @@
 using Inventory.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace Inventory.Service.Sevices.ProductService
 {
@@ -43,5 +44,26 @@ namespace Inventory.Service.Sevices.ProductService
         {
             _productRepository.Delete(id);
         }
-    }
+		public string UploadFile(IFormFile file, string FolderName)
+		{
+			string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\assets\\", FolderName);
+
+			string FileName = $"{Guid.NewGuid()}{file.FileName}";
+
+			string FilePath = Path.Combine(FolderPath, FileName);
+
+			using var FileStream = new FileStream(FilePath, FileMode.Create);
+			file.CopyTo(FileStream);
+			return FileName;
+		}
+
+		public void DeleteFile(string FolderName, string FileName)
+		{
+			string FilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\assets\\", FolderName, FileName);
+			if (File.Exists(FilePath))
+			{
+				File.Delete(FilePath);
+			}
+		}
+	}
 }

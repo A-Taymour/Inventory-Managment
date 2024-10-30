@@ -31,7 +31,8 @@ namespace Inventory.DB.ViewModels
         public int StockQuantity { get; set; }
 
         [RegularExpression(@"(.*\.(jpg|jpeg|png|gif|bmp|webp))$", ErrorMessage = "Only image files are allowed (.jpg, .jpeg, .png, .gif, .bmp, .webp)")]
-        public string imageurl { get; set; }
+		public string? imageurl { get; set; }
+		public IFormFile? Image { get; set; }
 
 		[Required(ErrorMessage = "LowStockThreshold  is required.")]
         [Range(0, int.MaxValue, ErrorMessage = "LowStockThreshold must be a non-negative integer.")]

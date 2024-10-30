@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Inventory.Controllers
 {
-	[Authorize]
-	[Authorize(Roles = "admin")]
-	public class TransactionController : Controller
+    [Authorize]
+    [Authorize(Roles = "admin")]
+    public class TransactionController : Controller
     {
         private readonly ITransactionService _transactionService;
         private readonly IUserService _userService;
@@ -39,8 +39,6 @@ namespace Inventory.Controllers
 
             return View("GetAll", transactions);
         }
-
-
         public IActionResult GetById(int id)
         {
             var Transactions = _transactionService.GetById(id);
@@ -53,13 +51,13 @@ namespace Inventory.Controllers
             var products = _productService.GetAll();
             var users = _userService.GetAll();
 
-            
+
             if (products == null || users == null)
             {
                 return NotFound("Products or Users data is not available.");
             }
 
-            
+
             var selectProductItems = products.Select(p => new SelectListItem
             {
                 Value = p.ID.ToString(),
@@ -72,7 +70,7 @@ namespace Inventory.Controllers
                 Text = u.UserName,
             }).ToList();
 
-            
+
             var viewModel = new TransactionViewModel
             {
                 products = selectProductItems,

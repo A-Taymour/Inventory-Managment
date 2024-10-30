@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u0645\u0628\u0627\u062F\u0631\u0647 \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Technical\\Project\\Inventory-Managment\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\\u0634\u063A\u0644\\Inventory-Managment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0634\u063A\u0644\\inventory-managment\\inventory\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|d:\\\u0634\u063A\u0644\\inventory-managment\\inventory\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2814D629-3DD5-4C21-93D9-8B4F8B65F2E9}|Inventory\\Inventory.csproj|solutionrelative:inventory\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 83,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +35,31 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SupplierController.cs",
+              "DocumentMoniker": "D:\\\u0634\u063A\u0644\\Inventory-Managment\\Inventory\\Controllers\\SupplierController.cs",
+              "RelativeDocumentMoniker": "Inventory\\Controllers\\SupplierController.cs",
+              "ToolTip": "D:\\\u0634\u063A\u0644\\Inventory-Managment\\Inventory\\Controllers\\SupplierController.cs",
+              "RelativeToolTip": "Inventory\\Controllers\\SupplierController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAYwE0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T12:01:52.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\\u0634\u063A\u0644\\Inventory-Managment\\Inventory\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Inventory\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\\u0634\u063A\u0644\\Inventory-Managment\\Inventory\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Inventory\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAMBBwFUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T11:56:54.743Z"
             }
           ]
         },

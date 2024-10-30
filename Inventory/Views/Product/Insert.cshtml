@@ -17,7 +17,7 @@
 		</div>
 	</header>
 
-	<form asp-action="Insert" method="post" style="margin-top:30px">
+	<form asp-action="Insert" method="post" style="margin-top:30px" enctype="multipart/form-data">
 		<div class="row mb-3">
 			<div class="col-md-6">
 				<label asp-for="Name" class="control-label"></label>
@@ -44,10 +44,9 @@
 				<input asp-for="StockQuantity" type="number" class="form-control" />
 				<span asp-validation-for="StockQuantity" class="text-danger"></span>
 			</div>
-			<div class="col-md-6">
-				<label asp-for="imageurl" class="control-label"></label>
-				<input asp-for="imageurl" type="text" class="form-control" />
-				<span asp-validation-for="imageurl" class="text-danger"></span>
+			<div class="form-group m-3">
+				<label for="Image" class="control-label">Profile Image</label>
+				<input type="file" name="Image" class="form-control-file" />
 			</div>
 		</div>
 

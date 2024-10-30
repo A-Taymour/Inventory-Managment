@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +15,7 @@ namespace Inventory.Service.Sevices.ProductService
         void Update(Product product);
         void Delete(int id);
         IEnumerable<Product> GetByCategoryId(int Categoryid);
-    }
+		public string UploadFile(IFormFile file, string FolderName);
+		public void DeleteFile(string FolderName, string FileName);
+	}
 }

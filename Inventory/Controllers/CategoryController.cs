@@ -34,8 +34,7 @@ namespace Inventory.Controllers
         public IActionResult Insert(CategoryViewModel viewModel)
         {
             if (ModelState.IsValid)
-            {
-              
+            { 
                 var category = new Category
                 {
                     CategoryName = viewModel.CategoryName,
@@ -44,7 +43,11 @@ namespace Inventory.Controllers
 
                 };
 
-                _CategoryService.Insert(category);
+				if (viewModel.Image != null)
+				{
+					category.imageurl = _CategoryService.UploadFile(viewModel.Image, "ProductImages");
+				}
+				_CategoryService.Insert(category);
                
                 return RedirectToAction(nameof(GetAll));
             }
@@ -62,6 +65,7 @@ namespace Inventory.Controllers
 
             return View(categories);
         }
+
 		[Authorize]
 		[Authorize(Roles = "admin")]
 		public IActionResult GetById(int id)
@@ -90,6 +94,7 @@ namespace Inventory.Controllers
 
             return View(viewModel);
         }
+
 		[Authorize]
 		[Authorize(Roles = "admin")]
 		[HttpPost]
@@ -106,9 +111,12 @@ namespace Inventory.Controllers
                 existingCategory.CategoryName = viewModel.CategoryName;
                 existingCategory.Description = viewModel.Description;
                 existingCategory.imageurl = viewModel.imageurl;
+				if (viewModel.Image != null)
+				{
+					existingCategory.imageurl = _CategoryService.UploadFile(viewModel.Image, "ProductImages");
+				}
 
-
-                _CategoryService.Update(existingCategory);
+				_CategoryService.Update(existingCategory);
 
                 return RedirectToAction(nameof(GetAll));
             }

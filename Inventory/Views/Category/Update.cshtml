@@ -17,7 +17,7 @@
     <div class="container mt-5">
         <h2 class="text-center mb-4">Edit Category</h2>
 
-        <form asp-controller="Category" asp-action="Update" method="post">
+        <form asp-controller="Category" asp-action="Update" method="post" enctype="multipart/form-data">
             <!-- Validation Summary -->
             <div asp-validation-summary="All" class="text-danger mb-3"></div>
 
@@ -37,11 +37,14 @@
                     <input asp-for="Description" class="form-control" placeholder="Enter description" />
                     <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
-                <div class="col-md-6">
-                    <label asp-for="imageurl" class="control-label"></label>
-                    <input asp-for="imageurl" type="text" class="form-control" />
-                    <span asp-validation-for="imageurl" class="text-danger"></span>
-                </div>
+			<div class="form-group m-3">
+				<label for="ImageUrl" class="control-label">Image URL</label>
+				<input type="text" name="ImageUrl" class="form-control" value="@Model.imageurl" readonly />
+			</div>
+			<div class="form-group m-3">
+				<label for="Image" class="control-label">Image</label>
+				<input type="file" name="Image" class="form-control-file" />
+			</div>
             </div>
 
             <div class="text-center mt-4">

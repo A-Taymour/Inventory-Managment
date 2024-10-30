@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RC/W7MWy7zw=",
+  "dgSpecHash": "8tGT0O2MSMg=",
   "success": true,
-  "projectFilePath": "D:\\مبادره مصر الرقميه\\Technical\\Project\\Inventory-Managment\\Inventory\\Inventory.csproj",
+  "projectFilePath": "D:\\شغل\\Inventory-Managment\\Inventory\\Inventory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\georg\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\georg\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

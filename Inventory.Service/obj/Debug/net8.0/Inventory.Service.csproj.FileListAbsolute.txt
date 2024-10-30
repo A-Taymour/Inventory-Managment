@@ -214,3 +214,39 @@ C:\Users\anton\OneDrive\Desktop\final\Inventory-Managment\Inventory.Service\obj\
 C:\Users\anton\OneDrive\Desktop\final\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\refint\Inventory.Service.dll
 C:\Users\anton\OneDrive\Desktop\final\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.pdb
 C:\Users\anton\OneDrive\Desktop\final\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\ref\Inventory.Service.dll
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.csproj.AssemblyReference.cache
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.AssemblyInfoInputs.cache
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.AssemblyInfo.cs
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.csproj.CoreCompileInputs.cache
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.sourcelink.json
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.dll
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\refint\Inventory.Service.dll
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.pdb
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.deps.json
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.dll
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.pdb
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.DB.dll
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Repository.dll
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Repository.pdb
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.DB.pdb
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventor.7932B3AC.Up2Date
+D:\مبادره مصر الرقميه\Technical\test\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\ref\Inventory.Service.dll
+D:\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.deps.json
+D:\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.dll
+D:\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Service.pdb
+D:\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.DB.dll
+D:\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Repository.dll
+D:\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.Repository.pdb
+D:\Inventory-Managment\Inventory.Service\bin\Debug\net8.0\Inventory.DB.pdb
+D:\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.csproj.AssemblyReference.cache
+D:\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.AssemblyInfoInputs.cache
+D:\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.AssemblyInfo.cs
+D:\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.csproj.CoreCompileInputs.cache
+D:\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.sourcelink.json
+D:\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventor.7932B3AC.Up2Date
+D:\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.dll
+D:\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\refint\Inventory.Service.dll
+D:\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\Inventory.Service.pdb
+D:\Inventory-Managment\Inventory.Service\obj\Debug\net8.0\ref\Inventory.Service.dll

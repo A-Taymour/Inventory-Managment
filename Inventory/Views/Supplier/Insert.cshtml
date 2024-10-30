@@ -22,7 +22,7 @@
 <div class="container mt-4">
 	<h2 class="mb-4">Add New Supplier</h2>
 
-	<form asp-action="Insert">
+	<form asp-action="Insert" enctype="multipart/form-data">
 		<div class="mb-3">
 			<label asp-for="Name" class="form-label"></label>
 			<input asp-for="Name" class="form-control" placeholder="Enter Supplier Name" />
@@ -40,10 +40,9 @@
 			<input asp-for="Phone" class="form-control" placeholder="Enter Phone Number" />
 			<span asp-validation-for="Phone" class="text-danger"></span>
 		</div>
-		<div class="col-md-6">
-			<label asp-for="imageurl" class="control-label"></label>
-			<input asp-for="imageurl" type="text" class="form-control" />
-			<span asp-validation-for="imageurl" class="text-danger"></span>
+		<div class="form-group m-3">
+			<label for="Image" class="control-label">Profile Image</label>
+			<input type="file" name="Image" class="form-control-file" />
 		</div>
 
 		<div class="mb-3">

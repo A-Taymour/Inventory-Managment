@@ -12,7 +12,7 @@
 
 <div class="container mt-5">
 
-    <form asp-action="Insert" class="mt-4 p-4 border rounded shadow-lg">
+    <form asp-action="Insert" class="mt-4 p-4 border rounded shadow-lg" enctype="multipart/form-data">
         <div class="mb-3">
             <label asp-for="Name" class="form-label">Full Name</label>
             <input asp-for="Name" class="form-control" placeholder="Enter full name" />
@@ -36,10 +36,9 @@
             <input asp-for="Phone" class="form-control" placeholder="Enter phone number" />
             <span asp-validation-for="Phone" class="text-danger"></span>
         </div>
-        <div class="col-md-6">
-            <label asp-for="imageurl" class="control-label"></label>
-            <input asp-for="imageurl" type="text" class="form-control" />
-            <span asp-validation-for="imageurl" class="text-danger"></span>
+        <div class="form-group m-3">
+            <label for="Image" class="control-label">Profile Image</label>
+            <input type="file" name="Image" class="form-control-file" />
         </div>
 
         <button type="submit" class="btn btn-primary w-100">Create User</button>

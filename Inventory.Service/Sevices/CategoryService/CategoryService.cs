@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,27 @@ namespace Inventory.Service.Sevices.CategoryService
         {
             _CategoryRepository.Delete(id);
         }
-    }
+		public string UploadFile(IFormFile file, string FolderName)
+		{
+			string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\assets\\", FolderName);
+
+			string FileName = $"{Guid.NewGuid()}{file.FileName}";
+
+			string FilePath = Path.Combine(FolderPath, FileName);
+
+			using var FileStream = new FileStream(FilePath, FileMode.Create);
+			file.CopyTo(FileStream);
+			return FileName;
+		}
+
+		public void DeleteFile(string FolderName, string FileName)
+		{
+			string FilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\assets\\", FolderName, FileName);
+			if (File.Exists(FilePath))
+			{
+				File.Delete(FilePath);
+			}
+		}
+	}
 
 }

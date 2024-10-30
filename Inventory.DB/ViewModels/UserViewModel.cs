@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Inventory.DB.ViewModels
@@ -29,8 +30,9 @@ namespace Inventory.DB.ViewModels
         public string? Phone { get; set; }
         [RegularExpression(@"(.*\.(jpg|jpeg|png|gif|bmp|webp))$", ErrorMessage = "Only image files are allowed (.jpg, .jpeg, .png, .gif, .bmp, .webp)")]
 
-        public string? imageurl { get; set; }
-        public string role { get; set; }
+		public string? imageurl { get; set; }
+		public IFormFile? Image { get; set; }
+		public string role { get; set; }
 
 
         [Display(Name = "Role")]

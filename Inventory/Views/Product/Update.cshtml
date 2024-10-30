@@ -15,7 +15,7 @@
         </div>
     </header>
 
-    <form asp-controller="Product" asp-action="Update" method="post">
+    <form asp-controller="Product" asp-action="Update" method="post" enctype="multipart/form-data">
         <!-- Validation Summary -->
         <div asp-validation-summary="All" class="text-danger mb-3"></div>
 
@@ -81,11 +81,14 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="imageurl" class="control-label"></label>
-                <input asp-for="imageurl" class="form-control" />
-                <span asp-validation-for="imageurl" class="text-danger"></span>
-            </div>
+			<div class="form-group m-3">
+				<label for="ImageUrl" class="control-label">Image URL</label>
+				<input type="text" name="ImageUrl" class="form-control" value="@Model.imageurl" readonly />
+			</div>
+			<div class="form-group m-3">
+				<label for="Image" class="control-label">Image</label>
+				<input type="file" name="Image" class="form-control-file" />
+			</div>
         </div>
 
 
