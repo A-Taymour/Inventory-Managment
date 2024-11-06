@@ -75,7 +75,7 @@ namespace Inventory.Controllers
         public IActionResult Update(int id)
         {
             var Supplier = _SupplierService.GetById(id);
-            if (Supplier == null
+            if (Supplier == null)
             {
                 return NotFound("this Supplier doesn't exist");
             }
